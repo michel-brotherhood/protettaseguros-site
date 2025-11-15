@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Heart, Leaf } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const commitments = [
   {
@@ -15,10 +16,17 @@ const commitments = [
 ];
 
 const Commitment = () => {
+  const { ref, isVisible } = useScrollAnimation(0.1);
+
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div 
+          ref={ref}
+          className={`text-center mb-16 transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Nosso compromisso vai além dos seguros
           </h2>
@@ -28,7 +36,10 @@ const Commitment = () => {
           {commitments.map((item, index) => (
             <Card 
               key={index} 
-              className="p-10 hover:shadow-xl transition-all duration-300 border-border"
+              className={`p-10 hover:shadow-xl transition-all duration-300 border-border hover:scale-105 ${
+                isVisible ? index === 0 ? "animate-fade-in-left" : "animate-fade-in-right" : "opacity-0"
+              }`}
+              style={{ animationDelay: `${index * 200}ms`, animationFillMode: 'forwards' }}
             >
               <div className="bg-gradient-to-br from-secondary to-primary p-4 rounded-2xl w-16 h-16 flex items-center justify-center mb-6">
                 <item.icon className="h-8 w-8 text-white" />

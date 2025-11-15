@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Headphones, FileText, Star, User } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const differentials = [
   {
@@ -25,10 +26,17 @@ const differentials = [
 ];
 
 const Differentials = () => {
+  const { ref, isVisible } = useScrollAnimation(0.1);
+
   return (
     <section id="diferenciais" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div 
+          ref={ref}
+          className={`text-center mb-16 transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Uma estrutura de atendimento completa para sua empresa
           </h2>
@@ -38,7 +46,10 @@ const Differentials = () => {
           {differentials.map((item, index) => (
             <Card 
               key={index} 
-              className="p-8 hover:shadow-xl transition-all duration-300 border-border hover:border-primary/50"
+              className={`p-8 hover:shadow-xl transition-all duration-300 border-border hover:border-primary/50 hover:scale-105 ${
+                isVisible ? "animate-fade-in" : "opacity-0"
+              }`}
+              style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'forwards' }}
             >
               <div className="bg-gradient-to-br from-primary to-secondary p-4 rounded-2xl w-16 h-16 flex items-center justify-center mb-6">
                 <item.icon className="h-8 w-8 text-white" />

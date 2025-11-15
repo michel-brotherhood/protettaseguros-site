@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BarChart3, Heart, ArrowRight } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const solutions = [
   {
@@ -20,10 +21,17 @@ const solutions = [
 ];
 
 const Solutions = () => {
+  const { ref, isVisible } = useScrollAnimation(0.1);
+
   return (
     <section id="solucoes" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div 
+          ref={ref}
+          className={`text-center mb-16 transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Soluções Inteligentes
           </h2>
@@ -33,7 +41,10 @@ const Solutions = () => {
           {solutions.map((solution, index) => (
             <Card 
               key={index} 
-              className="p-10 hover:shadow-2xl transition-all duration-300 border-border hover:border-primary/50"
+              className={`p-10 hover:shadow-2xl transition-all duration-300 border-border hover:border-primary/50 hover:scale-105 ${
+                isVisible ? index === 0 ? "animate-fade-in-left" : "animate-fade-in-right" : "opacity-0"
+              }`}
+              style={{ animationDelay: `${index * 200}ms`, animationFillMode: 'forwards' }}
             >
               <div className="inline-block bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full mb-4">
                 {solution.tag}

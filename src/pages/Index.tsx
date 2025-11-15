@@ -4,6 +4,7 @@ import Differentials from "@/components/Differentials";
 import Solutions from "@/components/Solutions";
 import Partnership from "@/components/Partnership";
 import Commitment from "@/components/Commitment";
+import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -15,6 +16,7 @@ const Index = () => {
       <Solutions />
       <Partnership />
       <Commitment />
+      <ContactForm />
       <Footer />
     </div>
   );
