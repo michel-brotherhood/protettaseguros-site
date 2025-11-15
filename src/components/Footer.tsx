@@ -1,6 +1,7 @@
 import React from "react";
 import protettaLogo from "@/assets/protetta-logo.png";
 import { Mail, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -8,7 +9,9 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div>
-            <img src={protettaLogo} alt="Protetta Seguros" className="h-10 mb-6 brightness-0 invert" />
+            <Link to="/">
+              <img src={protettaLogo} alt="Protetta Seguros" className="h-10 mb-6 brightness-0 invert" />
+            </Link>
             <p className="text-white/70 text-sm leading-relaxed">
               Excelência em Seguros
             </p>
@@ -17,8 +20,8 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">A Protetta</h3>
             <ul className="space-y-3">
-              <li><a href="#sobre" className="text-white/70 hover:text-white transition-colors">Sobre Nós</a></li>
-              <li><a href="#" className="text-white/70 hover:text-white transition-colors">Prêmios</a></li>
+              <li><Link to="/sobre" className="text-white/70 hover:text-white transition-colors">Sobre Nós</Link></li>
+              <li><a href="/#diferenciais" className="text-white/70 hover:text-white transition-colors">Nossos Diferenciais</a></li>
               <li><a href="#" className="text-white/70 hover:text-white transition-colors">#ProChange</a></li>
               <li><a href="#" className="text-white/70 hover:text-white transition-colors">Saúde Ambiental</a></li>
             </ul>
@@ -27,10 +30,10 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Nossas Soluções</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-white/70 hover:text-white transition-colors">Gestão de Benefícios</a></li>
-              <li><a href="#" className="text-white/70 hover:text-white transition-colors">Sistema B.I.</a></li>
-              <li><a href="#" className="text-white/70 hover:text-white transition-colors">Wellness Corporativo</a></li>
-              <li><a href="#" className="text-white/70 hover:text-white transition-colors">Assessoria Jurídica</a></li>
+              <li><a href="/#diferenciais" className="text-white/70 hover:text-white transition-colors">Gestão de Benefícios</a></li>
+              <li><Link to="/sistema-bi" className="text-white/70 hover:text-white transition-colors">Sistema B.I.</Link></li>
+              <li><Link to="/wellness" className="text-white/70 hover:text-white transition-colors">Wellness Corporativo</Link></li>
+              <li><a href="/#solucoes" className="text-white/70 hover:text-white transition-colors">Assessoria Jurídica</a></li>
             </ul>
           </div>
 
