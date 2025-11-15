@@ -1,7 +1,7 @@
 import React from "react";
-import { Card } from "@/components/ui/card";
 import { Headphones, FileText, Star, User } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import AnimatedCard from "@/components/AnimatedCard";
 
 const differentials = [
   {
@@ -45,12 +45,12 @@ const Differentials = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {differentials.map((item, index) => (
-            <Card 
-              key={index} 
-              className={`p-8 hover:shadow-xl transition-all duration-300 border-border hover:border-primary/50 hover:scale-105 ${
+            <AnimatedCard 
+              key={index}
+              delay={index * 100}
+              className={`p-8 ${
                 isVisible ? "animate-fade-in" : "opacity-0"
               }`}
-              style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'forwards' }}
             >
               <div className="bg-gradient-to-br from-primary to-secondary p-4 rounded-2xl w-16 h-16 flex items-center justify-center mb-6">
                 <item.icon className="h-8 w-8 text-white" />
@@ -61,7 +61,7 @@ const Differentials = () => {
               <p className="text-muted-foreground leading-relaxed">
                 {item.description}
               </p>
-            </Card>
+            </AnimatedCard>
           ))}
         </div>
       </div>
