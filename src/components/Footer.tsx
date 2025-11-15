@@ -1,3 +1,4 @@
+import React from "react";
 import protettaLogo from "@/assets/protetta-logo.png";
 import { Mail, Phone } from "lucide-react";
 

@@ -1,3 +1,4 @@
+import React from "react";
 import { Card } from "@/components/ui/card";
 import { Heart, Leaf } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
