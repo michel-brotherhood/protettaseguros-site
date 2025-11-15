@@ -143,6 +143,66 @@ export default {
             backgroundPosition: "100% 50%",
           },
         },
+        "scroll-left": {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateX(-50%)",
+          },
+        },
+        "particle-1": {
+          "0%": {
+            opacity: "0",
+            transform: "translate(0, 0) scale(0)",
+          },
+          "50%": {
+            opacity: "1",
+          },
+          "100%": {
+            opacity: "0",
+            transform: "translate(-30px, -30px) scale(1)",
+          },
+        },
+        "particle-2": {
+          "0%": {
+            opacity: "0",
+            transform: "translate(0, 0) scale(0)",
+          },
+          "50%": {
+            opacity: "1",
+          },
+          "100%": {
+            opacity: "0",
+            transform: "translate(30px, -30px) scale(1)",
+          },
+        },
+        "particle-3": {
+          "0%": {
+            opacity: "0",
+            transform: "translate(0, 0) scale(0)",
+          },
+          "50%": {
+            opacity: "1",
+          },
+          "100%": {
+            opacity: "0",
+            transform: "translate(-30px, 30px) scale(1)",
+          },
+        },
+        "particle-4": {
+          "0%": {
+            opacity: "0",
+            transform: "translate(0, 0) scale(0)",
+          },
+          "50%": {
+            opacity: "1",
+          },
+          "100%": {
+            opacity: "0",
+            transform: "translate(30px, 30px) scale(1)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -153,6 +213,11 @@ export default {
         "scale-in": "scale-in 0.5s ease-out forwards",
         "float": "float 3s ease-in-out infinite",
         "gradient": "gradient 3s ease infinite",
+        "scroll-left": "scroll-left 30s linear infinite",
+        "particle-1": "particle-1 1s ease-out forwards",
+        "particle-2": "particle-2 1.2s ease-out forwards",
+        "particle-3": "particle-3 1.1s ease-out forwards",
+        "particle-4": "particle-4 1.3s ease-out forwards",
       },
     },
   },

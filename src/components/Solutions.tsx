@@ -1,8 +1,8 @@
 import React from "react";
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BarChart3, Heart, ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import AnimatedCard from "@/components/AnimatedCard";
 
 const solutions = [
   {
@@ -40,12 +40,12 @@ const Solutions = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {solutions.map((solution, index) => (
-            <Card 
-              key={index} 
-              className={`p-10 hover:shadow-2xl transition-all duration-300 border-border hover:border-primary/50 hover:scale-105 ${
+            <AnimatedCard 
+              key={index}
+              delay={index * 200}
+              className={`p-10 ${
                 isVisible ? index === 0 ? "animate-fade-in-left" : "animate-fade-in-right" : "opacity-0"
               }`}
-              style={{ animationDelay: `${index * 200}ms`, animationFillMode: 'forwards' }}
             >
               <div className="inline-block bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full mb-4">
                 {solution.tag}
@@ -67,7 +67,7 @@ const Solutions = () => {
                 {solution.cta}
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </Card>
+            </AnimatedCard>
           ))}
         </div>
       </div>
