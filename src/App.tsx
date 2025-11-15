@@ -9,6 +9,8 @@ import About from "./pages/About";
 import BusinessIntelligence from "./pages/BusinessIntelligence";
 import Wellness from "./pages/Wellness";
 import Contact from "./pages/Contact";
+import ProChange from "./pages/ProChange";
+import SaudeAmbiental from "./pages/SaudeAmbiental";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +27,8 @@ const App = () => (
           <Route path="/sistema-bi" element={<BusinessIntelligence />} />
           <Route path="/wellness" element={<Wellness />} />
           <Route path="/contato" element={<Contact />} />
+          <Route path="/prochange" element={<ProChange />} />
+          <Route path="/saude-ambiental" element={<SaudeAmbiental />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
