@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight, Shield, Award, TrendingUp } from "lucide-react";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -8,32 +9,97 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center pt-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
-      <div className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight animate-fade-in">
-            Protetta Seguros: <br />
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Cuidado por dentro e por fora
-            </span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed animate-fade-in [animation-delay:200ms] opacity-0" style={{ animationFillMode: 'forwards' }}>
-            Simplificamos a gestão de seguros saúde para empresas com uma consultoria personalizada e sem custos adicionais.
-          </p>
+    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary/5 to-secondary/5 rounded-full blur-3xl"></div>
+      </div>
 
-          <div className="animate-fade-in [animation-delay:400ms] opacity-0" style={{ animationFillMode: 'forwards' }}>
-            <Button 
-              size="lg" 
-              onClick={scrollToContact}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all hover:scale-105"
-            >
-              Solicite uma Análise Gratuita
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+      {/* Floating Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary rounded-full animate-float"></div>
+        <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-secondary rounded-full animate-float" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-primary rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+      </div>
+
+      <div className="container mx-auto px-4 py-20 relative z-10">
+        <div className="max-w-5xl mx-auto">
+          {/* Badges */}
+          <div className="flex flex-wrap justify-center gap-3 mb-8 animate-fade-in">
+            <Badge variant="secondary" className="px-4 py-2 text-sm font-semibold bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors">
+              <Award className="w-4 h-4 mr-2" />
+              Premiada em Excelência
+            </Badge>
+            <Badge variant="secondary" className="px-4 py-2 text-sm font-semibold bg-secondary/10 text-secondary-foreground border-secondary/20 hover:bg-secondary/20 transition-colors">
+              <Shield className="w-4 h-4 mr-2" />
+              100% Seguro
+            </Badge>
+            <Badge variant="secondary" className="px-4 py-2 text-sm font-semibold bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors">
+              <TrendingUp className="w-4 h-4 mr-2" />
+              +500 Empresas
+            </Badge>
+          </div>
+
+          <div className="text-center">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-6 leading-tight animate-fade-in">
+              Protetta Seguros
+              <br />
+              <span className="relative inline-block mt-2">
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
+                  Cuidado completo
+                </span>
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-secondary/20 blur-2xl -z-10"></div>
+              </span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in [animation-delay:200ms] opacity-0 font-light" style={{ animationFillMode: 'forwards' }}>
+              Simplificamos a gestão de seguros saúde com 
+              <span className="text-primary font-semibold"> consultoria personalizada</span> e 
+              <span className="text-secondary font-semibold"> tecnologia inteligente</span>
+            </p>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto mb-12 animate-fade-in [animation-delay:400ms] opacity-0" style={{ animationFillMode: 'forwards' }}>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-1">500+</div>
+                <div className="text-sm text-muted-foreground">Empresas Atendidas</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-1">98%</div>
+                <div className="text-sm text-muted-foreground">Satisfação</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-1">24/7</div>
+                <div className="text-sm text-muted-foreground">Suporte</div>
+              </div>
+            </div>
+
+            <div className="animate-fade-in [animation-delay:600ms] opacity-0 flex flex-col sm:flex-row gap-4 justify-center items-center" style={{ animationFillMode: 'forwards' }}>
+              <Button 
+                size="lg" 
+                onClick={scrollToContact}
+                className="group bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white text-lg px-8 py-6 shadow-2xl hover:shadow-primary/50 transition-all hover:scale-105"
+              >
+                Solicite uma Análise Gratuita
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button 
+                size="lg"
+                variant="outline"
+                onClick={() => document.getElementById('diferenciais')?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-lg px-8 py-6 border-2 hover:bg-muted"
+              >
+                Conheça nossos diferenciais
+              </Button>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Bottom Wave */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent"></div>
     </section>
   );
 };
