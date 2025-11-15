@@ -1,17 +1,22 @@
 import React from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import dominosLogo from "@/assets/dominos-logo.png";
+import nuuvemLogo from "@/assets/nuuvem-logo.jpg";
+import clientLogo1 from "@/assets/client-logo-1.jpg";
+import clientLogo2 from "@/assets/client-logo-2.jpg";
+import clientLogo3 from "@/assets/client-logo-3.jpg";
+import clientLogo4 from "@/assets/client-logo-4.jpg";
 
 const ClientLogos = () => {
   const { ref, isVisible } = useScrollAnimation(0.1);
 
-  // Clientes fictícios para demonstração
   const clients = [
-    { name: "Domino's Pizza", logo: "text-red-600 font-bold text-2xl" },
-    { name: "Nuuvem", logo: "text-blue-600 font-bold text-2xl" },
-    { name: "TechCorp", logo: "text-purple-600 font-bold text-2xl" },
-    { name: "HealthPlus", logo: "text-green-600 font-bold text-2xl" },
-    { name: "GlobalBiz", logo: "text-orange-600 font-bold text-2xl" },
-    { name: "StartupHub", logo: "text-cyan-600 font-bold text-2xl" },
+    { name: "Domino's Pizza", logo: dominosLogo },
+    { name: "Nuuvem", logo: nuuvemLogo },
+    { name: "TechCorp", logo: clientLogo1 },
+    { name: "HealthPlus", logo: clientLogo2 },
+    { name: "GlobalBiz", logo: clientLogo3 },
+    { name: "StartupHub", logo: clientLogo4 },
   ];
 
   return (
@@ -40,7 +45,11 @@ const ClientLogos = () => {
                   key={index}
                   className="flex-shrink-0 mx-8 w-40 h-24 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
                 >
-                  <div className={client.logo}>{client.name}</div>
+                  <img
+                    src={client.logo}
+                    alt={client.name}
+                    className="max-w-full max-h-full object-contain"
+                  />
                 </div>
               ))}
             </div>

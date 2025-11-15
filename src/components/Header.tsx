@@ -84,6 +84,13 @@ const Header = () => {
                 </Link>
               </div>
             </div>
+
+            <Link 
+              to="/prochange" 
+              className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium"
+            >
+              #ProChange
+            </Link>
             
             <Link 
               to="/contato" 
@@ -144,6 +151,13 @@ const Header = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Wellness Corporativo
+            </Link>
+            <Link 
+              to="/prochange" 
+              className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              #ProChange
             </Link>
             <Link 
               to="/contato" 
