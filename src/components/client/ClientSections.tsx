@@ -8,7 +8,7 @@ const ClientSections = () => {
   return (
     <>
       {/* Quem Somos */}
-      <section className="py-20 bg-background">
+      <section id="quem-somos" className="py-20 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">Quem Somos</h2>
@@ -135,7 +135,7 @@ const ClientSections = () => {
       </section>
 
       {/* Nossos Diferenciais */}
-      <section id="diferenciais" className="py-20 bg-muted/30">
+      <section id="diferenciais" className="py-20 bg-muted/30 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -239,7 +239,7 @@ const ClientSections = () => {
       </section>
 
       {/* Responsabilidade Social */}
-      <section className="py-20 bg-background">
+      <section id="responsabilidade-social" className="py-20 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">

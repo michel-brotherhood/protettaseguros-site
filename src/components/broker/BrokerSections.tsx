@@ -18,7 +18,7 @@ const BrokerSections = () => {
   return (
     <>
       {/* Sobre a Protetta */}
-      <section className="py-20 bg-background">
+      <section id="sobre-protetta" className="py-20 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
@@ -91,7 +91,7 @@ const BrokerSections = () => {
       </section>
 
       {/* Como funciona */}
-      <section className="py-20 bg-muted/30">
+      <section id="como-funciona" className="py-20 bg-muted/30 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-12 text-center">
@@ -143,7 +143,7 @@ const BrokerSections = () => {
       </section>
 
       {/* Vantagens */}
-      <section id="vantagens" className="py-20 bg-background">
+      <section id="vantagens" className="py-20 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 text-center">
