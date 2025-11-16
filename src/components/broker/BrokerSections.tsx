@@ -1,8 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { CheckCircle, DollarSign, Award, Headphones, Clock, Users, BookOpen, MapPin, Trophy, MessageCircle, UserPlus, Calendar, Gauge, Building2, Megaphone, Zap, MousePointerClick, Monitor, GraduationCap } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import brokerMeeting from "@/assets/broker-meeting.jpg";
+import brokerConsulting from "@/assets/broker-consulting.jpg";
+import brokerTraining from "@/assets/broker-training.jpg";
 
 const BrokerSections = () => {
+  const { ref: assessoriaRef, isVisible: assessoriaVisible } = useScrollAnimation(0.1);
+  const { ref: expandaRef, isVisible: expandaVisible } = useScrollAnimation(0.1);
+  const { ref: logosRef, isVisible: logosVisible } = useScrollAnimation(0.1);
+  
+  const [selectedFeature, setSelectedFeature] = useState(0);
+
+  const features = [
+    {
+      title: "Mix de Carteira",
+      description: "Ajudamos o Corretor de Seguros parceiro a aumentar o mix de carteira, atendendo a nova realidade do mercado de seguros.",
+      image: brokerMeeting
+    },
+    {
+      title: "Acompanhamento em reunião",
+      description: "Precisa de apoio comercial, técnico e operacional em visita ao cliente? Nossa equipe está pronta para ajudar!",
+      image: brokerConsulting
+    },
+    {
+      title: "Cursos gratuitos",
+      description: "Oferecemos semanalmente cursos gratuitos para o corretor parceiro aprimorar o conhecimento nos produtos das Companhias.",
+      image: brokerTraining
+    }
+  ];
+
+  const insuranceLogos = [
+    "AIG", "AXA", "Akad", "Allianz", "Allseg", "Amil", "Aruana",
+    "Assim", "Azos", "Azul", "Bradesco", "CNP", "Capemisa", "Coris",
+    "Darwin", "Essor", "Excelsior", "EZZE", "Fator", "HDI", "Hapvida",
+    "Icatu", "Junto", "Justos", "Klini", "Kovr", "Loovi", "Mapfre",
+    "MBM", "MAG", "Omint", "Porto", "Pottencial", "Prudential", "Quali",
+    "Sabemi", "Suhai", "SulAmérica", "Tokio Marine", "Usebens", "Yelum", "Youse"
+  ];
+
   const advantages = [
     { icon: Headphones, text: "Suporte integral ao corretor: da cotação ao pós-venda" },
     { icon: Clock, text: "Atendimento instantâneo: tempo máximo de resposta de 5 minutos" },
@@ -40,7 +77,7 @@ const BrokerSections = () => {
       </section>
 
       {/* Assessoria Para Todos */}
-      <section className="py-20 bg-gradient-to-br from-[hsl(175,84%,55%)] to-[hsl(175,84%,45%)]">
+      <section ref={assessoriaRef} className="py-20 bg-gradient-to-br from-[hsl(175,84%,55%)] to-[hsl(175,84%,45%)]">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -53,45 +90,91 @@ const BrokerSections = () => {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-              <Card className="p-8 bg-white/95 backdrop-blur-sm hover:bg-white transition-all duration-300 hover:shadow-xl">
-                <Users className="h-12 w-12 md:h-14 md:w-14 text-[hsl(175,84%,45%)] mb-6" strokeWidth={1.5} />
-                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
-                  Suporte
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Damos todo suporte técnico, comercial e operacional para sua Corretora. 
-                  Canalizamos o suporte de mais de 30 Cias em um único lugar.
-                </p>
-              </Card>
+              {[
+                { icon: Users, title: "Suporte", description: "Damos todo suporte técnico, comercial e operacional para sua Corretora. Canalizamos o suporte de mais de 30 Cias em um único lugar." },
+                { icon: Monitor, title: "Tecnologia", description: "São diversas soluções em tecnologia para sua Corretora. Através da BaetaPRO, tenha acesso a multicálculo, simulador de saúde, leads, marketing digital e mais." },
+                { icon: GraduationCap, title: "Capacitação", description: "Treinamentos ao vivo semanais, eventos especiais, parceria com a ENS e uma plataforma completa com mais de 800 conteúdos sobre seguros." }
+              ].map((item, index) => (
+                <Card 
+                  key={index}
+                  className={`p-8 bg-white/95 backdrop-blur-sm hover:bg-white transition-all duration-500 hover:shadow-xl transform ${
+                    assessoriaVisible 
+                      ? 'translate-y-0 opacity-100' 
+                      : 'translate-y-10 opacity-0'
+                  }`}
+                  style={{ transitionDelay: `${index * 150}ms` }}
+                >
+                  <item.icon className="h-12 w-12 md:h-14 md:w-14 text-[hsl(175,84%,45%)] mb-6" strokeWidth={1.5} />
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
+                    {item.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {item.description}
+                  </p>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
-              <Card className="p-8 bg-white/95 backdrop-blur-sm hover:bg-white transition-all duration-300 hover:shadow-xl">
-                <Monitor className="h-12 w-12 md:h-14 md:w-14 text-[hsl(175,84%,45%)] mb-6" strokeWidth={1.5} />
-                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
-                  Tecnologia
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  São diversas soluções em tecnologia para sua Corretora. Através da BaetaPRO, 
-                  tenha acesso a multicálculo, simulador de saúde, leads, marketing digital e mais.
-                </p>
-              </Card>
+      {/* Expanda seus horizontes */}
+      <section ref={expandaRef} className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <p className="text-sm md:text-base font-semibold text-primary tracking-wider mb-4">
+                ASSESSORIA PARA TODOS
+              </p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+                Expanda seus horizontes e cresça com o apoio de<br />uma equipe especializada.
+              </h2>
+            </div>
 
-              <Card className="p-8 bg-white/95 backdrop-blur-sm hover:bg-white transition-all duration-300 hover:shadow-xl">
-                <GraduationCap className="h-12 w-12 md:h-14 md:w-14 text-[hsl(175,84%,45%)] mb-6" strokeWidth={1.5} />
-                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
-                  Capacitação
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Treinamentos ao vivo semanais, eventos especiais, parceria com a ENS e uma 
-                  plataforma completa com mais de 800 conteúdos sobre seguros.
-                </p>
-              </Card>
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="space-y-6">
+                {features.map((feature, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setSelectedFeature(index)}
+                    className={`w-full text-left p-6 rounded-lg transition-all duration-300 ${
+                      selectedFeature === index 
+                        ? 'bg-primary/10 border-l-4 border-primary' 
+                        : 'bg-muted/30 hover:bg-muted/50'
+                    } ${expandaVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}
+                    style={{ transitionDelay: `${index * 100}ms` }}
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="h-3 w-3 rounded-full bg-primary shrink-0 mt-2"></div>
+                      <div>
+                        <h3 className="text-xl font-bold text-foreground mb-2">
+                          {feature.title}
+                        </h3>
+                        <p className="text-muted-foreground">
+                          {feature.description}
+                        </p>
+                      </div>
+                    </div>
+                  </button>
+                ))}
+              </div>
+
+              <div className={`relative rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 ${
+                expandaVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'
+              }`}>
+                <img 
+                  src={features[selectedFeature].image} 
+                  alt={features[selectedFeature].title}
+                  className="w-full h-[500px] object-cover transition-opacity duration-500"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Recursos e Benefícios */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 max-w-6xl mx-auto">
             <div className="flex flex-col items-center text-center gap-4">
@@ -148,6 +231,33 @@ const BrokerSections = () => {
               <h3 className="text-base md:text-lg font-semibold text-foreground">
                 Ferramentas<br />de Vendas
               </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Seguradoras Parceiras */}
+      <section ref={logosRef} className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-12">
+              Seguradoras Parceiras
+            </h2>
+            
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-6">
+              {insuranceLogos.map((logo, index) => (
+                <div 
+                  key={index}
+                  className={`bg-muted/30 rounded-lg p-4 flex items-center justify-center hover:bg-muted/50 transition-all duration-300 hover:shadow-md ${
+                    logosVisible ? 'scale-100 opacity-100' : 'scale-90 opacity-0'
+                  }`}
+                  style={{ transitionDelay: `${index * 30}ms` }}
+                >
+                  <span className="text-xs font-semibold text-muted-foreground text-center">
+                    {logo}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
