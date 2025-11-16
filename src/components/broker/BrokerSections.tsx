@@ -5,6 +5,16 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import brokerMeeting from "@/assets/broker-meeting.jpg";
 import brokerConsulting from "@/assets/broker-consulting.jpg";
 import brokerTraining from "@/assets/broker-training.jpg";
+import logoAIG from "@/assets/insurance-logos/aig.png";
+import logoAkad from "@/assets/insurance-logos/akad.png";
+import logoAllianz from "@/assets/insurance-logos/allianz.png";
+import logoAmil from "@/assets/insurance-logos/amil.png";
+import logoAruana from "@/assets/insurance-logos/aruana.png";
+import logoAssim from "@/assets/insurance-logos/assim.png";
+import logoAXA from "@/assets/insurance-logos/axa.png";
+import logoAzos from "@/assets/insurance-logos/azos.png";
+import logoAzul from "@/assets/insurance-logos/azul.png";
+import logoBradesco from "@/assets/insurance-logos/bradesco.png";
 
 const BrokerSections = () => {
   const { ref: assessoriaRef, isVisible: assessoriaVisible } = useScrollAnimation(0.1);
@@ -32,12 +42,48 @@ const BrokerSections = () => {
   ];
 
   const insuranceLogos = [
-    "AIG", "AXA", "Akad", "Allianz", "Allseg", "Amil", "Aruana",
-    "Assim", "Azos", "Azul", "Bradesco", "CNP", "Capemisa", "Coris",
-    "Darwin", "Essor", "Excelsior", "EZZE", "Fator", "HDI", "Hapvida",
-    "Icatu", "Junto", "Justos", "Klini", "Kovr", "Loovi", "Mapfre",
-    "MBM", "MAG", "Omint", "Porto", "Pottencial", "Prudential", "Quali",
-    "Sabemi", "Suhai", "SulAmérica", "Tokio Marine", "Usebens", "Yelum", "Youse"
+    { name: "AIG", logo: logoAIG },
+    { name: "Akad", logo: logoAkad },
+    { name: "Allianz", logo: logoAllianz },
+    { name: "Amil", logo: logoAmil },
+    { name: "Aruana", logo: logoAruana },
+    { name: "Assim", logo: logoAssim },
+    { name: "AXA", logo: logoAXA },
+    { name: "Azos", logo: logoAzos },
+    { name: "Azul", logo: logoAzul },
+    { name: "Bradesco", logo: logoBradesco },
+    // Placeholders para as logos restantes
+    { name: "CNP", logo: null },
+    { name: "Capemisa", logo: null },
+    { name: "Coris", logo: null },
+    { name: "Darwin", logo: null },
+    { name: "Essor", logo: null },
+    { name: "Excelsior", logo: null },
+    { name: "EZZE", logo: null },
+    { name: "Fator", logo: null },
+    { name: "HDI", logo: null },
+    { name: "Hapvida", logo: null },
+    { name: "Icatu", logo: null },
+    { name: "Junto", logo: null },
+    { name: "Justos", logo: null },
+    { name: "Klini", logo: null },
+    { name: "Kovr", logo: null },
+    { name: "Loovi", logo: null },
+    { name: "Mapfre", logo: null },
+    { name: "MBM", logo: null },
+    { name: "MAG", logo: null },
+    { name: "Omint", logo: null },
+    { name: "Porto", logo: null },
+    { name: "Pottencial", logo: null },
+    { name: "Prudential", logo: null },
+    { name: "Quali", logo: null },
+    { name: "Sabemi", logo: null },
+    { name: "Suhai", logo: null },
+    { name: "SulAmérica", logo: null },
+    { name: "Tokio Marine", logo: null },
+    { name: "Usebens", logo: null },
+    { name: "Yelum", logo: null },
+    { name: "Youse", logo: null },
   ];
 
   const advantages = [
@@ -245,17 +291,25 @@ const BrokerSections = () => {
             </h2>
             
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-6">
-              {insuranceLogos.map((logo, index) => (
+              {insuranceLogos.map((item, index) => (
                 <div 
                   key={index}
-                  className={`bg-muted/30 rounded-lg p-4 flex items-center justify-center hover:bg-muted/50 transition-all duration-300 hover:shadow-md ${
+                  className={`bg-muted/30 rounded-lg p-4 flex items-center justify-center hover:bg-muted/50 transition-all duration-300 hover:shadow-md min-h-[80px] ${
                     logosVisible ? 'scale-100 opacity-100' : 'scale-90 opacity-0'
                   }`}
                   style={{ transitionDelay: `${index * 30}ms` }}
                 >
-                  <span className="text-xs font-semibold text-muted-foreground text-center">
-                    {logo}
-                  </span>
+                  {item.logo ? (
+                    <img 
+                      src={item.logo} 
+                      alt={item.name}
+                      className="w-full h-auto object-contain max-h-[60px]"
+                    />
+                  ) : (
+                    <span className="text-xs font-semibold text-muted-foreground text-center">
+                      {item.name}
+                    </span>
+                  )}
                 </div>
               ))}
             </div>
