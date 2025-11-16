@@ -9,6 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import protettaLogo from "@/assets/protetta-logo.png";
+import protettaLogo3D from "@/assets/protetta-logo-3d-new.webp";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,6 +28,17 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -354,13 +366,17 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu - Cliente */}
-        {isClientPage && (
-          <div 
-            className={`lg:hidden overflow-hidden transition-all duration-500 ease-out ${
-              isMobileMenuOpen ? 'max-h-[600px] opacity-100 mt-4' : 'max-h-0 opacity-0'
-            }`}
-          >
-            <nav className="flex flex-col gap-1 py-4 border-t border-border/50 bg-gradient-to-b from-background/50 to-transparent rounded-b-lg">
+        {isClientPage && isMobileMenuOpen && (
+          <div className="lg:hidden fixed inset-0 top-[72px] bg-background z-50 overflow-y-auto">
+            <div className="container mx-auto px-4 py-6">
+              <div className="flex justify-center mb-8">
+                <img 
+                  src={protettaLogo3D} 
+                  alt="Protetta Seguros" 
+                  className="h-20 w-auto animate-fade-in"
+                />
+              </div>
+              <nav className="flex flex-col gap-1">
               <div className="px-2 py-1 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
                 Menu
               </div>
@@ -422,17 +438,22 @@ const Header = () => {
                 </Button>
               </div>
             </nav>
+            </div>
           </div>
         )}
 
         {/* Mobile Menu - Corretor */}
-        {isBrokerPage && (
-          <div 
-            className={`lg:hidden overflow-hidden transition-all duration-500 ease-out ${
-              isMobileMenuOpen ? 'max-h-[600px] opacity-100 mt-4' : 'max-h-0 opacity-0'
-            }`}
-          >
-            <nav className="flex flex-col gap-1 py-4 border-t border-border/50 bg-gradient-to-b from-background/50 to-transparent rounded-b-lg">
+        {isBrokerPage && isMobileMenuOpen && (
+          <div className="lg:hidden fixed inset-0 top-[72px] bg-background z-50 overflow-y-auto">
+            <div className="container mx-auto px-4 py-6">
+              <div className="flex justify-center mb-8">
+                <img 
+                  src={protettaLogo3D} 
+                  alt="Protetta Seguros" 
+                  className="h-20 w-auto animate-fade-in"
+                />
+              </div>
+              <nav className="flex flex-col gap-1">
               <div className="px-2 py-1 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
                 Menu
               </div>
@@ -494,17 +515,22 @@ const Header = () => {
                 </Button>
               </div>
             </nav>
+            </div>
           </div>
         )}
 
         {/* Mobile Menu - Outras páginas */}
-        {isOtherPage && (
-          <div 
-            className={`lg:hidden overflow-hidden transition-all duration-500 ease-out ${
-              isMobileMenuOpen ? 'max-h-[800px] opacity-100 mt-4' : 'max-h-0 opacity-0'
-            }`}
-          >
-            <nav className="flex flex-col gap-1 py-4 border-t border-border/50 bg-gradient-to-b from-background/50 to-transparent rounded-b-lg">
+        {isOtherPage && isMobileMenuOpen && (
+          <div className="lg:hidden fixed inset-0 top-[72px] bg-background z-50 overflow-y-auto">
+            <div className="container mx-auto px-4 py-6">
+              <div className="flex justify-center mb-8">
+                <img 
+                  src={protettaLogo3D} 
+                  alt="Protetta Seguros" 
+                  className="h-20 w-auto animate-fade-in"
+                />
+              </div>
+              <nav className="flex flex-col gap-1">
               <div className="px-2 py-1 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
                 Navegação
               </div>
@@ -587,6 +613,7 @@ const Header = () => {
                 </Link>
               </div>
             </nav>
+            </div>
           </div>
         )}
       </div>
