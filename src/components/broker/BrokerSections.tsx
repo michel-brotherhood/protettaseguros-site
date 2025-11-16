@@ -25,6 +25,16 @@ import logoEzze from "@/assets/insurance-logos/ezze.png";
 import logoFator from "@/assets/insurance-logos/fator.png";
 import logoHapvida from "@/assets/insurance-logos/hapvida.png";
 import logoHDI from "@/assets/insurance-logos/hdi.png";
+import logoIcatu from "@/assets/insurance-logos/icatu.png";
+import logoJunto from "@/assets/insurance-logos/junto.png";
+import logoJustos from "@/assets/insurance-logos/justos.png";
+import logoKlini from "@/assets/insurance-logos/klini.webp";
+import logoKovr from "@/assets/insurance-logos/kovr.png";
+import logoLoovi from "@/assets/insurance-logos/loovi.webp";
+import logoMAG from "@/assets/insurance-logos/mag.png";
+import logoMapfre from "@/assets/insurance-logos/mapfre.png";
+import logoMBM from "@/assets/insurance-logos/mbm.png";
+import logoOmint from "@/assets/insurance-logos/omint.png";
 
 const BrokerSections = () => {
   const { ref: assessoriaRef, isVisible: assessoriaVisible } = useScrollAnimation(0.1);
@@ -72,17 +82,17 @@ const BrokerSections = () => {
     { name: "Fator", logo: logoFator },
     { name: "Hapvida", logo: logoHapvida },
     { name: "HDI", logo: logoHDI },
+    { name: "Icatu", logo: logoIcatu },
+    { name: "Junto", logo: logoJunto },
+    { name: "Justos", logo: logoJustos },
+    { name: "Klini", logo: logoKlini },
+    { name: "Kovr", logo: logoKovr },
+    { name: "Loovi", logo: logoLoovi },
+    { name: "MAG", logo: logoMAG },
+    { name: "Mapfre", logo: logoMapfre },
+    { name: "MBM", logo: logoMBM },
+    { name: "Omint", logo: logoOmint },
     // Placeholders para as logos restantes
-    { name: "Icatu", logo: null },
-    { name: "Junto", logo: null },
-    { name: "Justos", logo: null },
-    { name: "Klini", logo: null },
-    { name: "Kovr", logo: null },
-    { name: "Loovi", logo: null },
-    { name: "Mapfre", logo: null },
-    { name: "MBM", logo: null },
-    { name: "MAG", logo: null },
-    { name: "Omint", logo: null },
     { name: "Porto", logo: null },
     { name: "Pottencial", logo: null },
     { name: "Prudential", logo: null },
