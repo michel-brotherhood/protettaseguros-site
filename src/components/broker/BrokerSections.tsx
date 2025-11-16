@@ -35,6 +35,16 @@ import logoMAG from "@/assets/insurance-logos/mag.png";
 import logoMapfre from "@/assets/insurance-logos/mapfre.png";
 import logoMBM from "@/assets/insurance-logos/mbm.png";
 import logoOmint from "@/assets/insurance-logos/omint.png";
+import logoPorto from "@/assets/insurance-logos/porto.png";
+import logoPottencial from "@/assets/insurance-logos/pottencial.png";
+import logoPrudential from "@/assets/insurance-logos/prudential.png";
+import logoQualicorp from "@/assets/insurance-logos/qualicorp.png";
+import logoSabemi from "@/assets/insurance-logos/sabemi.png";
+import logoSuhai from "@/assets/insurance-logos/suhai.png";
+import logoSulAmerica from "@/assets/insurance-logos/sulamerica.png";
+import logoTokioMarine from "@/assets/insurance-logos/tokiomarine.png";
+import logoUsebens from "@/assets/insurance-logos/usebens.png";
+import logoYouse from "@/assets/insurance-logos/youse.png";
 
 const BrokerSections = () => {
   const { ref: assessoriaRef, isVisible: assessoriaVisible } = useScrollAnimation(0.1);
@@ -92,18 +102,16 @@ const BrokerSections = () => {
     { name: "Mapfre", logo: logoMapfre },
     { name: "MBM", logo: logoMBM },
     { name: "Omint", logo: logoOmint },
-    // Placeholders para as logos restantes
-    { name: "Porto", logo: null },
-    { name: "Pottencial", logo: null },
-    { name: "Prudential", logo: null },
-    { name: "Quali", logo: null },
-    { name: "Sabemi", logo: null },
-    { name: "Suhai", logo: null },
-    { name: "SulAmérica", logo: null },
-    { name: "Tokio Marine", logo: null },
-    { name: "Usebens", logo: null },
-    { name: "Yelum", logo: null },
-    { name: "Youse", logo: null },
+    { name: "Porto", logo: logoPorto },
+    { name: "Pottencial", logo: logoPottencial },
+    { name: "Prudential", logo: logoPrudential },
+    { name: "Qualicorp", logo: logoQualicorp },
+    { name: "Sabemi", logo: logoSabemi },
+    { name: "Suhai", logo: logoSuhai },
+    { name: "SulAmérica", logo: logoSulAmerica },
+    { name: "Tokio Marine", logo: logoTokioMarine },
+    { name: "Usebens", logo: logoUsebens },
+    { name: "Youse", logo: logoYouse },
   ];
 
   const advantages = [
