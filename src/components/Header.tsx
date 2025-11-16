@@ -356,37 +356,58 @@ const Header = () => {
         {/* Mobile Menu - Cliente */}
         {isClientPage && (
           <div 
-            className={`lg:hidden overflow-hidden transition-all duration-300 ${
-              isMobileMenuOpen ? 'max-h-screen opacity-100 mt-4' : 'max-h-0 opacity-0'
+            className={`lg:hidden overflow-hidden transition-all duration-500 ease-out ${
+              isMobileMenuOpen ? 'max-h-[600px] opacity-100 mt-4' : 'max-h-0 opacity-0'
             }`}
           >
-            <nav className="flex flex-col gap-2 py-4 border-t border-border">
+            <nav className="flex flex-col gap-1 py-4 border-t border-border/50 bg-gradient-to-b from-background/50 to-transparent rounded-b-lg">
+              <div className="px-2 py-1 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                Menu
+              </div>
               <button 
                 onClick={() => scrollToSection("quem-somos")}
-                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all text-left"
+                className={`px-4 py-3 rounded-lg text-foreground hover:bg-primary/10 hover:text-primary transition-all text-left font-medium border-l-2 border-transparent hover:border-primary ${
+                  isMobileMenuOpen ? 'animate-fade-in' : ''
+                } [animation-delay:50ms] opacity-0`}
+                style={{ animationFillMode: 'forwards' }}
               >
                 Quem somos
               </button>
               <button 
                 onClick={() => scrollToSection("diferenciais")}
-                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all text-left"
+                className={`px-4 py-3 rounded-lg text-foreground hover:bg-primary/10 hover:text-primary transition-all text-left font-medium border-l-2 border-transparent hover:border-primary ${
+                  isMobileMenuOpen ? 'animate-fade-in' : ''
+                } [animation-delay:100ms] opacity-0`}
+                style={{ animationFillMode: 'forwards' }}
               >
                 Especialidades
               </button>
               <button 
                 onClick={() => scrollToSection("responsabilidade-social")}
-                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all text-left"
+                className={`px-4 py-3 rounded-lg text-foreground hover:bg-primary/10 hover:text-primary transition-all text-left font-medium border-l-2 border-transparent hover:border-primary ${
+                  isMobileMenuOpen ? 'animate-fade-in' : ''
+                } [animation-delay:150ms] opacity-0`}
+                style={{ animationFillMode: 'forwards' }}
               >
                 Responsabilidade Social
               </button>
               <Link 
                 to="/contato" 
-                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all"
+                className={`px-4 py-3 rounded-lg text-foreground hover:bg-primary/10 hover:text-primary transition-all font-medium border-l-2 border-transparent hover:border-primary ${
+                  isMobileMenuOpen ? 'animate-fade-in' : ''
+                } [animation-delay:200ms] opacity-0`}
+                style={{ animationFillMode: 'forwards' }}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Fale com a Protetta
               </Link>
-              <div className="flex gap-2 mt-4 px-4">
+              
+              <div className="h-px bg-border/50 my-3 mx-4" />
+              
+              <div className={`flex gap-2 px-4 ${
+                isMobileMenuOpen ? 'animate-fade-in' : ''
+              } [animation-delay:250ms] opacity-0`}
+              style={{ animationFillMode: 'forwards' }}>
                 <Button
                   variant="outline"
                   size="sm"
@@ -394,10 +415,10 @@ const Header = () => {
                     navigate("/corretor");
                     setIsMobileMenuOpen(false);
                   }}
-                  className="gap-2 flex-1"
+                  className="flex-1 border-secondary text-secondary hover:bg-secondary hover:text-white transition-all"
                 >
-                  <UserCheck className="h-4 w-4" />
-                  Corretor
+                  <UserCheck className="h-4 w-4 mr-2" />
+                  Ver como Corretor
                 </Button>
               </div>
             </nav>
@@ -407,37 +428,58 @@ const Header = () => {
         {/* Mobile Menu - Corretor */}
         {isBrokerPage && (
           <div 
-            className={`lg:hidden overflow-hidden transition-all duration-300 ${
-              isMobileMenuOpen ? 'max-h-screen opacity-100 mt-4' : 'max-h-0 opacity-0'
+            className={`lg:hidden overflow-hidden transition-all duration-500 ease-out ${
+              isMobileMenuOpen ? 'max-h-[600px] opacity-100 mt-4' : 'max-h-0 opacity-0'
             }`}
           >
-            <nav className="flex flex-col gap-2 py-4 border-t border-border">
+            <nav className="flex flex-col gap-1 py-4 border-t border-border/50 bg-gradient-to-b from-background/50 to-transparent rounded-b-lg">
+              <div className="px-2 py-1 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                Menu
+              </div>
               <button 
                 onClick={() => scrollToSection("sobre-protetta")}
-                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all text-left"
+                className={`px-4 py-3 rounded-lg text-foreground hover:bg-secondary/10 hover:text-secondary transition-all text-left font-medium border-l-2 border-transparent hover:border-secondary ${
+                  isMobileMenuOpen ? 'animate-fade-in' : ''
+                } [animation-delay:50ms] opacity-0`}
+                style={{ animationFillMode: 'forwards' }}
               >
                 Sobre a Protetta
               </button>
               <button 
                 onClick={() => scrollToSection("como-funciona")}
-                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all text-left"
+                className={`px-4 py-3 rounded-lg text-foreground hover:bg-secondary/10 hover:text-secondary transition-all text-left font-medium border-l-2 border-transparent hover:border-secondary ${
+                  isMobileMenuOpen ? 'animate-fade-in' : ''
+                } [animation-delay:100ms] opacity-0`}
+                style={{ animationFillMode: 'forwards' }}
               >
-                Como funciona?
+                Como funciona
               </button>
               <button 
                 onClick={() => scrollToSection("vantagens")}
-                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all text-left"
+                className={`px-4 py-3 rounded-lg text-foreground hover:bg-secondary/10 hover:text-secondary transition-all text-left font-medium border-l-2 border-transparent hover:border-secondary ${
+                  isMobileMenuOpen ? 'animate-fade-in' : ''
+                } [animation-delay:150ms] opacity-0`}
+                style={{ animationFillMode: 'forwards' }}
               >
                 Vantagens
               </button>
               <Link 
                 to="/contato" 
-                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all"
+                className={`px-4 py-3 rounded-lg text-foreground hover:bg-secondary/10 hover:text-secondary transition-all font-medium border-l-2 border-transparent hover:border-secondary ${
+                  isMobileMenuOpen ? 'animate-fade-in' : ''
+                } [animation-delay:200ms] opacity-0`}
+                style={{ animationFillMode: 'forwards' }}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contato
               </Link>
-              <div className="flex gap-2 mt-4 px-4">
+              
+              <div className="h-px bg-border/50 my-3 mx-4" />
+              
+              <div className={`flex gap-2 px-4 ${
+                isMobileMenuOpen ? 'animate-fade-in' : ''
+              } [animation-delay:250ms] opacity-0`}
+              style={{ animationFillMode: 'forwards' }}>
                 <Button
                   variant="outline"
                   size="sm"
@@ -445,10 +487,10 @@ const Header = () => {
                     navigate("/cliente");
                     setIsMobileMenuOpen(false);
                   }}
-                  className="gap-2 flex-1"
+                  className="flex-1 border-primary text-primary hover:bg-primary hover:text-white transition-all"
                 >
-                  <Building2 className="h-4 w-4" />
-                  Cliente
+                  <Building2 className="h-4 w-4 mr-2" />
+                  Ver como Cliente
                 </Button>
               </div>
             </nav>
@@ -458,58 +500,92 @@ const Header = () => {
         {/* Mobile Menu - Outras páginas */}
         {isOtherPage && (
           <div 
-            className={`lg:hidden overflow-hidden transition-all duration-300 ${
-              isMobileMenuOpen ? 'max-h-screen opacity-100 mt-4' : 'max-h-0 opacity-0'
+            className={`lg:hidden overflow-hidden transition-all duration-500 ease-out ${
+              isMobileMenuOpen ? 'max-h-[800px] opacity-100 mt-4' : 'max-h-0 opacity-0'
             }`}
           >
-            <nav className="flex flex-col gap-2 py-4 border-t border-border">
+            <nav className="flex flex-col gap-1 py-4 border-t border-border/50 bg-gradient-to-b from-background/50 to-transparent rounded-b-lg">
+              <div className="px-2 py-1 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                Navegação
+              </div>
               <Link 
                 to="/sobre" 
-                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all"
+                className={`px-4 py-3 rounded-lg text-foreground hover:bg-primary/10 hover:text-primary transition-all font-medium border-l-2 border-transparent hover:border-primary ${
+                  isMobileMenuOpen ? 'animate-fade-in' : ''
+                } [animation-delay:50ms] opacity-0`}
+                style={{ animationFillMode: 'forwards' }}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Sobre Nós
               </Link>
               <a 
                 href="/#diferenciais" 
-                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all"
+                className={`px-4 py-3 rounded-lg text-foreground hover:bg-primary/10 hover:text-primary transition-all font-medium border-l-2 border-transparent hover:border-primary ${
+                  isMobileMenuOpen ? 'animate-fade-in' : ''
+                } [animation-delay:100ms] opacity-0`}
+                style={{ animationFillMode: 'forwards' }}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Diferenciais
               </a>
+              
+              <div className="px-2 py-1 mt-3 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                Soluções
+              </div>
               <Link 
                 to="/sistema-bi" 
-                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all"
+                className={`px-4 py-3 rounded-lg text-foreground hover:bg-primary/10 hover:text-primary transition-all font-medium border-l-2 border-transparent hover:border-primary ${
+                  isMobileMenuOpen ? 'animate-fade-in' : ''
+                } [animation-delay:150ms] opacity-0`}
+                style={{ animationFillMode: 'forwards' }}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Sistema B.I.
               </Link>
               <Link 
                 to="/wellness" 
-                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all"
+                className={`px-4 py-3 rounded-lg text-foreground hover:bg-primary/10 hover:text-primary transition-all font-medium border-l-2 border-transparent hover:border-primary ${
+                  isMobileMenuOpen ? 'animate-fade-in' : ''
+                } [animation-delay:200ms] opacity-0`}
+                style={{ animationFillMode: 'forwards' }}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Wellness Corporativo
               </Link>
               <Link 
                 to="/prochange" 
-                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all"
+                className={`px-4 py-3 rounded-lg text-foreground hover:bg-primary/10 hover:text-primary transition-all font-medium border-l-2 border-transparent hover:border-primary ${
+                  isMobileMenuOpen ? 'animate-fade-in' : ''
+                } [animation-delay:250ms] opacity-0`}
+                style={{ animationFillMode: 'forwards' }}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 #ProChange
               </Link>
+              
+              <div className="h-px bg-border/50 my-3 mx-4" />
+              
               <Link 
                 to="/contato" 
-                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all"
+                className={`px-4 py-3 rounded-lg text-foreground hover:bg-primary/10 hover:text-primary transition-all font-medium border-l-2 border-transparent hover:border-primary ${
+                  isMobileMenuOpen ? 'animate-fade-in' : ''
+                } [animation-delay:300ms] opacity-0`}
+                style={{ animationFillMode: 'forwards' }}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contato
               </Link>
-              <Link to="/cotacao" className="mt-2 px-4" onClick={() => setIsMobileMenuOpen(false)}>
-                <Button className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white shadow-lg">
-                  Solicitar Cotação
-                </Button>
-              </Link>
+              
+              <div className={`mt-4 px-4 ${
+                isMobileMenuOpen ? 'animate-fade-in' : ''
+              } [animation-delay:350ms] opacity-0`}
+              style={{ animationFillMode: 'forwards' }}>
+                <Link to="/cotacao" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white shadow-lg">
+                    Solicitar Cotação
+                  </Button>
+                </Link>
+              </div>
             </nav>
           </div>
         )}
