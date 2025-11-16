@@ -41,7 +41,7 @@ const Index = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground mb-16 max-w-2xl mx-auto animate-fade-in [animation-delay:200ms] opacity-0" style={{ animationFillMode: 'forwards' }}>
-            Sua porta de entrada para o universo dos seguros
+            Sua porta de entrada para o universo dos seguros de saúde empresariais
           </p>
 
           {/* Choice Cards */}
@@ -60,7 +60,7 @@ const Index = () => {
                   <h2 className="text-3xl font-bold text-foreground group-hover:text-white transition-colors mb-4">Para Clientes</h2>
                   
                   <p className="text-muted-foreground group-hover:text-white/90 transition-colors mb-6 leading-relaxed">
-                    Soluções completas em seguros saúde empresarial com tecnologia e consultoria especializada
+                    Especialistas em seguro saúde empresarial com tecnologia de Business Intelligence e consultoria personalizada
                   </p>
                   
                   <div className="flex flex-wrap gap-2 justify-center mb-6">
@@ -101,7 +101,7 @@ const Index = () => {
                   <h2 className="text-3xl font-bold text-foreground group-hover:text-white transition-colors mb-4">Para Corretores</h2>
                   
                   <p className="text-muted-foreground group-hover:text-white/90 transition-colors mb-6 leading-relaxed">
-                    Assessoria especializada com suporte integral e custo zero para você vender com segurança
+                    Assessoria especializada para você vender saúde com segurança, suporte integral e custo zero
                   </p>
                   
                   <div className="flex flex-wrap gap-2 justify-center mb-6">

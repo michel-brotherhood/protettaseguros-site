@@ -25,18 +25,15 @@ const BrokerSections = () => {
               Sobre a Protetta
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Em 2017 a Protetta nasceu com um propósito: facilitar a vida de corretores de seguros que desejam 
-              vender saúde. De lá para cá, trabalhamos duro e de forma genuína para tornar a experiência dos 
-              nossos corretores cada vez mais simples e intuitiva.
+              Desde 2017, a Protetta existe com um propósito: facilitar a vida do corretor que deseja vender planos de saúde. 
+              De lá para cá, trabalhamos duro e de forma genuína para tornar essa experiência cada vez mais simples, intuitiva e lucrativa.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Acreditamos que todo corretor pode vender saúde e, principalmente, que isso pode ser feito de 
-              forma leve e prática. Por isso, oferecemos suporte integral para que você se sinta cada vez mais 
-              seguro, confiante e com autonomia em relação às suas vendas.
+              Acreditamos que todo corretor pode vender saúde de forma leve e prática. 
+              Por isso, oferecemos suporte integral, para que você se sinta cada vez mais seguro, confiante e com autonomia nas suas vendas.
             </p>
             <p className="text-xl font-semibold text-foreground">
-              Nossa missão é fazer com que todos os nossos corretores prosperem e batam suas metas pessoais, 
-              sem precisar se estressar para isso.
+              Nossa missão é simples e direta: fazer com que nossos corretores prosperem e batam suas metas pessoais sem precisar se estressar para isso.
             </p>
           </div>
         </div>
@@ -54,32 +51,33 @@ const BrokerSections = () => {
                 Somos uma assessoria especializada em planos de saúde!
               </h3>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Sabemos que vender saúde é algo sério e complexo. Além de ser uma enorme responsabilidade 
-                cuidar do bem mais precioso de seus clientes, são muitas regras comerciais, que mudam de 
-                seguradora para seguradora, com muitos detalhes, e é normal que o corretor se sinta confuso 
-                com tudo isso!
+                Sabemos que vender saúde é algo sério e complexo: muitas regras comerciais, que mudam de seguradora para seguradora, 
+                muitos detalhes operacionais, e uma responsabilidade enorme com o bem mais precioso do seu cliente: a saúde.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                É normal o corretor se sentir confuso com tudo isso. Aqui, você não fica sozinho.
               </p>
               <p className="text-xl font-semibold text-primary text-center mb-6">
-                Mas aqui na Protetta não tem erro! A gente te acompanha do início ao fim da venda!
+                Na Protetta, não tem erro: a gente te acompanha do início ao fim da venda.
               </p>
               
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <CheckCircle className="h-6 w-6 text-secondary shrink-0 mt-1" />
                   <p className="text-foreground">
-                    Tem muito tempo que não vende saúde? Não tem problema, a gente te tira da inércia!
+                    Faz tempo que você não vende saúde? A gente te tira da inércia.
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle className="h-6 w-6 text-secondary shrink-0 mt-1" />
                   <p className="text-foreground">
-                    Está se sentindo inseguro para fazer reunião com o cliente? Não tem problema, a gente vai junto com você!
+                    Está inseguro para fazer reunião com o cliente? A gente vai junto com você.
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle className="h-6 w-6 text-secondary shrink-0 mt-1" />
                   <p className="text-foreground">
-                    Está com alguma dúvida acerca de regras comerciais? Não tem problema, a gente te responde na mesma hora!
+                    Está com dúvidas sobre regras comerciais? A gente te responde na hora.
                   </p>
                 </div>
               </div>
@@ -107,7 +105,7 @@ const BrokerSections = () => {
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">Ponte entre Corretor e Seguradora</h3>
                 <p className="text-muted-foreground">
-                  Intermediamos procedimentos técnicos, operacionais e comerciais
+                  Intermediamos os processos técnicos, operacionais e comerciais entre seguradoras/operadoras e corretores parceiros
                 </p>
               </Card>
 
@@ -117,7 +115,7 @@ const BrokerSections = () => {
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">Custo Zero</h3>
                 <p className="text-muted-foreground">
-                  Serviços totalmente gratuitos. Somos remunerados pelas seguradoras
+                  Os serviços da Protetta são totalmente gratuitos para corretores parceiros. Somos remunerados pelas seguradoras
                 </p>
               </Card>
 
@@ -127,17 +125,17 @@ const BrokerSections = () => {
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">Seu Próprio Código</h3>
                 <p className="text-muted-foreground">
-                  Seus dados constam nas apólices. Seguros feitos diretamente no seu código
+                  Você terá seu próprio código nas seguradoras. Seus dados constarão nas apólices dos seus clientes
                 </p>
               </Card>
             </div>
 
             <Card className="p-8 bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/20">
               <h3 className="text-2xl font-bold text-center text-foreground mb-4">
-                Não ficamos com parte do seu comissionamento!
+                Não ficamos com parte da sua comissão!
               </h3>
               <p className="text-center text-lg text-muted-foreground">
-                Você não ganha menos comissão por estar vinculado à Protetta. Aqui o corretor só tem a ganhar!
+                Você não ganha menos por estar vinculado à Protetta. Aqui, o corretor só tem a ganhar.
               </p>
             </Card>
           </div>
@@ -149,10 +147,10 @@ const BrokerSections = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 text-center">
-              Quais as Vantagens?
+              Vantagens de Ser Corretor Parceiro Protetta
             </h2>
             <p className="text-xl text-center text-muted-foreground mb-12">
-              Tudo o que a Protetta oferece para você deslanchar suas vendas!
+              Tudo o que você precisa para destravar suas vendas de saúde
             </p>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">

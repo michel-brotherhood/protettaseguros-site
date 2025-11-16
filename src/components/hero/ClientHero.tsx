@@ -56,13 +56,13 @@ const ClientHero: React.FC<ClientHeroProps> = ({ onSwitchMode }) => {
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-secondary/20 blur-2xl -z-10"></div>
               </span>
               <br />
-              para o universo dos seguros
+              para o universo dos seguros de saúde empresariais
             </h1>
             
             <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in [animation-delay:200ms] opacity-0 font-light" style={{ animationFillMode: 'forwards' }}>
-              Muito mais que brokers, somos a 
-              <span className="text-primary font-semibold"> primeira hub de seguros do Brasil </span> 
-              com foco em seguro saúde empresarial
+              Muito mais do que brokers: somos o 
+              <span className="text-primary font-semibold"> primeiro hub de seguros do Brasil </span> 
+              focado em saúde corporativa
             </p>
 
             {/* Stats */}
