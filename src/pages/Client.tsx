@@ -29,7 +29,6 @@ const Client = () => {
       transition={{ duration: 0.4, ease: "easeInOut" }}
     >
       <Header />
-      <Breadcrumb />
       <ClientHero onSwitchMode={handleSwitchMode} />
       <ClientLogos />
       <ClientSections />

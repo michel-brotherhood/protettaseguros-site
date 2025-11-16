@@ -28,7 +28,6 @@ const Broker = () => {
       transition={{ duration: 0.4, ease: "easeInOut" }}
     >
       <Header />
-      <Breadcrumb />
       <BrokerHero onSwitchMode={handleSwitchMode} />
       <BrokerSections />
       <ContactForm />

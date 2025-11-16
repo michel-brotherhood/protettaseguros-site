@@ -62,12 +62,12 @@ const Header = () => {
 
           {/* Desktop Navigation - Cliente */}
           {isClientPage && (
-            <nav className="hidden lg:flex items-center gap-2 ml-auto mr-4">
+            <nav className="hidden lg:flex items-center gap-1 ml-auto mr-6">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium flex items-center gap-1">
+                  <Button variant="ghost" className="px-4 py-2 text-sm font-normal text-foreground hover:text-primary hover:bg-primary/5 transition-all flex items-center gap-1">
                     A Protetta
-                    <ChevronDown className="h-4 w-4" />
+                    <ChevronDown className="h-3.5 w-3.5 opacity-70" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent 
@@ -117,23 +117,23 @@ const Header = () => {
 
               <button 
                 onClick={() => scrollToSection("diferenciais")}
-                className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium"
+                className="px-4 py-2 text-sm font-normal text-foreground hover:text-primary hover:bg-primary/5 transition-all"
               >
                 Especialidades
               </button>
 
               <button 
                 onClick={() => scrollToSection("responsabilidade-social")}
-                className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium"
+                className="px-4 py-2 text-sm font-normal text-foreground hover:text-primary hover:bg-primary/5 transition-all"
               >
                 Responsabilidade Social
               </button>
 
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium flex items-center gap-1">
+                  <Button variant="ghost" className="px-4 py-2 text-sm font-normal text-foreground hover:text-primary hover:bg-primary/5 transition-all flex items-center gap-1">
                     Carreiras
-                    <ChevronDown className="h-4 w-4" />
+                    <ChevronDown className="h-3.5 w-3.5 opacity-70" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent 
@@ -173,7 +173,7 @@ const Header = () => {
 
               <Link 
                 to="/contato" 
-                className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium"
+                className="px-4 py-2 text-sm font-normal text-foreground hover:text-primary hover:bg-primary/5 transition-all"
               >
                 Fale com a Protetta
               </Link>
@@ -182,12 +182,12 @@ const Header = () => {
 
           {/* Desktop Navigation - Corretor */}
           {isBrokerPage && (
-            <nav className="hidden lg:flex items-center gap-2 ml-auto mr-4">
+            <nav className="hidden lg:flex items-center gap-1 ml-auto mr-6">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium flex items-center gap-1">
+                  <Button variant="ghost" className="px-4 py-2 text-sm font-normal text-foreground hover:text-primary hover:bg-primary/5 transition-all flex items-center gap-1">
                     A Protetta
-                    <ChevronDown className="h-4 w-4" />
+                    <ChevronDown className="h-3.5 w-3.5 opacity-70" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent 
@@ -223,14 +223,14 @@ const Header = () => {
 
               <button 
                 onClick={() => scrollToSection("vantagens")}
-                className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium whitespace-nowrap"
+                className="px-4 py-2 text-sm font-normal text-foreground hover:text-primary hover:bg-primary/5 transition-all whitespace-nowrap"
               >
                 Quais as vantagens de me associar a uma assessoria?
               </button>
 
               <Link 
                 to="/contato" 
-                className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium"
+                className="px-4 py-2 text-sm font-normal text-foreground hover:text-primary hover:bg-primary/5 transition-all"
               >
                 Contato
               </Link>
@@ -308,26 +308,29 @@ const Header = () => {
           <div className="flex items-center gap-4">
             {/* Toggle Buttons Cliente/Corretor - Only on Client/Broker pages */}
             {(isClientPage || isBrokerPage) && (
-              <div className="hidden lg:flex items-center gap-2">
-                <Button
-                  variant={isClientPage ? "default" : "outline"}
-                  size="sm"
+              <div className="hidden lg:flex items-center gap-3 border-l border-border pl-6">
+                <button
                   onClick={() => navigate("/cliente")}
-                  className="gap-2"
+                  className={`flex items-center gap-2 px-3 py-1.5 text-sm transition-all ${
+                    isClientPage 
+                      ? "text-primary font-medium" 
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
                 >
                   <Building2 className="h-4 w-4" />
                   Cliente
-                </Button>
-                <div className="h-4 w-px bg-border"></div>
-                <Button
-                  variant={isBrokerPage ? "default" : "outline"}
-                  size="sm"
+                </button>
+                <button
                   onClick={() => navigate("/corretor")}
-                  className="gap-2"
+                  className={`flex items-center gap-2 px-3 py-1.5 text-sm transition-all ${
+                    isBrokerPage 
+                      ? "text-primary font-medium" 
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
                 >
                   <UserCheck className="h-4 w-4" />
                   Corretor
-                </Button>
+                </button>
               </div>
             )}
 
