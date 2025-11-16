@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Building2, UserCheck, ArrowRight, Shield, Award } from "lucide-react";
+import protettaLogo3D from "@/assets/protetta-logo-3d.webp";
 
 const Index = () => {
   return (
@@ -21,17 +22,26 @@ const Index = () => {
         <div className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-primary rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
       </div>
 
-      <div className="container mx-auto px-4 py-20 relative z-10 flex items-center justify-center min-h-screen">
+      <div className="container mx-auto px-4 py-12 sm:py-20 relative z-10 flex items-center justify-center min-h-screen">
         <div className="max-w-5xl mx-auto text-center">
-          {/* Logo/Brand */}
+          {/* 3D Logo */}
           <div className="flex justify-center mb-8 animate-fade-in">
-            <Badge variant="secondary" className="px-6 py-3 text-base font-semibold bg-primary/10 text-primary border-primary/20">
-              <Award className="w-5 h-5 mr-2" />
+            <img 
+              src={protettaLogo3D} 
+              alt="Protetta Seguros Logo" 
+              className="h-32 sm:h-40 md:h-48 lg:h-56 w-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+
+          {/* Badge */}
+          <div className="flex justify-center mb-6 animate-fade-in [animation-delay:100ms] opacity-0" style={{ animationFillMode: 'forwards' }}>
+            <Badge variant="secondary" className="px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold bg-primary/10 text-primary border-primary/20">
+              <Award className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               Primeira Hub de Seguros do Brasil
             </Badge>
           </div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-6 leading-tight animate-fade-in">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight animate-fade-in [animation-delay:200ms] opacity-0" style={{ animationFillMode: 'forwards' }}>
             <span className="relative inline-block">
               <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
                 Protetta Seguros
@@ -40,26 +50,26 @@ const Index = () => {
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground mb-16 max-w-2xl mx-auto animate-fade-in [animation-delay:200ms] opacity-0" style={{ animationFillMode: 'forwards' }}>
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-12 sm:mb-16 max-w-2xl mx-auto px-4 animate-fade-in [animation-delay:300ms] opacity-0" style={{ animationFillMode: 'forwards' }}>
             Sua porta de entrada para o universo dos seguros de saúde empresariais
           </p>
 
           {/* Choice Cards */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto animate-fade-in [animation-delay:400ms] opacity-0" style={{ animationFillMode: 'forwards' }}>
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto px-4 animate-fade-in [animation-delay:400ms] opacity-0" style={{ animationFillMode: 'forwards' }}>
             {/* Cliente Card */}
             <Link to="/cliente">
-              <div className="group relative p-8 bg-card rounded-2xl border-2 border-border hover:border-primary hover:bg-primary transition-all duration-300 hover:shadow-2xl hover:scale-105 cursor-pointer">
+              <div className="group relative p-6 sm:p-8 bg-card rounded-2xl border-2 border-border hover:border-primary hover:bg-primary transition-all duration-300 hover:shadow-2xl hover:scale-105 cursor-pointer">
                 {/* Glow Effect */}
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-secondary rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
                 
                 <div className="relative">
-                  <div className="bg-gradient-to-br from-primary to-secondary p-6 rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-all">
-                    <Building2 className="h-10 w-10 text-white" />
+                  <div className="bg-gradient-to-br from-primary to-secondary p-4 sm:p-6 rounded-2xl w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-white/20 transition-all">
+                    <Building2 className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
                   </div>
                   
-                  <h2 className="text-3xl font-bold text-foreground group-hover:text-white transition-colors mb-4">Para Clientes</h2>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-foreground group-hover:text-white transition-colors mb-3 sm:mb-4">Para Clientes</h2>
                   
-                  <p className="text-muted-foreground group-hover:text-white/90 transition-colors mb-6 leading-relaxed">
+                  <p className="text-sm sm:text-base text-muted-foreground group-hover:text-white/90 transition-colors mb-4 sm:mb-6 leading-relaxed">
                     Especialistas em seguro saúde empresarial com tecnologia de Business Intelligence e consultoria personalizada
                   </p>
                   
@@ -89,18 +99,18 @@ const Index = () => {
 
             {/* Corretor Card */}
             <Link to="/corretor">
-              <div className="group relative p-8 bg-card rounded-2xl border-2 border-border hover:border-secondary hover:bg-secondary transition-all duration-300 hover:shadow-2xl hover:scale-105 cursor-pointer">
+              <div className="group relative p-6 sm:p-8 bg-card rounded-2xl border-2 border-border hover:border-secondary hover:bg-secondary transition-all duration-300 hover:shadow-2xl hover:scale-105 cursor-pointer">
                 {/* Glow Effect */}
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-secondary to-primary rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
                 
                 <div className="relative">
-                  <div className="bg-gradient-to-br from-secondary to-primary p-6 rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-all">
-                    <UserCheck className="h-10 w-10 text-white" />
+                  <div className="bg-gradient-to-br from-secondary to-primary p-4 sm:p-6 rounded-2xl w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-white/20 transition-all">
+                    <UserCheck className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
                   </div>
                   
-                  <h2 className="text-3xl font-bold text-foreground group-hover:text-white transition-colors mb-4">Para Corretores</h2>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-foreground group-hover:text-white transition-colors mb-3 sm:mb-4">Para Corretores</h2>
                   
-                  <p className="text-muted-foreground group-hover:text-white/90 transition-colors mb-6 leading-relaxed">
+                  <p className="text-sm sm:text-base text-muted-foreground group-hover:text-white/90 transition-colors mb-4 sm:mb-6 leading-relaxed">
                     Assessoria especializada para você vender saúde com segurança, suporte integral e custo zero
                   </p>
                   
@@ -131,8 +141,8 @@ const Index = () => {
           </div>
 
           {/* Additional Info */}
-          <div className="mt-16 animate-fade-in [animation-delay:600ms] opacity-0" style={{ animationFillMode: 'forwards' }}>
-            <p className="text-sm text-muted-foreground">
+          <div className="mt-12 sm:mt-16 animate-fade-in [animation-delay:600ms] opacity-0 px-4" style={{ animationFillMode: 'forwards' }}>
+            <p className="text-xs sm:text-sm text-muted-foreground">
               Desde 2017 revolucionando o mercado segurador brasileiro
             </p>
           </div>
