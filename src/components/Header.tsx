@@ -101,9 +101,9 @@ const Header = () => {
           </nav>
 
           <div className="flex items-center gap-4">
-            <Link to="/contato" className="hidden lg:block">
+            <Link to="/cotacao" className="hidden lg:block">
               <Button className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white shadow-lg hover:shadow-xl transition-all">
-                Fale com um especialista
+                Solicitar Cotação
               </Button>
             </Link>
 
@@ -166,9 +166,9 @@ const Header = () => {
             >
               Contato
             </Link>
-            <Link to="/contato" className="mt-2">
+            <Link to="/cotacao" className="mt-2" onClick={() => setIsMobileMenuOpen(false)}>
               <Button className="w-full bg-gradient-to-r from-primary to-secondary text-white">
-                Fale com um especialista
+                Solicitar Cotação
               </Button>
             </Link>
           </nav>
