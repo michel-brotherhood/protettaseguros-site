@@ -3,12 +3,10 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Building2, UserCheck, ArrowRight, Shield, Award } from "lucide-react";
-import WelcomeModal from "@/components/WelcomeModal";
 
 const Index = () => {
   return (
     <div className="min-h-screen relative overflow-hidden">
-      <WelcomeModal />
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
@@ -79,10 +77,10 @@ const Index = () => {
                   </div>
                   
                   <Button 
-                    className="w-full bg-gradient-to-r from-primary to-secondary text-white hover:opacity-90 transition-all group-hover:bg-white group-hover:text-primary group-hover:scale-105"
+                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90 group-hover:bg-white group-hover:text-primary transition-all"
                     size="lg"
                   >
-                    Sou Cliente
+                    Explorar Soluções
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </div>
@@ -121,10 +119,10 @@ const Index = () => {
                   
                   <Button 
                     variant="secondary"
-                    className="w-full bg-gradient-to-r from-secondary to-primary text-white hover:opacity-90 transition-all group-hover:bg-white group-hover:text-secondary group-hover:scale-105"
+                    className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 group-hover:bg-white group-hover:text-secondary transition-all"
                     size="lg"
                   >
-                    Sou Corretor
+                    Seja Parceiro
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </div>
