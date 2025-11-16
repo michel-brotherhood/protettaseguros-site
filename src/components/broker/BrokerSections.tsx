@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
-import { CheckCircle, DollarSign, Award, Headphones, Clock, Users, BookOpen, MapPin, Trophy, MessageCircle, UserPlus, Calendar, Gauge, Building2, Megaphone, Zap, MousePointerClick } from "lucide-react";
+import { CheckCircle, DollarSign, Award, Headphones, Clock, Users, BookOpen, MapPin, Trophy, MessageCircle, UserPlus, Calendar, Gauge, Building2, Megaphone, Zap, MousePointerClick, Monitor, GraduationCap } from "lucide-react";
 
 const BrokerSections = () => {
   const advantages = [
@@ -35,6 +35,57 @@ const BrokerSections = () => {
             <p className="text-xl font-semibold text-foreground">
               Nossa missão é simples e direta: fazer com que nossos corretores prosperem e batam suas metas pessoais sem precisar se estressar para isso.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Assessoria Para Todos */}
+      <section className="py-20 bg-gradient-to-br from-[hsl(175,84%,55%)] to-[hsl(175,84%,45%)]">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <p className="text-sm md:text-base font-semibold text-white/90 tracking-wider mb-4">
+                ASSESSORIA PARA TODOS
+              </p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+                Tudo o que sua Corretora precisa para prosperar
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+              <Card className="p-8 bg-white/95 backdrop-blur-sm hover:bg-white transition-all duration-300 hover:shadow-xl">
+                <Users className="h-12 w-12 md:h-14 md:w-14 text-[hsl(175,84%,45%)] mb-6" strokeWidth={1.5} />
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
+                  Suporte
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Damos todo suporte técnico, comercial e operacional para sua Corretora. 
+                  Canalizamos o suporte de mais de 30 Cias em um único lugar.
+                </p>
+              </Card>
+
+              <Card className="p-8 bg-white/95 backdrop-blur-sm hover:bg-white transition-all duration-300 hover:shadow-xl">
+                <Monitor className="h-12 w-12 md:h-14 md:w-14 text-[hsl(175,84%,45%)] mb-6" strokeWidth={1.5} />
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
+                  Tecnologia
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  São diversas soluções em tecnologia para sua Corretora. Através da BaetaPRO, 
+                  tenha acesso a multicálculo, simulador de saúde, leads, marketing digital e mais.
+                </p>
+              </Card>
+
+              <Card className="p-8 bg-white/95 backdrop-blur-sm hover:bg-white transition-all duration-300 hover:shadow-xl">
+                <GraduationCap className="h-12 w-12 md:h-14 md:w-14 text-[hsl(175,84%,45%)] mb-6" strokeWidth={1.5} />
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
+                  Capacitação
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Treinamentos ao vivo semanais, eventos especiais, parceria com a ENS e uma 
+                  plataforma completa com mais de 800 conteúdos sobre seguros.
+                </p>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
