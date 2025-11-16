@@ -30,15 +30,6 @@ const BrokerHero: React.FC<BrokerHeroProps> = ({ onSwitchMode }) => {
 
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-5xl mx-auto">
-          {/* Mode Switch */}
-          <div className="flex justify-center mb-6">
-            <button
-              onClick={onSwitchMode}
-              className="text-sm text-muted-foreground hover:text-secondary transition-colors underline"
-            >
-              É cliente? Clique aqui
-            </button>
-          </div>
 
           {/* Badges */}
           <div className="flex flex-wrap justify-center gap-3 mb-8 animate-fade-in">

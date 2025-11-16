@@ -41,11 +41,11 @@ const Header = () => {
             />
           </Link>
           
-          {/* Toggle Button - Cliente/Corretor */}
+          {/* Toggle Button - Cliente/Corretor - Positioned to the right of logo */}
           {showToggle && (
-            <div className="hidden lg:flex items-center gap-2 absolute left-1/2 -translate-x-1/2">
+            <div className="hidden lg:flex items-center gap-2 ml-6">
               <Button
-                variant={isClientPage ? "default" : "ghost"}
+                variant={isClientPage ? "default" : "outline"}
                 size="sm"
                 onClick={() => navigate("/cliente")}
                 className="gap-2"
@@ -53,11 +53,12 @@ const Header = () => {
                 <Building2 className="h-4 w-4" />
                 Cliente
               </Button>
+              <div className="h-4 w-px bg-border"></div>
               <Button
-                variant={isBrokerPage ? "secondary" : "ghost"}
+                variant={isBrokerPage ? "default" : "outline"}
                 size="sm"
                 onClick={() => navigate("/corretor")}
-                className="gap-2"
+                className="gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground data-[state=active]:bg-secondary"
               >
                 <UserCheck className="h-4 w-4" />
                 Corretor
