@@ -2,18 +2,23 @@ import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, ChevronDown, Building2, UserCheck } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import protettaLogo from "@/assets/protetta-logo.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
   const isClientPage = location.pathname === "/cliente";
   const isBrokerPage = location.pathname === "/corretor";
-  const showToggle = isClientPage || isBrokerPage;
+  const isOtherPage = !isClientPage && !isBrokerPage;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +27,20 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <header 
@@ -40,103 +59,236 @@ const Header = () => {
               className="h-10 transition-transform duration-300 hover:scale-105" 
             />
           </Link>
-          
-          {/* Toggle Button - Cliente/Corretor - Positioned to the right of logo */}
-          {showToggle && (
-            <div className="hidden lg:flex items-center gap-2 ml-6">
-              <Button
-                variant={isClientPage ? "default" : "outline"}
-                size="sm"
-                onClick={() => navigate("/cliente")}
-                className="gap-2"
+
+          {/* Desktop Navigation - Cliente */}
+          {isClientPage && (
+            <nav className="hidden lg:flex items-center gap-2 ml-auto mr-4">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium flex items-center gap-1">
+                    A Protetta
+                    <ChevronDown className="h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="w-64 bg-background/95 backdrop-blur-md border border-border">
+                  <DropdownMenuItem onClick={() => scrollToSection("quem-somos")} className="cursor-pointer">
+                    <div className="py-2">
+                      <div className="font-semibold text-foreground">Quem somos</div>
+                    </div>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link to="/cliente" onClick={() => scrollToSection("o-que-fazemos")} className="cursor-pointer">
+                      <div className="py-2">
+                        <div className="font-semibold text-foreground">O que fazemos</div>
+                      </div>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link to="/cliente" onClick={() => scrollToSection("como-fazemos")} className="cursor-pointer">
+                      <div className="py-2">
+                        <div className="font-semibold text-foreground">Como fazemos</div>
+                      </div>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => scrollToSection("diferenciais")} className="cursor-pointer">
+                    <div className="py-2">
+                      <div className="font-semibold text-foreground">Por que escolher a Protetta?</div>
+                    </div>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+              <button 
+                onClick={() => scrollToSection("diferenciais")}
+                className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium"
               >
-                <Building2 className="h-4 w-4" />
-                Cliente
-              </Button>
-              <div className="h-4 w-px bg-border"></div>
-              <Button
-                variant={isBrokerPage ? "default" : "outline"}
-                size="sm"
-                onClick={() => navigate("/corretor")}
-                className="gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground data-[state=active]:bg-secondary"
+                Especialidades
+              </button>
+
+              <button 
+                onClick={() => scrollToSection("responsabilidade-social")}
+                className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium"
               >
-                <UserCheck className="h-4 w-4" />
-                Corretor
-              </Button>
-            </div>
+                Responsabilidade Social
+              </button>
+
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium flex items-center gap-1">
+                    Carreiras
+                    <ChevronDown className="h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="w-64 bg-background/95 backdrop-blur-md border border-border">
+                  <DropdownMenuItem asChild>
+                    <Link to="/prochange" className="cursor-pointer">
+                      <div className="py-2">
+                        <div className="font-semibold text-foreground">Pro Orange</div>
+                      </div>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => scrollToSection("responsabilidade-social")} className="cursor-pointer">
+                    <div className="py-2">
+                      <div className="font-semibold text-foreground">ESG</div>
+                    </div>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link to="/contato" className="cursor-pointer">
+                      <div className="py-2">
+                        <div className="font-semibold text-foreground">Enviar CV</div>
+                      </div>
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+              <Link 
+                to="/contato" 
+                className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium"
+              >
+                Fale com a Protetta
+              </Link>
+            </nav>
           )}
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-2">
-            <Link 
-              to="/sobre" 
-              className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium"
-            >
-              Sobre Nós
-            </Link>
-            <a 
-              href="/#diferenciais" 
-              className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium"
-            >
-              Diferenciais
-            </a>
-            
-            {/* Dropdown Soluções */}
-            <div 
-              className="relative"
-              onMouseEnter={() => setIsSolutionsOpen(true)}
-              onMouseLeave={() => setIsSolutionsOpen(false)}
-            >
-              <button className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium flex items-center gap-1">
-                Soluções
-                <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isSolutionsOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
-              <div 
-                className={`absolute top-full left-0 mt-2 w-64 bg-background/95 backdrop-blur-md border border-border rounded-xl shadow-2xl overflow-hidden transition-all duration-300 ${
-                  isSolutionsOpen 
-                    ? 'opacity-100 visible translate-y-0' 
-                    : 'opacity-0 invisible -translate-y-2'
-                }`}
-              >
-                <Link 
-                  to="/sistema-bi" 
-                  className="block px-6 py-4 hover:bg-gradient-to-r hover:from-primary/10 hover:to-transparent transition-all border-b border-border"
-                >
-                  <div className="font-semibold text-foreground mb-1">Sistema B.I.</div>
-                  <div className="text-sm text-muted-foreground">Business Intelligence para gestão</div>
-                </Link>
-                <Link 
-                  to="/wellness" 
-                  className="block px-6 py-4 hover:bg-gradient-to-r hover:from-secondary/10 hover:to-transparent transition-all"
-                >
-                  <div className="font-semibold text-foreground mb-1">Wellness Corporativo</div>
-                  <div className="text-sm text-muted-foreground">Cultura de bem-estar</div>
-                </Link>
-              </div>
-            </div>
+          {/* Desktop Navigation - Corretor */}
+          {isBrokerPage && (
+            <nav className="hidden lg:flex items-center gap-2 ml-auto mr-4">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium flex items-center gap-1">
+                    A Protetta
+                    <ChevronDown className="h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="w-80 bg-background/95 backdrop-blur-md border border-border">
+                  <DropdownMenuItem onClick={() => scrollToSection("sobre-protetta")} className="cursor-pointer">
+                    <div className="py-2">
+                      <div className="font-semibold text-foreground">Sobre a Protetta</div>
+                    </div>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => scrollToSection("como-funciona")} className="cursor-pointer">
+                    <div className="py-2">
+                      <div className="font-semibold text-foreground">Como funciona uma assessoria de seguros?</div>
+                    </div>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => scrollToSection("como-funciona")} className="cursor-pointer">
+                    <div className="py-2">
+                      <div className="font-semibold text-foreground">Mas por que escolher a Protetta como assessoria?</div>
+                    </div>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
 
-            <Link 
-              to="/prochange" 
-              className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium"
-            >
-              #ProChange
-            </Link>
-            
-            <Link 
-              to="/contato" 
-              className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium"
-            >
-              Contato
-            </Link>
-          </nav>
+              <button 
+                onClick={() => scrollToSection("vantagens")}
+                className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium whitespace-nowrap"
+              >
+                Quais as vantagens de me associar a uma assessoria?
+              </button>
+
+              <Link 
+                to="/contato" 
+                className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium"
+              >
+                Contato
+              </Link>
+            </nav>
+          )}
+
+          {/* Desktop Navigation - Outras páginas */}
+          {isOtherPage && (
+            <nav className="hidden lg:flex items-center gap-2 ml-auto mr-4">
+              <Link 
+                to="/sobre" 
+                className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium"
+              >
+                Sobre Nós
+              </Link>
+              <a 
+                href="/#diferenciais" 
+                className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium"
+              >
+                Diferenciais
+              </a>
+              
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium flex items-center gap-1">
+                    Soluções
+                    <ChevronDown className="h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="w-64 bg-background/95 backdrop-blur-md border border-border">
+                  <DropdownMenuItem asChild>
+                    <Link to="/sistema-bi" className="cursor-pointer">
+                      <div className="py-2">
+                        <div className="font-semibold text-foreground mb-1">Sistema B.I.</div>
+                        <div className="text-sm text-muted-foreground">Business Intelligence para gestão</div>
+                      </div>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link to="/wellness" className="cursor-pointer">
+                      <div className="py-2">
+                        <div className="font-semibold text-foreground mb-1">Wellness Corporativo</div>
+                        <div className="text-sm text-muted-foreground">Cultura de bem-estar</div>
+                      </div>
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+              <Link 
+                to="/prochange" 
+                className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium"
+              >
+                #ProChange
+              </Link>
+              
+              <Link 
+                to="/contato" 
+                className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium"
+              >
+                Contato
+              </Link>
+            </nav>
+          )}
 
           <div className="flex items-center gap-4">
-            <Link to="/cotacao" className="hidden lg:block">
-              <Button className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white shadow-lg hover:shadow-xl transition-all">
-                Solicitar Cotação
-              </Button>
-            </Link>
+            {/* Toggle Buttons Cliente/Corretor - Only on Client/Broker pages */}
+            {(isClientPage || isBrokerPage) && (
+              <div className="hidden lg:flex items-center gap-2">
+                <Button
+                  variant={isClientPage ? "default" : "outline"}
+                  size="sm"
+                  onClick={() => navigate("/cliente")}
+                  className="gap-2"
+                >
+                  <Building2 className="h-4 w-4" />
+                  Cliente
+                </Button>
+                <div className="h-4 w-px bg-border"></div>
+                <Button
+                  variant={isBrokerPage ? "default" : "outline"}
+                  size="sm"
+                  onClick={() => navigate("/corretor")}
+                  className="gap-2"
+                >
+                  <UserCheck className="h-4 w-4" />
+                  Corretor
+                </Button>
+              </div>
+            )}
+
+            {/* CTA Button */}
+            {isOtherPage && (
+              <Link to="/cotacao" className="hidden lg:block">
+                <Button className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white shadow-lg hover:shadow-xl transition-all">
+                  Solicitar Cotação
+                </Button>
+              </Link>
+            )}
 
             {/* Mobile Menu Button */}
             <button 
@@ -148,62 +300,166 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
-        <div 
-          className={`lg:hidden overflow-hidden transition-all duration-300 ${
-            isMobileMenuOpen ? 'max-h-screen opacity-100 mt-4' : 'max-h-0 opacity-0'
-          }`}
-        >
-          <nav className="flex flex-col gap-2 py-4 border-t border-border">
-            <Link 
-              to="/sobre" 
-              className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Sobre Nós
-            </Link>
-            <a 
-              href="/#diferenciais" 
-              className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Diferenciais
-            </a>
-            <Link 
-              to="/sistema-bi" 
-              className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Sistema B.I.
-            </Link>
-            <Link 
-              to="/wellness" 
-              className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Wellness Corporativo
-            </Link>
-            <Link 
-              to="/prochange" 
-              className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              #ProChange
-            </Link>
-            <Link 
-              to="/contato" 
-              className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Contato
-            </Link>
-            <Link to="/cotacao" className="mt-2" onClick={() => setIsMobileMenuOpen(false)}>
-              <Button className="w-full bg-gradient-to-r from-primary to-secondary text-white">
-                Solicitar Cotação
-              </Button>
-            </Link>
-          </nav>
-        </div>
+        {/* Mobile Menu - Cliente */}
+        {isClientPage && (
+          <div 
+            className={`lg:hidden overflow-hidden transition-all duration-300 ${
+              isMobileMenuOpen ? 'max-h-screen opacity-100 mt-4' : 'max-h-0 opacity-0'
+            }`}
+          >
+            <nav className="flex flex-col gap-2 py-4 border-t border-border">
+              <button 
+                onClick={() => scrollToSection("quem-somos")}
+                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all text-left"
+              >
+                Quem somos
+              </button>
+              <button 
+                onClick={() => scrollToSection("diferenciais")}
+                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all text-left"
+              >
+                Especialidades
+              </button>
+              <button 
+                onClick={() => scrollToSection("responsabilidade-social")}
+                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all text-left"
+              >
+                Responsabilidade Social
+              </button>
+              <Link 
+                to="/contato" 
+                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Fale com a Protetta
+              </Link>
+              <div className="flex gap-2 mt-4 px-4">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => {
+                    navigate("/corretor");
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="gap-2 flex-1"
+                >
+                  <UserCheck className="h-4 w-4" />
+                  Corretor
+                </Button>
+              </div>
+            </nav>
+          </div>
+        )}
+
+        {/* Mobile Menu - Corretor */}
+        {isBrokerPage && (
+          <div 
+            className={`lg:hidden overflow-hidden transition-all duration-300 ${
+              isMobileMenuOpen ? 'max-h-screen opacity-100 mt-4' : 'max-h-0 opacity-0'
+            }`}
+          >
+            <nav className="flex flex-col gap-2 py-4 border-t border-border">
+              <button 
+                onClick={() => scrollToSection("sobre-protetta")}
+                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all text-left"
+              >
+                Sobre a Protetta
+              </button>
+              <button 
+                onClick={() => scrollToSection("como-funciona")}
+                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all text-left"
+              >
+                Como funciona?
+              </button>
+              <button 
+                onClick={() => scrollToSection("vantagens")}
+                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all text-left"
+              >
+                Vantagens
+              </button>
+              <Link 
+                to="/contato" 
+                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contato
+              </Link>
+              <div className="flex gap-2 mt-4 px-4">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => {
+                    navigate("/cliente");
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="gap-2 flex-1"
+                >
+                  <Building2 className="h-4 w-4" />
+                  Cliente
+                </Button>
+              </div>
+            </nav>
+          </div>
+        )}
+
+        {/* Mobile Menu - Outras páginas */}
+        {isOtherPage && (
+          <div 
+            className={`lg:hidden overflow-hidden transition-all duration-300 ${
+              isMobileMenuOpen ? 'max-h-screen opacity-100 mt-4' : 'max-h-0 opacity-0'
+            }`}
+          >
+            <nav className="flex flex-col gap-2 py-4 border-t border-border">
+              <Link 
+                to="/sobre" 
+                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Sobre Nós
+              </Link>
+              <a 
+                href="/#diferenciais" 
+                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Diferenciais
+              </a>
+              <Link 
+                to="/sistema-bi" 
+                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Sistema B.I.
+              </Link>
+              <Link 
+                to="/wellness" 
+                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Wellness Corporativo
+              </Link>
+              <Link 
+                to="/prochange" 
+                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                #ProChange
+              </Link>
+              <Link 
+                to="/contato" 
+                className="px-4 py-3 rounded-lg text-foreground hover:bg-primary/5 transition-all"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contato
+              </Link>
+              <Link to="/cotacao" className="mt-2 px-4" onClick={() => setIsMobileMenuOpen(false)}>
+                <Button className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white shadow-lg">
+                  Solicitar Cotação
+                </Button>
+              </Link>
+            </nav>
+          </div>
+        )}
       </div>
     </header>
   );
