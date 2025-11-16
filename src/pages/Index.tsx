@@ -29,7 +29,7 @@ const Index = () => {
             <img 
               src={protettaLogo3D} 
               alt="Protetta Seguros Logo" 
-              className="h-32 sm:h-40 md:h-48 lg:h-56 w-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+              className="h-24 sm:h-28 md:h-32 lg:h-36 w-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
             />
           </div>
 
