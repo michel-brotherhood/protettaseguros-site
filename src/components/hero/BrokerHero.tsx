@@ -61,8 +61,8 @@ const BrokerHero: React.FC<BrokerHeroProps> = ({ onSwitchMode }) => {
             
             <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in [animation-delay:200ms] opacity-0 font-light" style={{ animationFillMode: 'forwards' }}>
               Mais do que uma assessoria de seguros, estamos aqui para que você 
-              <span className="text-secondary font-semibold"> se sinta cada vez mais seguro </span> 
-              em vender
+              <span className="text-secondary font-semibold"> se sinta realmente seguro </span> 
+              em vender saúde
             </p>
 
             {/* Stats */}
