@@ -22,10 +22,10 @@ const Broker = () => {
   return (
     <motion.div 
       className="min-h-screen"
-      initial={{ opacity: 0, x: 20 }}
+      initial={{ opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -20 }}
-      transition={{ duration: 0.4, ease: "easeInOut" }}
+      exit={{ opacity: 0, x: -100 }}
+      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
     >
       <Header />
       <BrokerHero onSwitchMode={handleSwitchMode} />
