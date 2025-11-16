@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Building2, UserCheck, ArrowRight, Shield, Award } from "lucide-react";
+import WelcomeModal from "@/components/WelcomeModal";
 
 const Index = () => {
   return (
     <div className="min-h-screen relative overflow-hidden">
+      <WelcomeModal />
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
@@ -48,36 +50,36 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto animate-fade-in [animation-delay:400ms] opacity-0" style={{ animationFillMode: 'forwards' }}>
             {/* Cliente Card */}
             <Link to="/cliente">
-              <div className="group relative p-8 bg-card rounded-2xl border-2 border-border hover:border-primary transition-all duration-300 hover:shadow-2xl hover:scale-105 cursor-pointer">
+              <div className="group relative p-8 bg-card rounded-2xl border-2 border-border hover:border-primary hover:bg-primary transition-all duration-300 hover:shadow-2xl hover:scale-105 cursor-pointer">
                 {/* Glow Effect */}
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-secondary rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
                 
                 <div className="relative">
-                  <div className="bg-gradient-to-br from-primary to-secondary p-6 rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                  <div className="bg-gradient-to-br from-primary to-secondary p-6 rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-all">
                     <Building2 className="h-10 w-10 text-white" />
                   </div>
                   
-                  <h2 className="text-3xl font-bold text-foreground mb-4">Para Clientes</h2>
+                  <h2 className="text-3xl font-bold text-foreground group-hover:text-white transition-colors mb-4">Para Clientes</h2>
                   
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                  <p className="text-muted-foreground group-hover:text-white/90 transition-colors mb-6 leading-relaxed">
                     Soluções completas em seguros saúde empresarial com tecnologia e consultoria especializada
                   </p>
                   
                   <div className="flex flex-wrap gap-2 justify-center mb-6">
-                    <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                    <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20 group-hover:bg-white/20 group-hover:text-white group-hover:border-white/30 transition-colors">
                       <Shield className="w-3 h-3 mr-1" />
                       Business Intelligence
                     </Badge>
-                    <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                    <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20 group-hover:bg-white/20 group-hover:text-white group-hover:border-white/30 transition-colors">
                       Wellness
                     </Badge>
-                    <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                    <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20 group-hover:bg-white/20 group-hover:text-white group-hover:border-white/30 transition-colors">
                       Consultoria
                     </Badge>
                   </div>
                   
                   <Button 
-                    className="w-full bg-gradient-to-r from-primary to-secondary text-white hover:opacity-90 transition-all group-hover:scale-105"
+                    className="w-full bg-gradient-to-r from-primary to-secondary text-white hover:opacity-90 transition-all group-hover:bg-white group-hover:text-primary group-hover:scale-105"
                     size="lg"
                   >
                     Sou Cliente
@@ -89,36 +91,37 @@ const Index = () => {
 
             {/* Corretor Card */}
             <Link to="/corretor">
-              <div className="group relative p-8 bg-card rounded-2xl border-2 border-border hover:border-secondary transition-all duration-300 hover:shadow-2xl hover:scale-105 cursor-pointer">
+              <div className="group relative p-8 bg-card rounded-2xl border-2 border-border hover:border-secondary hover:bg-secondary transition-all duration-300 hover:shadow-2xl hover:scale-105 cursor-pointer">
                 {/* Glow Effect */}
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-secondary to-primary rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
                 
                 <div className="relative">
-                  <div className="bg-gradient-to-br from-secondary to-primary p-6 rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                  <div className="bg-gradient-to-br from-secondary to-primary p-6 rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-all">
                     <UserCheck className="h-10 w-10 text-white" />
                   </div>
                   
-                  <h2 className="text-3xl font-bold text-foreground mb-4">Para Corretores</h2>
+                  <h2 className="text-3xl font-bold text-foreground group-hover:text-white transition-colors mb-4">Para Corretores</h2>
                   
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                  <p className="text-muted-foreground group-hover:text-white/90 transition-colors mb-6 leading-relaxed">
                     Assessoria especializada com suporte integral e custo zero para você vender com segurança
                   </p>
                   
                   <div className="flex flex-wrap gap-2 justify-center mb-6">
-                    <Badge variant="secondary" className="bg-secondary/10 text-secondary-foreground border-secondary/20">
+                    <Badge variant="secondary" className="bg-secondary/10 text-secondary border-secondary/20 group-hover:bg-white/20 group-hover:text-white group-hover:border-white/30 transition-colors">
                       <Shield className="w-3 h-3 mr-1" />
                       Suporte 24/7
                     </Badge>
-                    <Badge variant="secondary" className="bg-secondary/10 text-secondary-foreground border-secondary/20">
+                    <Badge variant="secondary" className="bg-secondary/10 text-secondary border-secondary/20 group-hover:bg-white/20 group-hover:text-white group-hover:border-white/30 transition-colors">
                       Custo Zero
                     </Badge>
-                    <Badge variant="secondary" className="bg-secondary/10 text-secondary-foreground border-secondary/20">
+                    <Badge variant="secondary" className="bg-secondary/10 text-secondary border-secondary/20 group-hover:bg-white/20 group-hover:text-white group-hover:border-white/30 transition-colors">
                       Treinamentos
                     </Badge>
                   </div>
                   
                   <Button 
-                    className="w-full bg-gradient-to-r from-secondary to-primary text-white hover:opacity-90 transition-all group-hover:scale-105"
+                    variant="secondary"
+                    className="w-full bg-gradient-to-r from-secondary to-primary text-white hover:opacity-90 transition-all group-hover:bg-white group-hover:text-secondary group-hover:scale-105"
                     size="lg"
                   >
                     Sou Corretor
