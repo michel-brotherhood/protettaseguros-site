@@ -15,6 +15,16 @@ import logoAXA from "@/assets/insurance-logos/axa.png";
 import logoAzos from "@/assets/insurance-logos/azos.png";
 import logoAzul from "@/assets/insurance-logos/azul.png";
 import logoBradesco from "@/assets/insurance-logos/bradesco.png";
+import logoCapemisa from "@/assets/insurance-logos/capemisa.png";
+import logoCNP from "@/assets/insurance-logos/cnp.svg";
+import logoCoris from "@/assets/insurance-logos/coris.png";
+import logoDarwin from "@/assets/insurance-logos/darwin.png";
+import logoEssor from "@/assets/insurance-logos/essor.png";
+import logoExcelsior from "@/assets/insurance-logos/excelsior.png";
+import logoEzze from "@/assets/insurance-logos/ezze.png";
+import logoFator from "@/assets/insurance-logos/fator.png";
+import logoHapvida from "@/assets/insurance-logos/hapvida.png";
+import logoHDI from "@/assets/insurance-logos/hdi.png";
 
 const BrokerSections = () => {
   const { ref: assessoriaRef, isVisible: assessoriaVisible } = useScrollAnimation(0.1);
@@ -52,17 +62,17 @@ const BrokerSections = () => {
     { name: "Azos", logo: logoAzos },
     { name: "Azul", logo: logoAzul },
     { name: "Bradesco", logo: logoBradesco },
+    { name: "Capemisa", logo: logoCapemisa },
+    { name: "CNP", logo: logoCNP },
+    { name: "Coris", logo: logoCoris },
+    { name: "Darwin", logo: logoDarwin },
+    { name: "Essor", logo: logoEssor },
+    { name: "Excelsior", logo: logoExcelsior },
+    { name: "EZZE", logo: logoEzze },
+    { name: "Fator", logo: logoFator },
+    { name: "Hapvida", logo: logoHapvida },
+    { name: "HDI", logo: logoHDI },
     // Placeholders para as logos restantes
-    { name: "CNP", logo: null },
-    { name: "Capemisa", logo: null },
-    { name: "Coris", logo: null },
-    { name: "Darwin", logo: null },
-    { name: "Essor", logo: null },
-    { name: "Excelsior", logo: null },
-    { name: "EZZE", logo: null },
-    { name: "Fator", logo: null },
-    { name: "HDI", logo: null },
-    { name: "Hapvida", logo: null },
     { name: "Icatu", logo: null },
     { name: "Junto", logo: null },
     { name: "Justos", logo: null },
