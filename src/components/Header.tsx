@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Menu, X, ChevronDown, Building2, UserCheck } from "lucide-react";
 import protettaLogo from "@/assets/protetta-logo.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const isClientPage = location.pathname === "/cliente";
+  const isBrokerPage = location.pathname === "/corretor";
+  const showToggle = isClientPage || isBrokerPage;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +41,30 @@ const Header = () => {
             />
           </Link>
           
+          {/* Toggle Button - Cliente/Corretor */}
+          {showToggle && (
+            <div className="hidden lg:flex items-center gap-2 absolute left-1/2 -translate-x-1/2">
+              <Button
+                variant={isClientPage ? "default" : "ghost"}
+                size="sm"
+                onClick={() => navigate("/cliente")}
+                className="gap-2"
+              >
+                <Building2 className="h-4 w-4" />
+                Cliente
+              </Button>
+              <Button
+                variant={isBrokerPage ? "secondary" : "ghost"}
+                size="sm"
+                onClick={() => navigate("/corretor")}
+                className="gap-2"
+              >
+                <UserCheck className="h-4 w-4" />
+                Corretor
+              </Button>
+            </div>
+          )}
+
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-2">
             <Link 
