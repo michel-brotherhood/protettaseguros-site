@@ -70,27 +70,44 @@ const Header = () => {
                     <ChevronDown className="h-4 w-4" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="start" className="w-64 bg-background/95 backdrop-blur-md border border-border">
-                  <DropdownMenuItem onClick={() => scrollToSection("quem-somos")} className="cursor-pointer">
+                <DropdownMenuContent 
+                  align="start" 
+                  className="w-64 bg-background/95 backdrop-blur-md border border-border shadow-xl animate-in fade-in-0 zoom-in-95 slide-in-from-top-2 duration-200"
+                >
+                  <DropdownMenuItem 
+                    onClick={() => scrollToSection("quem-somos")} 
+                    className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
+                  >
                     <div className="py-2">
                       <div className="font-semibold text-foreground">Quem somos</div>
                     </div>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link to="/cliente" onClick={() => scrollToSection("o-que-fazemos")} className="cursor-pointer">
+                    <Link 
+                      to="/cliente" 
+                      onClick={() => scrollToSection("o-que-fazemos")} 
+                      className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
+                    >
                       <div className="py-2">
                         <div className="font-semibold text-foreground">O que fazemos</div>
                       </div>
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link to="/cliente" onClick={() => scrollToSection("como-fazemos")} className="cursor-pointer">
+                    <Link 
+                      to="/cliente" 
+                      onClick={() => scrollToSection("como-fazemos")} 
+                      className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
+                    >
                       <div className="py-2">
                         <div className="font-semibold text-foreground">Como fazemos</div>
                       </div>
                     </Link>
                   </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => scrollToSection("diferenciais")} className="cursor-pointer">
+                  <DropdownMenuItem 
+                    onClick={() => scrollToSection("diferenciais")} 
+                    className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
+                  >
                     <div className="py-2">
                       <div className="font-semibold text-foreground">Por que escolher a Protetta?</div>
                     </div>
@@ -119,21 +136,33 @@ const Header = () => {
                     <ChevronDown className="h-4 w-4" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="start" className="w-64 bg-background/95 backdrop-blur-md border border-border">
+                <DropdownMenuContent 
+                  align="start" 
+                  className="w-64 bg-background/95 backdrop-blur-md border border-border shadow-xl animate-in fade-in-0 zoom-in-95 slide-in-from-top-2 duration-200"
+                >
                   <DropdownMenuItem asChild>
-                    <Link to="/prochange" className="cursor-pointer">
+                    <Link 
+                      to="/prochange" 
+                      className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
+                    >
                       <div className="py-2">
                         <div className="font-semibold text-foreground">Pro Orange</div>
                       </div>
                     </Link>
                   </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => scrollToSection("responsabilidade-social")} className="cursor-pointer">
+                  <DropdownMenuItem 
+                    onClick={() => scrollToSection("responsabilidade-social")} 
+                    className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
+                  >
                     <div className="py-2">
                       <div className="font-semibold text-foreground">ESG</div>
                     </div>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link to="/contato" className="cursor-pointer">
+                    <Link 
+                      to="/contato" 
+                      className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
+                    >
                       <div className="py-2">
                         <div className="font-semibold text-foreground">Enviar CV</div>
                       </div>
@@ -161,18 +190,30 @@ const Header = () => {
                     <ChevronDown className="h-4 w-4" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="start" className="w-80 bg-background/95 backdrop-blur-md border border-border">
-                  <DropdownMenuItem onClick={() => scrollToSection("sobre-protetta")} className="cursor-pointer">
+                <DropdownMenuContent 
+                  align="start" 
+                  className="w-80 bg-background/95 backdrop-blur-md border border-border shadow-xl animate-in fade-in-0 zoom-in-95 slide-in-from-top-2 duration-200"
+                >
+                  <DropdownMenuItem 
+                    onClick={() => scrollToSection("sobre-protetta")} 
+                    className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
+                  >
                     <div className="py-2">
                       <div className="font-semibold text-foreground">Sobre a Protetta</div>
                     </div>
                   </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => scrollToSection("como-funciona")} className="cursor-pointer">
+                  <DropdownMenuItem 
+                    onClick={() => scrollToSection("como-funciona")} 
+                    className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
+                  >
                     <div className="py-2">
                       <div className="font-semibold text-foreground">Como funciona uma assessoria de seguros?</div>
                     </div>
                   </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => scrollToSection("como-funciona")} className="cursor-pointer">
+                  <DropdownMenuItem 
+                    onClick={() => scrollToSection("como-funciona")} 
+                    className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
+                  >
                     <div className="py-2">
                       <div className="font-semibold text-foreground">Mas por que escolher a Protetta como assessoria?</div>
                     </div>
@@ -219,9 +260,15 @@ const Header = () => {
                     <ChevronDown className="h-4 w-4" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="start" className="w-64 bg-background/95 backdrop-blur-md border border-border">
+                <DropdownMenuContent 
+                  align="start" 
+                  className="w-64 bg-background/95 backdrop-blur-md border border-border shadow-xl animate-in fade-in-0 zoom-in-95 slide-in-from-top-2 duration-200"
+                >
                   <DropdownMenuItem asChild>
-                    <Link to="/sistema-bi" className="cursor-pointer">
+                    <Link 
+                      to="/sistema-bi" 
+                      className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
+                    >
                       <div className="py-2">
                         <div className="font-semibold text-foreground mb-1">Sistema B.I.</div>
                         <div className="text-sm text-muted-foreground">Business Intelligence para gestão</div>
@@ -229,7 +276,10 @@ const Header = () => {
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link to="/wellness" className="cursor-pointer">
+                    <Link 
+                      to="/wellness" 
+                      className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
+                    >
                       <div className="py-2">
                         <div className="font-semibold text-foreground mb-1">Wellness Corporativo</div>
                         <div className="text-sm text-muted-foreground">Cultura de bem-estar</div>

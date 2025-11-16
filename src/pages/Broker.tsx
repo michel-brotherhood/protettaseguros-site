@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
+import Breadcrumb from "@/components/Breadcrumb";
 import BrokerHero from "@/components/hero/BrokerHero";
 import BrokerSections from "@/components/broker/BrokerSections";
 import ContactForm from "@/components/ContactForm";
@@ -27,6 +28,7 @@ const Broker = () => {
       transition={{ duration: 0.4, ease: "easeInOut" }}
     >
       <Header />
+      <Breadcrumb />
       <BrokerHero onSwitchMode={handleSwitchMode} />
       <BrokerSections />
       <ContactForm />

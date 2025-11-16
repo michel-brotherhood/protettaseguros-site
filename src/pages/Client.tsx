@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
+import Breadcrumb from "@/components/Breadcrumb";
 import ClientHero from "@/components/hero/ClientHero";
 import ClientSections from "@/components/client/ClientSections";
 import ClientLogos from "@/components/ClientLogos";
@@ -28,6 +29,7 @@ const Client = () => {
       transition={{ duration: 0.4, ease: "easeInOut" }}
     >
       <Header />
+      <Breadcrumb />
       <ClientHero onSwitchMode={handleSwitchMode} />
       <ClientLogos />
       <ClientSections />
