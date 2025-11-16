@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
-import { CheckCircle, DollarSign, Award, Headphones, Clock, Users, BookOpen, MapPin, Trophy, MessageCircle, UserPlus } from "lucide-react";
+import { CheckCircle, DollarSign, Award, Headphones, Clock, Users, BookOpen, MapPin, Trophy, MessageCircle, UserPlus, Calendar, Gauge, Building2, Megaphone, Zap, MousePointerClick } from "lucide-react";
 
 const BrokerSections = () => {
   const advantages = [
@@ -35,6 +35,69 @@ const BrokerSections = () => {
             <p className="text-xl font-semibold text-foreground">
               Nossa missão é simples e direta: fazer com que nossos corretores prosperem e batam suas metas pessoais sem precisar se estressar para isso.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Recursos e Benefícios */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 max-w-6xl mx-auto">
+            <div className="flex flex-col items-center text-center gap-4">
+              <Award className="h-12 w-12 md:h-16 md:w-16 text-primary" strokeWidth={1.5} />
+              <h3 className="text-base md:text-lg font-semibold text-foreground">
+                Assessoria<br />Completa
+              </h3>
+            </div>
+            
+            <div className="flex flex-col items-center text-center gap-4">
+              <Calendar className="h-12 w-12 md:h-16 md:w-16 text-primary" strokeWidth={1.5} />
+              <h3 className="text-base md:text-lg font-semibold text-foreground">
+                Treinamentos<br />Semanais
+              </h3>
+            </div>
+            
+            <div className="flex flex-col items-center text-center gap-4">
+              <Gauge className="h-12 w-12 md:h-16 md:w-16 text-primary" strokeWidth={1.5} />
+              <h3 className="text-base md:text-lg font-semibold text-foreground">
+                Cálculo e<br />Transmissão
+              </h3>
+            </div>
+            
+            <div className="flex flex-col items-center text-center gap-4">
+              <Building2 className="h-12 w-12 md:h-16 md:w-16 text-primary" strokeWidth={1.5} />
+              <h3 className="text-base md:text-lg font-semibold text-foreground">
+                Instalações<br />Modernas
+              </h3>
+            </div>
+            
+            <div className="flex flex-col items-center text-center gap-4">
+              <Users className="h-12 w-12 md:h-16 md:w-16 text-primary" strokeWidth={1.5} />
+              <h3 className="text-base md:text-lg font-semibold text-foreground">
+                Leads<br />Indicações
+              </h3>
+            </div>
+            
+            <div className="flex flex-col items-center text-center gap-4">
+              <Megaphone className="h-12 w-12 md:h-16 md:w-16 text-primary" strokeWidth={1.5} />
+              <h3 className="text-base md:text-lg font-semibold text-foreground">
+                Marketing<br />Digital
+              </h3>
+            </div>
+            
+            <div className="flex flex-col items-center text-center gap-4">
+              <Zap className="h-12 w-12 md:h-16 md:w-16 text-primary" strokeWidth={1.5} />
+              <h3 className="text-base md:text-lg font-semibold text-foreground">
+                Campanhas<br />Exclusivas
+              </h3>
+            </div>
+            
+            <div className="flex flex-col items-center text-center gap-4">
+              <MousePointerClick className="h-12 w-12 md:h-16 md:w-16 text-primary" strokeWidth={1.5} />
+              <h3 className="text-base md:text-lg font-semibold text-foreground">
+                Ferramentas<br />de Vendas
+              </h3>
+            </div>
           </div>
         </div>
       </section>
