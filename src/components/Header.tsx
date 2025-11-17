@@ -369,14 +369,6 @@ const Header = () => {
         {isClientPage && isMobileMenuOpen && (
           <div className="lg:hidden fixed inset-0 top-[72px] bg-background z-50 overflow-y-auto">
             <div className="container mx-auto px-6 py-8">
-              <div className="flex justify-center mb-8">
-                <img 
-                  src={protettaLogo3D} 
-                  alt="Protetta Seguros" 
-                  className="h-24 w-auto animate-fade-in hover:scale-110 transition-transform duration-500 cursor-pointer"
-                />
-              </div>
-              
               <div className="mb-4 px-2">
                 <span className="text-xs font-semibold text-primary uppercase tracking-widest">
                   Menu
@@ -439,14 +431,6 @@ const Header = () => {
         {isBrokerPage && isMobileMenuOpen && (
           <div className="lg:hidden fixed inset-0 top-[72px] bg-background z-50 overflow-y-auto">
             <div className="container mx-auto px-6 py-8">
-              <div className="flex justify-center mb-8">
-                <img 
-                  src={protettaLogo3D} 
-                  alt="Protetta Seguros" 
-                  className="h-24 w-auto animate-fade-in hover:scale-110 transition-transform duration-500 cursor-pointer"
-                />
-              </div>
-              
               <div className="mb-4 px-2">
                 <span className="text-xs font-semibold text-secondary uppercase tracking-widest">
                   Menu
@@ -503,14 +487,6 @@ const Header = () => {
         {isOtherPage && isMobileMenuOpen && (
           <div className="lg:hidden fixed inset-0 top-[72px] bg-background z-50 overflow-y-auto">
             <div className="container mx-auto px-6 py-8">
-              <div className="flex justify-center mb-8">
-                <img 
-                  src={protettaLogo3D} 
-                  alt="Protetta Seguros" 
-                  className="h-24 w-auto animate-fade-in hover:scale-110 transition-transform duration-500 cursor-pointer"
-                />
-              </div>
-              
               <div className="mb-4 px-2">
                 <span className="text-xs font-semibold text-primary uppercase tracking-widest">
                   Navegação
