@@ -368,7 +368,15 @@ const Header = () => {
         {/* Mobile Menu - Cliente */}
         {isClientPage && isMobileMenuOpen && (
           <div className="lg:hidden fixed inset-0 top-[72px] bg-background z-50 overflow-y-auto">
-            <div className="container mx-auto px-6 py-8">
+            <div className="px-6 py-8">
+              <div className="flex justify-center mb-8">
+                <img 
+                  src={protettaLogo3D} 
+                  alt="Protetta Seguros" 
+                  className="h-24 w-auto transition-transform duration-300 hover:scale-110" 
+                />
+              </div>
+              
               <div className="mb-4 px-2">
                 <span className="text-xs font-semibold text-primary uppercase tracking-widest">
                   Menu
@@ -430,7 +438,15 @@ const Header = () => {
         {/* Mobile Menu - Corretor */}
         {isBrokerPage && isMobileMenuOpen && (
           <div className="lg:hidden fixed inset-0 top-[72px] bg-background z-50 overflow-y-auto">
-            <div className="container mx-auto px-6 py-8">
+            <div className="px-6 py-8">
+              <div className="flex justify-center mb-8">
+                <img 
+                  src={protettaLogo3D} 
+                  alt="Protetta Seguros" 
+                  className="h-24 w-auto transition-transform duration-300 hover:scale-110" 
+                />
+              </div>
+              
               <div className="mb-4 px-2">
                 <span className="text-xs font-semibold text-secondary uppercase tracking-widest">
                   Menu
@@ -486,7 +502,15 @@ const Header = () => {
         {/* Mobile Menu - Outras páginas */}
         {isOtherPage && isMobileMenuOpen && (
           <div className="lg:hidden fixed inset-0 top-[72px] bg-background z-50 overflow-y-auto">
-            <div className="container mx-auto px-6 py-8">
+            <div className="px-6 py-8">
+              <div className="flex justify-center mb-8">
+                <img 
+                  src={protettaLogo3D} 
+                  alt="Protetta Seguros" 
+                  className="h-24 w-auto transition-transform duration-300 hover:scale-110" 
+                />
+              </div>
+              
               <div className="mb-4 px-2">
                 <span className="text-xs font-semibold text-primary uppercase tracking-widest">
                   Navegação
