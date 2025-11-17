@@ -135,45 +135,45 @@ const ClientSections = () => {
       </section>
 
       {/* Nossos Diferenciais */}
-      <section id="diferenciais" className="py-20 bg-muted/30 scroll-mt-20">
+      <section id="diferenciais" className="py-12 md:py-20 bg-muted/30 scroll-mt-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 md:mb-4 px-2">
               Por Que Escolher a Protetta?
             </h2>
-            <p className="text-xl text-muted-foreground">Nossos diferenciais que transformam a gestão de saúde corporativa</p>
+            <p className="text-lg md:text-xl text-muted-foreground px-4">Nossos diferenciais que transformam a gestão de saúde corporativa</p>
           </div>
 
-          <div className="max-w-6xl mx-auto space-y-16">
+          <div className="max-w-6xl mx-auto space-y-6 md:space-y-16">
             {/* BI */}
-            <Card className="p-8 md:p-12">
-              <div className="flex items-start gap-6 mb-6">
-                <div className="bg-gradient-to-br from-primary to-secondary p-4 rounded-2xl shrink-0">
-                  <BarChart3 className="h-8 w-8 text-white" />
+            <Card className="p-6 md:p-8 lg:p-12">
+              <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6 mb-4 md:mb-6">
+                <div className="bg-gradient-to-br from-primary to-secondary p-3 md:p-4 rounded-2xl shrink-0">
+                  <BarChart3 className="h-6 w-6 md:h-8 md:w-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">1. Sistema de Business Intelligence (BI)</h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-3 md:mb-4">1. Sistema de Business Intelligence (BI)</h3>
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-3 md:mb-4">
                     A saúde corporativa está passando por uma transformação: decisões agora precisam ser guiadas por dados.
                   </p>
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-3 md:mb-4">
                     Nosso sistema de Business Intelligence (BI) conecta dados assistenciais e financeiros e os transforma em análises que:
                   </p>
-                  <ul className="space-y-2 mb-4">
-                    <li className="flex items-start gap-2 text-muted-foreground">
+                  <ul className="space-y-2 md:space-y-2 mb-3 md:mb-4">
+                    <li className="flex items-start gap-2 md:gap-2 text-sm md:text-base text-muted-foreground">
                       <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></div>
                       <span>Orientam a redução de custos</span>
                     </li>
-                    <li className="flex items-start gap-2 text-muted-foreground">
+                    <li className="flex items-start gap-2 md:gap-2 text-sm md:text-base text-muted-foreground">
                       <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></div>
                       <span>Melhoram o cuidado com a saúde dos colaboradores</span>
                     </li>
-                    <li className="flex items-start gap-2 text-muted-foreground">
+                    <li className="flex items-start gap-2 md:gap-2 text-sm md:text-base text-muted-foreground">
                       <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></div>
                       <span>Trazem previsibilidade e sustentabilidade para os contratos de saúde</span>
                     </li>
                   </ul>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                     Com isso, deixamos de atuar apenas como corretores de seguros e passamos a conduzir estratégias com visão de futuro: 
                     prevenindo doenças, melhorando a experiência do colaborador e garantindo equilíbrio financeiro dos planos.
                   </p>
@@ -182,32 +182,32 @@ const ClientSections = () => {
             </Card>
 
             {/* Wellness */}
-            <Card className="p-8 md:p-12">
-              <div className="flex items-start gap-6 mb-6">
-                <div className="bg-gradient-to-br from-secondary to-primary p-4 rounded-2xl shrink-0">
-                  <Heart className="h-8 w-8 text-white" />
+            <Card className="p-6 md:p-8 lg:p-12">
+              <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6 mb-4 md:mb-6">
+                <div className="bg-gradient-to-br from-secondary to-primary p-3 md:p-4 rounded-2xl shrink-0">
+                  <Heart className="h-6 w-6 md:h-8 md:w-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">2. Wellness Corporativo</h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-3 md:mb-4">2. Wellness Corporativo</h3>
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-3 md:mb-4">
                     Contamos com uma equipe multidisciplinar de profissionais de saúde que, com base nas informações do BI, 
                     planeja e executa ações personalizadas de saúde e bem-estar para os colaboradores.
                   </p>
-                  <p className="text-lg font-semibold text-foreground mb-3">Nossos objetivos:</p>
+                  <p className="text-base md:text-lg font-semibold text-foreground mb-2 md:mb-3">Nossos objetivos:</p>
                   <ul className="space-y-2">
-                    <li className="flex items-start gap-2 text-muted-foreground">
+                    <li className="flex items-start gap-2 text-sm md:text-base text-muted-foreground">
                       <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0"></div>
                       <span>Aumentar produtividade</span>
                     </li>
-                    <li className="flex items-start gap-2 text-muted-foreground">
+                    <li className="flex items-start gap-2 text-sm md:text-base text-muted-foreground">
                       <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0"></div>
                       <span>Reduzir afastamentos por motivo de saúde</span>
                     </li>
-                    <li className="flex items-start gap-2 text-muted-foreground">
+                    <li className="flex items-start gap-2 text-sm md:text-base text-muted-foreground">
                       <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0"></div>
                       <span>Melhorar motivação e clima organizacional</span>
                     </li>
-                    <li className="flex items-start gap-2 text-muted-foreground">
+                    <li className="flex items-start gap-2 text-sm md:text-base text-muted-foreground">
                       <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0"></div>
                       <span>Reduzir ou controlar a sinistralidade da apólice</span>
                     </li>
@@ -217,17 +217,17 @@ const ClientSections = () => {
             </Card>
 
             {/* Projur */}
-            <Card className="p-8 md:p-12">
-              <div className="flex items-start gap-6 mb-6">
-                <div className="bg-gradient-to-br from-primary to-secondary p-4 rounded-2xl shrink-0">
-                  <Scale className="h-8 w-8 text-white" />
+            <Card className="p-6 md:p-8 lg:p-12">
+              <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6 mb-4 md:mb-6">
+                <div className="bg-gradient-to-br from-primary to-secondary p-3 md:p-4 rounded-2xl shrink-0">
+                  <Scale className="h-6 w-6 md:h-8 md:w-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">3. Projur</h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-3 md:mb-4">3. Projur</h3>
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-3 md:mb-4">
                     Acreditamos que relações securitárias não precisam ser complicadas, cheias de "juridiquês" e letras miúdas.
                   </p>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                     Por isso, disponibilizamos um time de advogados que são verdadeiros descomplicadores, 
                     para que nossos clientes se sintam sempre seguros e amparados em relação aos seus contratos.
                   </p>
