@@ -129,7 +129,7 @@ const BrokerSections = () => {
   return (
     <>
       {/* Sobre a Protetta */}
-      <section id="sobre-protetta" className="py-20 bg-background scroll-mt-20">
+      <section id="sobre-protetta" className="py-12 md:py-20 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
@@ -151,7 +151,7 @@ const BrokerSections = () => {
       </section>
 
       {/* Assessoria Para Todos */}
-      <section ref={assessoriaRef} className="py-20 bg-gradient-to-br from-[hsl(175,84%,55%)] to-[hsl(175,84%,45%)]">
+      <section ref={assessoriaRef} className="py-12 md:py-20 bg-gradient-to-br from-[hsl(175,84%,55%)] to-[hsl(175,84%,45%)]">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -193,7 +193,7 @@ const BrokerSections = () => {
       </section>
 
       {/* Expanda seus horizontes */}
-      <section ref={expandaRef} className="py-20 bg-background">
+      <section ref={expandaRef} className="py-12 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -248,9 +248,9 @@ const BrokerSections = () => {
       </section>
 
       {/* Recursos e Benefícios */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-12 md:py-20 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 lg:gap-12 max-w-6xl mx-auto">
             <div className="flex flex-col items-center text-center gap-4">
               <Award className="h-12 w-12 md:h-16 md:w-16 text-primary" strokeWidth={1.5} />
               <h3 className="text-base md:text-lg font-semibold text-foreground">
@@ -311,14 +311,14 @@ const BrokerSections = () => {
       </section>
 
       {/* Seguradoras Parceiras */}
-      <section ref={logosRef} className="py-20 bg-background">
+      <section ref={logosRef} className="py-12 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-12">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground text-center mb-8 md:mb-12">
               Seguradoras Parceiras
             </h2>
             
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-6">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-3 md:gap-6">
               {insuranceLogos.map((item, index) => (
                 <div 
                   key={index}
@@ -449,7 +449,7 @@ const BrokerSections = () => {
       </section>
 
       {/* Vantagens */}
-      <section id="vantagens" className="py-20 bg-background scroll-mt-20">
+      <section id="vantagens" className="py-12 md:py-20 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 text-center">
