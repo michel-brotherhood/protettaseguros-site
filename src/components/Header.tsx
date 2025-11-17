@@ -40,6 +40,11 @@ const Header = () => {
     };
   }, [isMobileMenuOpen]);
 
+  // Fecha o menu mobile quando a rota muda
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -531,16 +536,30 @@ const Header = () => {
               >
                 Sobre Nós
               </Link>
-              <a 
-                href="/#diferenciais" 
-                className={`px-4 py-3 rounded-lg text-foreground hover:bg-primary/10 hover:text-primary transition-all font-medium border-l-2 border-transparent hover:border-primary ${
+              <button 
+                onClick={() => {
+                  navigate("/cliente");
+                  setTimeout(() => {
+                    const element = document.getElementById("diferenciais");
+                    if (element) {
+                      const offset = 80;
+                      const elementPosition = element.getBoundingClientRect().top;
+                      const offsetPosition = elementPosition + window.pageYOffset - offset;
+                      window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                      });
+                    }
+                  }, 100);
+                  setIsMobileMenuOpen(false);
+                }}
+                className={`px-4 py-3 rounded-lg text-foreground hover:bg-primary/10 hover:text-primary transition-all font-medium border-l-2 border-transparent hover:border-primary text-left w-full ${
                   isMobileMenuOpen ? 'animate-fade-in' : ''
                 } [animation-delay:100ms] opacity-0`}
                 style={{ animationFillMode: 'forwards' }}
-                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Diferenciais
-              </a>
+              </button>
               
               <div className="px-2 py-1 mt-3 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
                 Soluções
