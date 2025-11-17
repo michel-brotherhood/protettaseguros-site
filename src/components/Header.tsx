@@ -64,7 +64,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="relative z-10">
+          <Link to="/" className={`relative z-10 ${isMobileMenuOpen ? 'lg:block hidden' : ''}`}>
             <img 
               src={protettaLogo} 
               alt="Protetta Seguros" 
