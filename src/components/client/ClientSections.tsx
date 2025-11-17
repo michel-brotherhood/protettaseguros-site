@@ -239,46 +239,46 @@ const ClientSections = () => {
       </section>
 
       {/* Responsabilidade Social */}
-      <section id="responsabilidade-social" className="py-20 bg-background scroll-mt-20">
+      <section id="responsabilidade-social" className="py-12 md:py-20 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 md:mb-4 px-2">
               Responsabilidade Social
             </h2>
           </div>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 md:gap-8">
             {/* ProChange */}
-            <Card className="p-8 hover:shadow-xl transition-all">
-              <div className="bg-gradient-to-br from-secondary to-primary p-4 rounded-2xl w-16 h-16 flex items-center justify-center mb-6">
-                <Shield className="h-8 w-8 text-white" />
+            <Card className="p-6 md:p-8 hover:shadow-xl transition-all">
+              <div className="bg-gradient-to-br from-secondary to-primary p-3 md:p-4 rounded-2xl w-14 h-14 md:w-16 md:h-16 flex items-center justify-center mb-4 md:mb-6">
+                <Shield className="h-6 w-6 md:h-8 md:w-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">ProChange</h3>
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3 md:mb-4">ProChange</h3>
+              <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-3 md:mb-4">
                 ProChange é o braço social da Protetta. Todo mês, uma parte do lucro é destinada para apoiar 
                 duas ONGs diferentes, escolhidas pela nossa equipe e divulgadas em nossas redes.
               </p>
-              <p className="text-lg font-semibold text-primary">
+              <p className="text-base md:text-lg font-semibold text-primary">
                 Ao escolher a Protetta, você não está apenas contratando uma consultoria de seguros: 
                 você também está ajudando a transformar o mundo em um lugar melhor.
               </p>
             </Card>
 
             {/* ESG */}
-            <Card className="p-8 hover:shadow-xl transition-all">
-              <div className="bg-gradient-to-br from-primary to-secondary p-4 rounded-2xl w-16 h-16 flex items-center justify-center mb-6">
-                <Leaf className="h-8 w-8 text-white" />
+            <Card className="p-6 md:p-8 hover:shadow-xl transition-all">
+              <div className="bg-gradient-to-br from-primary to-secondary p-3 md:p-4 rounded-2xl w-14 h-14 md:w-16 md:h-16 flex items-center justify-center mb-4 md:mb-6">
+                <Leaf className="h-6 w-6 md:h-8 md:w-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">ESG e Créditos de Carbono</h3>
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3 md:mb-4">ESG e Créditos de Carbono</h3>
+              <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-3 md:mb-4">
                 Na Protetta, cuidar de saúde é algo global. Isso inclui a saúde ambiental.
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-3 md:mb-4">
                 A cada contrato fechado, adquirimos créditos de carbono proporcionais ao valor do contrato. 
                 Um crédito de carbono representa uma tonelada de CO₂ que deixou de ser emitida na atmosfera, 
                 contribuindo para reduzir o efeito estufa.
               </p>
-              <p className="text-lg font-semibold text-secondary">
+              <p className="text-base md:text-lg font-semibold text-secondary">
                 Para nós, meio ambiente é coisa séria. Tão séria quanto saúde.
               </p>
             </Card>
