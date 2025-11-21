@@ -205,7 +205,7 @@ const BrokerSections = () => {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
               <div className="space-y-6">
                 {features.map((feature, index) => (
                   <button
@@ -346,13 +346,13 @@ const BrokerSections = () => {
       </section>
 
       {/* Por que escolher */}
-      <section className="py-20 bg-gradient-to-br from-secondary/10 via-background to-primary/10">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-secondary/10 via-background to-primary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 text-center">
               Por Que Escolher a Protetta?
             </h2>
-            <Card className="p-8 md:p-12 mb-8">
+            <Card className="p-6 md:p-8 lg:p-12 mb-8">
               <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
                 Somos uma assessoria especializada em planos de saúde!
               </h3>
@@ -397,14 +397,14 @@ const BrokerSections = () => {
       </section>
 
       {/* Como funciona */}
-      <section id="como-funciona" className="py-20 bg-muted/30 scroll-mt-20">
+      <section id="como-funciona" className="py-12 md:py-20 bg-muted/30 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-12 text-center">
               Como Funciona?
             </h2>
             
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-16">
               <Card className="p-6 text-center hover:shadow-xl transition-all">
                 <div className="bg-gradient-to-br from-primary to-secondary p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Users className="h-8 w-8 text-white" />
