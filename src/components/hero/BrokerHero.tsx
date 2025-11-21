@@ -28,7 +28,7 @@ const BrokerHero: React.FC<BrokerHeroProps> = ({ onSwitchMode }) => {
         <div className="absolute bottom-1/3 right-1/3 w-2 h-2 bg-secondary rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
       </div>
 
-      <div className="container mx-auto px-4 py-20 relative z-10">
+      <div className="container mx-auto px-4 py-12 md:py-20 relative z-10">
         <div className="max-w-5xl mx-auto">
 
           {/* Badges */}
