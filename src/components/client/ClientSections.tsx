@@ -8,18 +8,56 @@ const ClientSections = () => {
   return (
     <>
       {/* Quem Somos */}
-      <section id="quem-somos" className="py-12 md:py-20 bg-background scroll-mt-20">
+      <section id="quem-somos" className="py-12 md:py-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5 scroll-mt-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">Quem Somos</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Em 2017, a Protetta nasceu com um propósito claro: revolucionar o mercado segurador brasileiro, 
-              oferecendo soluções inovadoras, personalizadas e de classe mundial para empresas em todo o país.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Somos especialistas em seguro saúde empresarial e trabalhamos lado a lado com o RH e a gestão 
-              para transformar plano de saúde em estratégia de negócio.
-            </p>
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-6">
+                Desde 2017
+              </span>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+                Quem Somos
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
+            </div>
+            
+            <div className="space-y-8">
+              <Card className="p-8 md:p-10 bg-background/80 backdrop-blur-sm border-primary/10 hover:shadow-xl transition-all">
+                <p className="text-lg md:text-xl text-foreground leading-relaxed text-center">
+                  Em 2017, a Protetta nasceu com um propósito claro: 
+                  <span className="font-bold text-primary"> revolucionar o mercado segurador brasileiro</span>, 
+                  oferecendo soluções inovadoras, personalizadas e de classe mundial para empresas em todo o país.
+                </p>
+              </Card>
+
+              <Card className="p-8 md:p-10 bg-background/80 backdrop-blur-sm border-secondary/10 hover:shadow-xl transition-all">
+                <div className="flex flex-col md:flex-row items-center gap-6">
+                  <div className="bg-gradient-to-br from-primary to-secondary p-4 rounded-2xl shrink-0">
+                    <Shield className="h-12 w-12 text-white" />
+                  </div>
+                  <p className="text-lg md:text-xl text-foreground leading-relaxed text-center md:text-left">
+                    Somos <span className="font-bold text-secondary">especialistas em seguro saúde empresarial</span> e trabalhamos 
+                    lado a lado com o RH e a gestão para transformar plano de saúde em 
+                    <span className="font-bold text-primary"> estratégia de negócio</span>.
+                  </p>
+                </div>
+              </Card>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-12">
+                <div className="text-center p-6 bg-primary/5 rounded-xl">
+                  <div className="text-4xl font-bold text-primary mb-2">2017</div>
+                  <div className="text-sm text-muted-foreground">Ano de Fundação</div>
+                </div>
+                <div className="text-center p-6 bg-secondary/5 rounded-xl">
+                  <div className="text-4xl font-bold text-secondary mb-2">100%</div>
+                  <div className="text-sm text-muted-foreground">Focados em Saúde</div>
+                </div>
+                <div className="text-center p-6 bg-primary/5 rounded-xl">
+                  <div className="text-4xl font-bold text-primary mb-2">1º</div>
+                  <div className="text-sm text-muted-foreground">Hub de Seguros do Brasil</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
