@@ -8,7 +8,7 @@ const ClientSections = () => {
   return (
     <>
       {/* Quem Somos */}
-      <section id="quem-somos" className="py-20 bg-background scroll-mt-20">
+      <section id="quem-somos" className="py-12 md:py-20 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">Quem Somos</h2>
@@ -25,7 +25,7 @@ const ClientSections = () => {
       </section>
 
       {/* O Que Fazemos */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-12 md:py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 text-center">
@@ -38,7 +38,7 @@ const ClientSections = () => {
               A partir de uma análise minuciosa do perfil da empresa, considerando sempre o binômio necessidade x capacidade, atuamos para:
             </p>
             
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-4 md:gap-6">
               <Card className="p-6 hover:shadow-lg transition-all">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
@@ -81,7 +81,7 @@ const ClientSections = () => {
       </section>
 
       {/* Como Fazemos */}
-      <section className="py-20 bg-background">
+      <section className="py-12 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -90,7 +90,7 @@ const ClientSections = () => {
             <p className="text-xl text-muted-foreground">É essa base que nos permite ir além da corretagem tradicional e atuar como parceiros estratégicos da sua empresa</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
             <AnimatedCard
               delay={0}
               className="p-8 text-center hover:shadow-xl transition-all"
