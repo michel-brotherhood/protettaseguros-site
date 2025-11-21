@@ -8,7 +8,7 @@ const ClientSections = () => {
   return (
     <>
       {/* Quem Somos */}
-      <section id="quem-somos" className="py-12 md:py-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5 scroll-mt-20">
+      <section id="quem-somos" className="py-10 md:py-16 bg-gradient-to-br from-primary/5 via-background to-secondary/5 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
@@ -63,7 +63,7 @@ const ClientSections = () => {
       </section>
 
       {/* O Que Fazemos */}
-      <section className="py-12 md:py-20 bg-muted/30">
+      <section className="py-10 md:py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 text-center">
@@ -119,7 +119,7 @@ const ClientSections = () => {
       </section>
 
       {/* Como Fazemos */}
-      <section className="py-12 md:py-20 bg-background">
+      <section className="py-10 md:py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -173,7 +173,7 @@ const ClientSections = () => {
       </section>
 
       {/* Nossos Diferenciais */}
-      <section id="diferenciais" className="py-12 md:py-20 bg-muted/30 scroll-mt-20">
+      <section id="diferenciais" className="py-10 md:py-16 bg-muted/30 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10 md:mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 md:mb-4 px-2">
@@ -277,7 +277,7 @@ const ClientSections = () => {
       </section>
 
       {/* Responsabilidade Social */}
-      <section id="responsabilidade-social" className="py-12 md:py-20 bg-background scroll-mt-20">
+      <section id="responsabilidade-social" className="py-10 md:py-16 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10 md:mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 md:mb-4 px-2">

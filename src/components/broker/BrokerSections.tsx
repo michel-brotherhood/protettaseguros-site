@@ -129,7 +129,7 @@ const BrokerSections = () => {
   return (
     <>
       {/* Sobre a Protetta */}
-      <section id="sobre-protetta" className="py-12 md:py-20 bg-background scroll-mt-20">
+      <section id="sobre-protetta" className="py-10 md:py-16 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
@@ -151,7 +151,7 @@ const BrokerSections = () => {
       </section>
 
       {/* Assessoria Para Todos */}
-      <section ref={assessoriaRef} className="py-12 md:py-20 bg-gradient-to-br from-[hsl(175,84%,55%)] to-[hsl(175,84%,45%)]">
+      <section ref={assessoriaRef} className="py-10 md:py-16 bg-gradient-to-br from-[hsl(175,84%,55%)] to-[hsl(175,84%,45%)]">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -193,7 +193,7 @@ const BrokerSections = () => {
       </section>
 
       {/* Expanda seus horizontes */}
-      <section ref={expandaRef} className="py-12 md:py-20 bg-background">
+      <section ref={expandaRef} className="py-10 md:py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -248,7 +248,7 @@ const BrokerSections = () => {
       </section>
 
       {/* Recursos e Benefícios */}
-      <section className="py-12 md:py-20 bg-muted/30">
+      <section className="py-10 md:py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 lg:gap-12 max-w-6xl mx-auto">
             <div className="flex flex-col items-center text-center gap-4">
@@ -311,7 +311,7 @@ const BrokerSections = () => {
       </section>
 
       {/* Seguradoras Parceiras */}
-      <section ref={logosRef} className="py-12 md:py-20 bg-background">
+      <section ref={logosRef} className="py-10 md:py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground text-center mb-8 md:mb-12">
@@ -346,7 +346,7 @@ const BrokerSections = () => {
       </section>
 
       {/* Por que escolher */}
-      <section className="py-12 md:py-20 bg-gradient-to-br from-secondary/10 via-background to-primary/10">
+      <section className="py-10 md:py-16 bg-gradient-to-br from-secondary/10 via-background to-primary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 text-center">
@@ -397,7 +397,7 @@ const BrokerSections = () => {
       </section>
 
       {/* Como funciona */}
-      <section id="como-funciona" className="py-12 md:py-20 bg-muted/30 scroll-mt-20">
+      <section id="como-funciona" className="py-10 md:py-16 bg-muted/30 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-12 text-center">
@@ -449,7 +449,7 @@ const BrokerSections = () => {
       </section>
 
       {/* Vantagens */}
-      <section id="vantagens" className="py-12 md:py-20 bg-background scroll-mt-20">
+      <section id="vantagens" className="py-10 md:py-16 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 text-center">
