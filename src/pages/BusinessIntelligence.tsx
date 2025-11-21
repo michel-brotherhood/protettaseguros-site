@@ -14,7 +14,7 @@ const BusinessIntelligence = () => {
     <div className="min-h-screen">
       <Header />
       
-      <section className="pt-32 pb-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+      <section className="pt-24 pb-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block bg-primary/10 text-primary text-sm font-bold px-4 py-2 rounded-full mb-6">

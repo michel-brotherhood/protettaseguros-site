@@ -39,7 +39,7 @@ const SaudeAmbiental = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-24 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 via-emerald-500/5 to-background" />
         
         <div className="container mx-auto px-4 relative z-10">
