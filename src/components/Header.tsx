@@ -325,13 +325,20 @@ const Header = () => {
           <div className="flex items-center gap-4">
             {/* Toggle Buttons Cliente/Corretor - Only on Client/Broker pages */}
             {(isClientPage || isBrokerPage) && (
-              <div className="hidden lg:flex items-center gap-3 border-l border-border pl-6">
+              <div className="hidden lg:flex items-center gap-1 border-l border-border pl-6 relative">
+                <div 
+                  className="absolute left-6 top-0 bottom-0 bg-primary/10 rounded-lg transition-all duration-300 ease-out"
+                  style={{
+                    width: '90px',
+                    transform: isClientPage ? 'translateX(0)' : 'translateX(98px)'
+                  }}
+                />
                 <button
                   onClick={() => navigate("/cliente")}
-                  className={`flex items-center gap-2 px-3 py-1.5 text-sm transition-all ${
+                  className={`relative z-10 flex items-center gap-2 px-3 py-1.5 text-sm transition-all duration-300 rounded-lg ${
                     isClientPage 
-                      ? "text-primary font-medium" 
-                      : "text-muted-foreground hover:text-foreground"
+                      ? "text-primary font-semibold scale-105" 
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                   }`}
                 >
                   <Building2 className="h-4 w-4" />
@@ -339,10 +346,10 @@ const Header = () => {
                 </button>
                 <button
                   onClick={() => navigate("/corretor")}
-                  className={`flex items-center gap-2 px-3 py-1.5 text-sm transition-all ${
+                  className={`relative z-10 flex items-center gap-2 px-3 py-1.5 text-sm transition-all duration-300 rounded-lg ${
                     isBrokerPage 
-                      ? "text-primary font-medium" 
-                      : "text-muted-foreground hover:text-foreground"
+                      ? "text-primary font-semibold scale-105" 
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                   }`}
                 >
                   <UserCheck className="h-4 w-4" />

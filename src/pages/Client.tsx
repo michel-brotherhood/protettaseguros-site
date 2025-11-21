@@ -17,6 +17,10 @@ const Client = () => {
     navigate("/corretor");
   };
 
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   const whatsappMessage = "Olá! Gostaria de saber mais sobre as soluções da Protetta Seguros para minha empresa.";
   const phoneNumber = "5521999999999"; // Substitua pelo número real
 

@@ -16,6 +16,10 @@ const Broker = () => {
     navigate("/cliente");
   };
 
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   const whatsappMessage = "Olá! Sou corretor e gostaria de me tornar parceiro da Protetta Seguros.";
   const phoneNumber = "5521999999999"; // Substitua pelo número real
 
