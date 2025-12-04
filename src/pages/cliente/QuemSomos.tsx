@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Building2, Users, Target, Award } from "lucide-react";
+import { ArrowLeft, Building2, Home, Target, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Header from "@/components/Header";
@@ -30,12 +30,21 @@ const QuemSomos = () => {
       <section className="pt-28 pb-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Link to="/cliente">
-              <Button variant="ghost" className="mb-6 text-muted-foreground hover:text-primary">
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Voltar para Cliente
-              </Button>
-            </Link>
+            <div className="flex items-center gap-2 mb-6">
+              <Link to="/">
+                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary">
+                  <Home className="h-4 w-4 mr-2" />
+                  Início
+                </Button>
+              </Link>
+              <span className="text-muted-foreground">/</span>
+              <Link to="/cliente">
+                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary">
+                  <ArrowLeft className="h-4 w-4 mr-2" />
+                  Cliente
+                </Button>
+              </Link>
+            </div>
             
             <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-6">
               Desde 2017
