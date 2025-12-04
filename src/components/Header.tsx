@@ -99,27 +99,21 @@ const Header = () => {
                       <div className="font-semibold text-foreground">Quem somos</div>
                     </div>
                   </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link 
-                      to="/cliente" 
-                      onClick={() => scrollToSection("o-que-fazemos")} 
-                      className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
-                    >
-                      <div className="py-2">
-                        <div className="font-semibold text-foreground">O que fazemos</div>
-                      </div>
-                    </Link>
+                  <DropdownMenuItem 
+                    onClick={() => scrollToSection("o-que-fazemos")} 
+                    className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
+                  >
+                    <div className="py-2">
+                      <div className="font-semibold text-foreground">O que fazemos</div>
+                    </div>
                   </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link 
-                      to="/cliente" 
-                      onClick={() => scrollToSection("como-fazemos")} 
-                      className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
-                    >
-                      <div className="py-2">
-                        <div className="font-semibold text-foreground">Como fazemos</div>
-                      </div>
-                    </Link>
+                  <DropdownMenuItem 
+                    onClick={() => scrollToSection("como-fazemos")} 
+                    className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
+                  >
+                    <div className="py-2">
+                      <div className="font-semibold text-foreground">Como fazemos</div>
+                    </div>
                   </DropdownMenuItem>
                   <DropdownMenuItem 
                     onClick={() => scrollToSection("diferenciais")} 
