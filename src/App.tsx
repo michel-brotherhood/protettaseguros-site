@@ -18,6 +18,17 @@ import ProChange from "./pages/ProChange";
 import SaudeAmbiental from "./pages/SaudeAmbiental";
 import NotFound from "./pages/NotFound";
 
+// Client Pages
+import QuemSomos from "./pages/cliente/QuemSomos";
+import OQueFazemos from "./pages/cliente/OQueFazemos";
+import ComoFazemos from "./pages/cliente/ComoFazemos";
+import Diferenciais from "./pages/cliente/Diferenciais";
+
+// Broker Pages
+import SobreProtetta from "./pages/corretor/SobreProtetta";
+import ComoFuncionaAssessoria from "./pages/corretor/ComoFuncionaAssessoria";
+import PorQueEscolher from "./pages/corretor/PorQueEscolher";
+
 const queryClient = new QueryClient();
 
 const AnimatedRoutes = () => {
@@ -36,6 +47,18 @@ const AnimatedRoutes = () => {
         <Route path="/cotacao" element={<Quote />} />
         <Route path="/prochange" element={<ProChange />} />
         <Route path="/saude-ambiental" element={<SaudeAmbiental />} />
+        
+        {/* Client Internal Pages */}
+        <Route path="/cliente/quem-somos" element={<QuemSomos />} />
+        <Route path="/cliente/o-que-fazemos" element={<OQueFazemos />} />
+        <Route path="/cliente/como-fazemos" element={<ComoFazemos />} />
+        <Route path="/cliente/diferenciais" element={<Diferenciais />} />
+        
+        {/* Broker Internal Pages */}
+        <Route path="/corretor/sobre" element={<SobreProtetta />} />
+        <Route path="/corretor/como-funciona" element={<ComoFuncionaAssessoria />} />
+        <Route path="/corretor/por-que-escolher" element={<PorQueEscolher />} />
+        
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
