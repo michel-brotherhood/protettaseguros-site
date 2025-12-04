@@ -19,28 +19,22 @@ const ClientSections = () => {
                 Quem Somos
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
+              <p className="text-xl md:text-2xl text-muted-foreground font-medium">
+                Sua porta de entrada para o universo dos seguros.
+              </p>
             </div>
             
             <div className="space-y-8">
               <Card className="p-8 md:p-10 bg-background/80 backdrop-blur-sm border-primary/10 hover:shadow-xl transition-all">
                 <p className="text-lg md:text-xl text-foreground leading-relaxed text-center">
-                  Em 2017, a Protetta nasceu com um propósito claro: 
-                  <span className="font-bold text-primary"> revolucionar o mercado segurador brasileiro</span>, 
-                  oferecendo soluções inovadoras, personalizadas e de classe mundial para empresas em todo o país.
+                  Muito mais que brokers, somos a <span className="font-bold text-primary">primeira hub de seguros do Brasil</span> com foco em seguro saúde empresarial.
                 </p>
               </Card>
 
               <Card className="p-8 md:p-10 bg-background/80 backdrop-blur-sm border-secondary/10 hover:shadow-xl transition-all">
-                <div className="flex flex-col md:flex-row items-center gap-6">
-                  <div className="bg-gradient-to-br from-primary to-secondary p-4 rounded-2xl shrink-0">
-                    <Shield className="h-12 w-12 text-white" />
-                  </div>
-                  <p className="text-lg md:text-xl text-foreground leading-relaxed text-center md:text-left">
-                    Somos <span className="font-bold text-secondary">especialistas em seguro saúde empresarial</span> e trabalhamos 
-                    lado a lado com o RH e a gestão para transformar plano de saúde em 
-                    <span className="font-bold text-primary"> estratégia de negócio</span>.
-                  </p>
-                </div>
+                <p className="text-lg md:text-xl text-foreground leading-relaxed text-center">
+                  Em 2017 a Protetta nasceu com um propósito: <span className="font-bold text-secondary">revolucionar o mercado segurador brasileiro</span>, oferecendo soluções inovadoras, personalizadas e de classe mundial para empresas Brasil a fora.
+                </p>
               </Card>
 
               <div className="grid md:grid-cols-3 gap-6 mt-12">
@@ -70,10 +64,10 @@ const ClientSections = () => {
               O Que Fazemos
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-center">
-              Otimizamos a contratação e a gestão de seguros para empresas em todo o território nacional.
+              Otimizamos a contratação de seguros por empresas em todo território nacional.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              A partir de uma análise minuciosa do perfil da empresa, considerando sempre o binômio necessidade x capacidade, atuamos para:
+              Criamos estratégias inteligentes, através de minuciosa análise do perfil da empresa, observando o binômio necessidade x capacidade, a fim de:
             </p>
             
             <div className="grid md:grid-cols-2 gap-4 md:gap-6">
@@ -86,31 +80,31 @@ const ClientSections = () => {
               <Card className="p-6 hover:shadow-lg transition-all">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
-                  <p className="text-foreground">Solucionar problemas existentes com contratos e coberturas</p>
+                  <p className="text-foreground">Solucionar eventuais problemas com seguros</p>
                 </div>
               </Card>
               <Card className="p-6 hover:shadow-lg transition-all">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-secondary mt-2"></div>
-                  <p className="text-foreground">Simplificar os processos de contratação e renovação</p>
+                  <p className="text-foreground">Simplificar os processos de contratação e renovação de seguros</p>
                 </div>
               </Card>
               <Card className="p-6 hover:shadow-lg transition-all">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-secondary mt-2"></div>
-                  <p className="text-foreground">Encontrar o produto ideal para cada caso e o melhor modelo de contratação</p>
+                  <p className="text-foreground">Encontrar o produto ideal para cada caso e a melhor forma de contratação</p>
                 </div>
               </Card>
               <Card className="p-6 hover:shadow-lg transition-all">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
-                  <p className="text-foreground">Criar mecanismos para reduzir ou controlar a sinistralidade da apólice</p>
+                  <p className="text-foreground">Criar mecanismos de diminuição ou controle de sinistralidade da apólice</p>
                 </div>
               </Card>
               <Card className="p-6 hover:shadow-lg transition-all">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-secondary mt-2"></div>
-                  <p className="text-foreground">Facilitar o dia a dia do RH, absorvendo trâmites e processos burocráticos</p>
+                  <p className="text-foreground">Facilitar o dia a dia do RH absorvendo tramites e procedimentos burocráticos</p>
                 </div>
               </Card>
             </div>
@@ -125,7 +119,7 @@ const ClientSections = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Como Fazemos
             </h2>
-            <p className="text-xl text-muted-foreground">É essa base que nos permite ir além da corretagem tradicional e atuar como parceiros estratégicos da sua empresa</p>
+            <p className="text-xl text-muted-foreground">Combinando 4 pilares essenciais:</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
@@ -179,7 +173,7 @@ const ClientSections = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 md:mb-4 px-2">
               Por Que Escolher a Protetta?
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground px-4">Nossos diferenciais que transformam a gestão de saúde corporativa</p>
+            <p className="text-lg md:text-xl text-muted-foreground px-4">Nossos Diferenciais</p>
           </div>
 
           <div className="max-w-6xl mx-auto space-y-6 md:space-y-16">
@@ -190,30 +184,15 @@ const ClientSections = () => {
                   <BarChart3 className="h-6 w-6 md:h-8 md:w-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-3 md:mb-4">1. Sistema de Business Intelligence (BI)</h3>
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-3 md:mb-4">1. Sistema B.I.</h3>
                   <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-3 md:mb-4">
-                    A saúde corporativa está passando por uma transformação: decisões agora precisam ser guiadas por dados.
+                    A saúde corporativa está diante de uma transformação inevitável: o uso estratégico dos dados para decisões mais seguras, rápidas e sustentáveis. Nesse cenário, o sistema Business Intelligence (BI) não é apenas uma ferramenta tecnológica, mas um novo paradigma de gestão.
                   </p>
                   <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-3 md:mb-4">
-                    Nosso sistema de Business Intelligence (BI) conecta dados assistenciais e financeiros e os transforma em análises que:
+                    Com o BI, é possível unir dados assistenciais e financeiros, transformando-os em análises que orientam a redução de custos e promovem saúde de forma mais efetiva.
                   </p>
-                  <ul className="space-y-2 md:space-y-2 mb-3 md:mb-4">
-                    <li className="flex items-start gap-2 md:gap-2 text-sm md:text-base text-muted-foreground">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></div>
-                      <span>Orientam a redução de custos</span>
-                    </li>
-                    <li className="flex items-start gap-2 md:gap-2 text-sm md:text-base text-muted-foreground">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></div>
-                      <span>Melhoram o cuidado com a saúde dos colaboradores</span>
-                    </li>
-                    <li className="flex items-start gap-2 md:gap-2 text-sm md:text-base text-muted-foreground">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></div>
-                      <span>Trazem previsibilidade e sustentabilidade para os contratos de saúde</span>
-                    </li>
-                  </ul>
                   <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                    Com isso, deixamos de atuar apenas como corretores de seguros e passamos a conduzir estratégias com visão de futuro: 
-                    prevenindo doenças, melhorando a experiência do colaborador e garantindo equilíbrio financeiro dos planos.
+                    Ao aplicar dashboards dinâmicos, análises preditivas e indicadores personalizados, deixamos de atuar apenas como corretores de seguros e passamos a conduzir estratégias com visão de futuro. Isso significa prevenir doenças, melhorar a experiência do colaborador e garantir equilíbrio financeiro nos contratos de saúde.
                   </p>
                 </div>
               </div>
@@ -228,28 +207,11 @@ const ClientSections = () => {
                 <div>
                   <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-3 md:mb-4">2. Wellness Corporativo</h3>
                   <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-3 md:mb-4">
-                    Contamos com uma equipe multidisciplinar de profissionais de saúde que, com base nas informações do BI, 
-                    planeja e executa ações personalizadas de saúde e bem-estar para os colaboradores.
+                    Contamos com uma equipe multidisciplinar de profissionais da área da saúde, que com base nas informações obtidas pelo sistema B.I., elabora e promove ações personalizadas de saúde e bem-estar para os colaboradores de nossos empresas-clientes.
                   </p>
-                  <p className="text-base md:text-lg font-semibold text-foreground mb-2 md:mb-3">Nossos objetivos:</p>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2 text-sm md:text-base text-muted-foreground">
-                      <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0"></div>
-                      <span>Aumentar produtividade</span>
-                    </li>
-                    <li className="flex items-start gap-2 text-sm md:text-base text-muted-foreground">
-                      <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0"></div>
-                      <span>Reduzir afastamentos por motivo de saúde</span>
-                    </li>
-                    <li className="flex items-start gap-2 text-sm md:text-base text-muted-foreground">
-                      <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0"></div>
-                      <span>Melhorar motivação e clima organizacional</span>
-                    </li>
-                    <li className="flex items-start gap-2 text-sm md:text-base text-muted-foreground">
-                      <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 shrink-0"></div>
-                      <span>Reduzir ou controlar a sinistralidade da apólice</span>
-                    </li>
-                  </ul>
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                    Com isso, buscamos aumentar a produtividade, diminuir os afastamentos por motivo de saúde, melhorar a motivação e as relações no ambiente de trabalho e reduzir ou controlar a sinistralidade da apólice.
+                  </p>
                 </div>
               </div>
             </Card>
@@ -263,11 +225,10 @@ const ClientSections = () => {
                 <div>
                   <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-3 md:mb-4">3. Projur</h3>
                   <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-3 md:mb-4">
-                    Acreditamos que relações securitárias não precisam ser complicadas, cheias de "juridiquês" e letras miúdas.
+                    Acreditamos que as relações securitárias podem ser feitas sem complexidade, sem "juridiquês" e sem letras miúdas.
                   </p>
                   <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                    Por isso, disponibilizamos um time de advogados que são verdadeiros descomplicadores, 
-                    para que nossos clientes se sintam sempre seguros e amparados em relação aos seus contratos.
+                    Por isso, disponibilizamos um time de advogados, que são verdadeiros descomplicadores, pra que nossos clientes se sintam cada vez mais confiantes e amparados em relação aos seus contratos.
                   </p>
                 </div>
               </div>
@@ -293,12 +254,10 @@ const ClientSections = () => {
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3 md:mb-4">ProChange</h3>
               <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-3 md:mb-4">
-                ProChange é o braço social da Protetta. Todo mês, uma parte do lucro é destinada para apoiar 
-                duas ONGs diferentes, escolhidas pela nossa equipe e divulgadas em nossas redes.
+                ProChange é o braço social da Protetta. Todo mês, uma parte do lucro é revertida para auxiliar duas ONGs diferentes, sempre cuidadosamente escolhidas por nossa equipe e divulgadas em nossas redes sociais.
               </p>
               <p className="text-base md:text-lg font-semibold text-primary">
-                Ao escolher a Protetta, você não está apenas contratando uma consultoria de seguros: 
-                você também está ajudando a transformar o mundo em um lugar melhor.
+                Desta forma, ao escolher a Protetta, você não está apenas escolhendo uma corretora de seguros, está realmente ajudando o mundo a se tornar um lugar melhor.
               </p>
             </Card>
 
@@ -309,12 +268,10 @@ const ClientSections = () => {
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3 md:mb-4">ESG e Créditos de Carbono</h3>
               <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-3 md:mb-4">
-                Na Protetta, cuidar de saúde é algo global. Isso inclui a saúde ambiental.
+                Na Protetta, a preocupação com saúde ocorre de maneira global. E, é claro, que não deixaríamos de lado a saúde ambiental.
               </p>
               <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-3 md:mb-4">
-                A cada contrato fechado, adquirimos créditos de carbono proporcionais ao valor do contrato. 
-                Um crédito de carbono representa uma tonelada de CO₂ que deixou de ser emitida na atmosfera, 
-                contribuindo para reduzir o efeito estufa.
+                Sendo assim, a cada contrato fechado adquirimos créditos de carbono proporcionais ao valor do contrato. Um crédito de carbono é a representação de uma tonelada de carbono que deixou de ser emitida para a atmosfera, contribuindo para a diminuição do efeito estufa.
               </p>
               <p className="text-base md:text-lg font-semibold text-secondary">
                 Para nós, meio ambiente é coisa séria. Tão séria quanto saúde.
