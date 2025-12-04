@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import protettaLogo3D from "@/assets/protetta-logo-3d-new.webp";
 
@@ -11,7 +11,12 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
   phoneNumber, 
   message
 }) => {
+  const [showPulse, setShowPulse] = useState(false);
+
   const handleClick = () => {
+    setShowPulse(true);
+    setTimeout(() => setShowPulse(false), 600);
+    
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, "_blank");
@@ -43,19 +48,18 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
             className="h-14 w-14 object-contain drop-shadow-lg"
           />
           
-          {/* Pulse ring */}
-          <motion.div
-            className="absolute inset-0 rounded-full border-2 border-primary"
-            animate={{
-              scale: [1, 1.4],
-              opacity: [0.6, 0],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeOut",
-            }}
-          />
+          {/* Pulse ring - só aparece ao clicar */}
+          {showPulse && (
+            <motion.div
+              className="absolute inset-0 rounded-full border-2 border-primary"
+              initial={{ scale: 1, opacity: 0.6 }}
+              animate={{ scale: 1.4, opacity: 0 }}
+              transition={{
+                duration: 0.6,
+                ease: "easeOut",
+              }}
+            />
+          )}
         </button>
       </motion.div>
     </motion.div>
