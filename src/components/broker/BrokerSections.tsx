@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Card } from "@/components/ui/card";
-import { CheckCircle, DollarSign, Award, Headphones, Clock, Users, BookOpen, MapPin, Trophy, MessageCircle, UserPlus, Calendar, Gauge, Building2, Megaphone, Zap, MousePointerClick, Monitor, GraduationCap } from "lucide-react";
+import { CheckCircle, DollarSign, Award, Headphones, Clock, Users, BookOpen, MapPin, Trophy, MessageCircle, UserPlus, Calendar, Gauge, Building2, Megaphone, Zap, MousePointerClick, Monitor, GraduationCap, Sparkles } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import brokerMeeting from "@/assets/broker-meeting.jpg";
 import brokerConsulting from "@/assets/broker-consulting.jpg";
@@ -116,14 +116,15 @@ const BrokerSections = () => {
 
   const advantages = [
     { icon: Headphones, text: "Suporte integral ao corretor: da cotação ao pós-venda" },
-    { icon: Clock, text: "Atendimento instantâneo: tempo máximo de resposta de 5 minutos" },
+    { icon: Clock, text: "Atendimento instantâneo ao corretor: nosso tempo máximo de resposta é de 5 minutos" },
     { icon: Award, text: "Acesso gratuito a cotador multicalculos" },
-    { icon: BookOpen, text: "Treinamentos constantes de atualização de regras e campanhas" },
+    { icon: BookOpen, text: "Treinamentos constantes de atualização de regras e campanhas de vendas das seguradoras" },
     { icon: MapPin, text: "Espaço para receber clientes e fazer reuniões no centro do Rio" },
     { icon: Trophy, text: "Campanhas exclusivas de vendas com premiações oferecidas pela Protetta" },
-    { icon: MessageCircle, text: "Grupo exclusivo no WhatsApp com atualizações diárias" },
+    { icon: MessageCircle, text: "Participe de um grupo exclusivo no WhatsApp com atualizações diárias sobre novidades e mudanças do mercado" },
     { icon: Clock, text: "Plantão de dúvidas disponível inclusive aos fins de semana" },
-    { icon: UserPlus, text: "Supervisor para te acompanhar em reuniões com clientes corporativos" },
+    { icon: UserPlus, text: "Um supervisor para te acompanhar em reuniões com clientes corporativos se desejar" },
+    { icon: Sparkles, text: "e muito mais!" },
   ];
 
   return (
@@ -136,15 +137,13 @@ const BrokerSections = () => {
               Sobre a Protetta
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Desde 2017, a Protetta existe com um propósito: facilitar a vida do corretor que deseja vender planos de saúde. 
-              De lá para cá, trabalhamos duro e de forma genuína para tornar essa experiência cada vez mais simples, intuitiva e lucrativa.
+              Em 2017 a Protetta nasceu com um propósito: facilitar a vida de corretores de seguros que desejam vender saúde. De lá para cá, trabalhamos duro e de forma genuína para tornar a experiência dos nossos corretores cada vez mais simples e intuitiva.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Acreditamos que todo corretor pode vender saúde de forma leve e prática. 
-              Por isso, oferecemos suporte integral, para que você se sinta cada vez mais seguro, confiante e com autonomia nas suas vendas.
+              Acreditamos que todo corretor pode vender saúde e, principalmente, que isso pode ser feito de forma leve e prática. Por isso, oferecemos suporte integral pra que você se sinta cada vez mais seguro, confiante e com autonomia em relação as suas vendas.
             </p>
             <p className="text-xl font-semibold text-foreground">
-              Nossa missão é simples e direta: fazer com que nossos corretores prosperem e batam suas metas pessoais sem precisar se estressar para isso.
+              Nossa missão é fazer com que todos os nossos corretores prosperem e batam suas metas pessoais, sem precisar se estressar para isso.
             </p>
           </div>
         </div>
@@ -354,36 +353,32 @@ const BrokerSections = () => {
             </h2>
             <Card className="p-6 md:p-8 lg:p-12 mb-8">
               <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
-                Somos uma assessoria especializada em planos de saúde!
+                Porque somos uma assessoria especializada em planos de saúde!
               </h3>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Sabemos que vender saúde é algo sério e complexo: muitas regras comerciais, que mudam de seguradora para seguradora, 
-                muitos detalhes operacionais, e uma responsabilidade enorme com o bem mais precioso do seu cliente: a saúde.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                É normal o corretor se sentir confuso com tudo isso. Aqui, você não fica sozinho.
+                Sabemos que vender saúde é algo sério e complexo. Além de ser uma enorme responsabilidade cuidar do bem mais precioso de seus clientes, são muitas regras comerciais, que mudam de seguradora para seguradora, com muitos detalhes e, é normal que o corretor se sinta confuso com tudo isso!!
               </p>
               <p className="text-xl font-semibold text-primary text-center mb-6">
-                Na Protetta, não tem erro: a gente te acompanha do início ao fim da venda.
+                Mas aqui na Protetta não tem erro! A gente te acompanha do início ao fim da venda!
               </p>
               
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <CheckCircle className="h-6 w-6 text-secondary shrink-0 mt-1" />
                   <p className="text-foreground">
-                    Faz tempo que você não vende saúde? A gente te tira da inércia.
+                    Tem muito tempo que não vende saúde? Não tem problema, a gente te tira da inércia?
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle className="h-6 w-6 text-secondary shrink-0 mt-1" />
                   <p className="text-foreground">
-                    Está inseguro para fazer reunião com o cliente? A gente vai junto com você.
+                    Está se sentindo inseguro para fazer reunião com o cliente? Não tem problema, a gente vai junto com você!
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle className="h-6 w-6 text-secondary shrink-0 mt-1" />
                   <p className="text-foreground">
-                    Está com dúvidas sobre regras comerciais? A gente te responde na hora.
+                    Está com alguma dúvida acerca de regras comerciais? Não tem problema, a gente te responde na mesma hora!
                   </p>
                 </div>
               </div>
@@ -411,7 +406,7 @@ const BrokerSections = () => {
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">Ponte entre Corretor e Seguradora</h3>
                 <p className="text-muted-foreground">
-                  Intermediamos os processos técnicos, operacionais e comerciais entre seguradoras/operadoras e corretores parceiros
+                  Somos uma ponte entre o corretor e a seguradora. Intermediamos os procedimentos técnicos, operacionais e comerciais entre as seguradoras/operadoras e os corretores parceiros!
                 </p>
               </Card>
 
@@ -419,9 +414,9 @@ const BrokerSections = () => {
                 <div className="bg-gradient-to-br from-secondary to-primary p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <DollarSign className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">Custo Zero</h3>
+                <h3 className="text-xl font-bold text-foreground mb-3">Custo Zero para o Corretor</h3>
                 <p className="text-muted-foreground">
-                  Os serviços da Protetta são totalmente gratuitos para corretores parceiros. Somos remunerados pelas seguradoras
+                  Os serviços da Protetta são totalmente gratuitos para os corretores parceiros. Somos remunerados pelas seguradoras. Não ficamos com parte do comissionamento do corretor e ele não ganha menos comissão por estar vinculado a Protetta! Aqui o corretor só tem a ganhar!
                 </p>
               </Card>
 
@@ -431,7 +426,7 @@ const BrokerSections = () => {
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">Seu Próprio Código</h3>
                 <p className="text-muted-foreground">
-                  Você terá seu próprio código nas seguradoras. Seus dados constarão nas apólices dos seus clientes
+                  Sim! Você, corretor, terá seu próprio código nas Seguradoras e Operadoras parceiras da Protetta. Os seus dados constarão nas apólices dos seus clientes. Os seguros são feitos diretamente no seu código!
                 </p>
               </Card>
             </div>
@@ -453,10 +448,10 @@ const BrokerSections = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 text-center">
-              Vantagens de Ser Corretor Parceiro Protetta
+              Quais as vantagens de me associar a uma assessoria de seguros?
             </h2>
             <p className="text-xl text-center text-muted-foreground mb-12">
-              Tudo o que você precisa para destravar suas vendas de saúde
+              Tudo o que a Protetta oferece para você deslanchar suas vendas!
             </p>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
@@ -474,7 +469,7 @@ const BrokerSections = () => {
 
             <Card className="p-8 bg-gradient-to-br from-secondary/10 to-primary/10 border-2 border-secondary/20">
               <h3 className="text-3xl font-bold text-center text-foreground mb-4">
-                Tudo isso sem onerar em nada o corretor!
+                Tudo isso sem onerar em nada o corretor!!
               </h3>
               <p className="text-center text-2xl text-secondary font-bold">
                 Tá esperando o que? Vem com a gente!
