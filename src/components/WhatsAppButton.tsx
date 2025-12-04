@@ -1,7 +1,7 @@
 import React from "react";
-import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import protettaLogo3D from "@/assets/protetta-logo-3d-new.webp";
 
 interface WhatsAppButtonProps {
   phoneNumber: string;
@@ -37,9 +37,13 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
         <Button
           onClick={handleClick}
           size="lg"
-          className="h-14 w-14 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-xl p-0 relative"
+          className="h-16 w-16 rounded-full bg-primary hover:bg-primary/90 shadow-xl p-0 relative overflow-hidden"
         >
-          <MessageCircle className="h-7 w-7" />
+          <img 
+            src={protettaLogo3D} 
+            alt="Protetta" 
+            className="h-10 w-10 object-contain"
+          />
           
           {/* Pulse ring */}
           <motion.div
