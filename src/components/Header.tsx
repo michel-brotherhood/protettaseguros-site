@@ -222,7 +222,7 @@ const Header = () => {
                     </div>
                   </DropdownMenuItem>
                   <DropdownMenuItem 
-                    onClick={() => scrollToSection("como-funciona")} 
+                    onClick={() => scrollToSection("por-que-escolher")} 
                     className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
                   >
                     <div className="py-2">

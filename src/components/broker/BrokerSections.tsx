@@ -345,7 +345,7 @@ const BrokerSections = () => {
       </section>
 
       {/* Por que escolher */}
-      <section className="py-10 md:py-16 bg-gradient-to-br from-secondary/10 via-background to-primary/10">
+      <section id="por-que-escolher" className="py-10 md:py-16 bg-gradient-to-br from-secondary/10 via-background to-primary/10 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 text-center">
