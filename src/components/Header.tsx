@@ -91,37 +91,45 @@ const Header = () => {
                   align="start" 
                   className="w-64 bg-background/95 backdrop-blur-md border border-border shadow-xl animate-in fade-in-0 zoom-in-95 slide-in-from-top-2 duration-200"
                 >
-                  <DropdownMenuItem 
-                    onClick={() => scrollToSection("quem-somos")} 
-                    className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
-                  >
-                    <div className="py-2">
-                      <div className="font-semibold text-foreground">Quem somos</div>
-                    </div>
+                  <DropdownMenuItem asChild>
+                    <Link 
+                      to="/cliente/quem-somos" 
+                      className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
+                    >
+                      <div className="py-2">
+                        <div className="font-semibold text-foreground">Quem somos</div>
+                      </div>
+                    </Link>
                   </DropdownMenuItem>
-                  <DropdownMenuItem 
-                    onClick={() => scrollToSection("o-que-fazemos")} 
-                    className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
-                  >
-                    <div className="py-2">
-                      <div className="font-semibold text-foreground">O que fazemos</div>
-                    </div>
+                  <DropdownMenuItem asChild>
+                    <Link 
+                      to="/cliente/o-que-fazemos" 
+                      className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
+                    >
+                      <div className="py-2">
+                        <div className="font-semibold text-foreground">O que fazemos</div>
+                      </div>
+                    </Link>
                   </DropdownMenuItem>
-                  <DropdownMenuItem 
-                    onClick={() => scrollToSection("como-fazemos")} 
-                    className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
-                  >
-                    <div className="py-2">
-                      <div className="font-semibold text-foreground">Como fazemos</div>
-                    </div>
+                  <DropdownMenuItem asChild>
+                    <Link 
+                      to="/cliente/como-fazemos" 
+                      className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
+                    >
+                      <div className="py-2">
+                        <div className="font-semibold text-foreground">Como fazemos</div>
+                      </div>
+                    </Link>
                   </DropdownMenuItem>
-                  <DropdownMenuItem 
-                    onClick={() => scrollToSection("diferenciais")} 
-                    className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
-                  >
-                    <div className="py-2">
-                      <div className="font-semibold text-foreground">Por que escolher a Protetta?</div>
-                    </div>
+                  <DropdownMenuItem asChild>
+                    <Link 
+                      to="/cliente/diferenciais" 
+                      className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
+                    >
+                      <div className="py-2">
+                        <div className="font-semibold text-foreground">Por que escolher a Protetta?</div>
+                      </div>
+                    </Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -205,29 +213,35 @@ const Header = () => {
                   align="start" 
                   className="w-80 bg-background/95 backdrop-blur-md border border-border shadow-xl animate-in fade-in-0 zoom-in-95 slide-in-from-top-2 duration-200"
                 >
-                  <DropdownMenuItem 
-                    onClick={() => scrollToSection("sobre-protetta")} 
-                    className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
-                  >
-                    <div className="py-2">
-                      <div className="font-semibold text-foreground">Sobre a Protetta</div>
-                    </div>
+                  <DropdownMenuItem asChild>
+                    <Link 
+                      to="/corretor/sobre" 
+                      className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
+                    >
+                      <div className="py-2">
+                        <div className="font-semibold text-foreground">Sobre a Protetta</div>
+                      </div>
+                    </Link>
                   </DropdownMenuItem>
-                  <DropdownMenuItem 
-                    onClick={() => scrollToSection("como-funciona")} 
-                    className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
-                  >
-                    <div className="py-2">
-                      <div className="font-semibold text-foreground">Como funciona uma assessoria de seguros?</div>
-                    </div>
+                  <DropdownMenuItem asChild>
+                    <Link 
+                      to="/corretor/como-funciona" 
+                      className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
+                    >
+                      <div className="py-2">
+                        <div className="font-semibold text-foreground">Como funciona uma assessoria de seguros?</div>
+                      </div>
+                    </Link>
                   </DropdownMenuItem>
-                  <DropdownMenuItem 
-                    onClick={() => scrollToSection("por-que-escolher")} 
-                    className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
-                  >
-                    <div className="py-2">
-                      <div className="font-semibold text-foreground">Mas por que escolher a Protetta como assessoria?</div>
-                    </div>
+                  <DropdownMenuItem asChild>
+                    <Link 
+                      to="/corretor/por-que-escolher" 
+                      className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
+                    >
+                      <div className="py-2">
+                        <div className="font-semibold text-foreground">Mas por que escolher a Protetta como assessoria?</div>
+                      </div>
+                    </Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -390,30 +404,34 @@ const Header = () => {
               </div>
               
               <nav className="flex flex-col gap-2">
-                <button 
-                  onClick={() => scrollToSection("quem-somos")}
+                <Link 
+                  to="/cliente/quem-somos"
+                  onClick={() => setIsMobileMenuOpen(false)}
                   className="px-4 py-4 text-foreground hover:text-primary transition-all text-left font-medium text-base"
                 >
                   Quem somos
-                </button>
-                <button 
-                  onClick={() => scrollToSection("diferenciais")}
+                </Link>
+                <Link 
+                  to="/cliente/o-que-fazemos"
+                  onClick={() => setIsMobileMenuOpen(false)}
                   className="px-4 py-4 text-foreground hover:text-primary transition-all text-left font-medium text-base"
                 >
-                  Especialidades
-                </button>
-                <button 
-                  onClick={() => scrollToSection("responsabilidade-social")}
+                  O que fazemos
+                </Link>
+                <Link 
+                  to="/cliente/como-fazemos"
+                  onClick={() => setIsMobileMenuOpen(false)}
                   className="px-4 py-4 text-foreground hover:text-primary transition-all text-left font-medium text-base"
                 >
-                  Responsabilidade Social
-                </button>
-                <button 
-                  onClick={() => scrollToSection("fale-com-a-protetta")}
+                  Como fazemos
+                </Link>
+                <Link 
+                  to="/cliente/diferenciais"
+                  onClick={() => setIsMobileMenuOpen(false)}
                   className="px-4 py-4 text-foreground hover:text-primary transition-all text-left font-medium text-base"
                 >
-                  Fale com a Protetta
-                </button>
+                  Diferenciais
+                </Link>
                 <Link 
                   to="/contato" 
                   className="px-4 py-4 text-foreground hover:text-primary transition-all font-medium text-base"
@@ -460,24 +478,27 @@ const Header = () => {
               </div>
               
               <nav className="flex flex-col gap-2">
-                <button 
-                  onClick={() => scrollToSection("sobre-protetta")}
+                <Link 
+                  to="/corretor/sobre"
+                  onClick={() => setIsMobileMenuOpen(false)}
                   className="px-4 py-4 text-foreground hover:text-secondary transition-all text-left font-medium text-base"
                 >
                   Sobre a Protetta
-                </button>
-                <button 
-                  onClick={() => scrollToSection("como-funciona")}
+                </Link>
+                <Link 
+                  to="/corretor/como-funciona"
+                  onClick={() => setIsMobileMenuOpen(false)}
                   className="px-4 py-4 text-foreground hover:text-secondary transition-all text-left font-medium text-base"
                 >
                   Como funciona
-                </button>
-                <button 
-                  onClick={() => scrollToSection("vantagens")}
+                </Link>
+                <Link 
+                  to="/corretor/por-que-escolher"
+                  onClick={() => setIsMobileMenuOpen(false)}
                   className="px-4 py-4 text-foreground hover:text-secondary transition-all text-left font-medium text-base"
                 >
-                  Vantagens
-                </button>
+                  Por que escolher
+                </Link>
                 <Link 
                   to="/contato" 
                   className="px-4 py-4 text-foreground hover:text-secondary transition-all font-medium text-base"
