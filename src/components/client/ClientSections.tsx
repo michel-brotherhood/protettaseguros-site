@@ -57,7 +57,7 @@ const ClientSections = () => {
       </section>
 
       {/* O Que Fazemos */}
-      <section className="py-10 md:py-16 bg-muted/30">
+      <section id="o-que-fazemos" className="py-10 md:py-16 bg-muted/30 scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 text-center">
@@ -113,7 +113,7 @@ const ClientSections = () => {
       </section>
 
       {/* Como Fazemos */}
-      <section className="py-10 md:py-16 bg-background">
+      <section id="como-fazemos" className="py-10 md:py-16 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">

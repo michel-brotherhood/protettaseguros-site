@@ -42,7 +42,6 @@ const Client = () => {
       <WhatsAppButton 
         phoneNumber={phoneNumber}
         message={whatsappMessage}
-        label="Solicite uma Análise"
       />
     </motion.div>
   );

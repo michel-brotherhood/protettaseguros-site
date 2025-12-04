@@ -40,7 +40,6 @@ const Broker = () => {
       <WhatsAppButton 
         phoneNumber={phoneNumber}
         message={whatsappMessage}
-        label="Quero ser Parceiro"
       />
     </motion.div>
   );
