@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Users, Lightbulb, Globe, Zap } from "lucide-react";
+import { ArrowLeft, Home, Users, Lightbulb, Globe, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Header from "@/components/Header";
@@ -53,12 +53,21 @@ const ComoFazemos = () => {
       <section className="pt-28 pb-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Link to="/cliente">
-              <Button variant="ghost" className="mb-6 text-muted-foreground hover:text-primary">
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Voltar para Cliente
-              </Button>
-            </Link>
+            <div className="flex items-center gap-2 mb-6">
+              <Link to="/">
+                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary">
+                  <Home className="h-4 w-4 mr-2" />
+                  Início
+                </Button>
+              </Link>
+              <span className="text-muted-foreground">/</span>
+              <Link to="/cliente">
+                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-primary">
+                  <ArrowLeft className="h-4 w-4 mr-2" />
+                  Cliente
+                </Button>
+              </Link>
+            </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
               Como Fazemos

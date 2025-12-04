@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Users, Monitor, GraduationCap, DollarSign, FileKey, Building2 } from "lucide-react";
+import { ArrowLeft, Home, Users, Monitor, GraduationCap, DollarSign, FileKey, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Header from "@/components/Header";
@@ -66,12 +66,21 @@ const ComoFuncionaAssessoria = () => {
       <section className="pt-28 pb-16 bg-gradient-to-br from-[hsl(175,84%,55%)]/20 via-background to-secondary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Link to="/corretor">
-              <Button variant="ghost" className="mb-6 text-muted-foreground hover:text-secondary">
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Voltar para Corretor
-              </Button>
-            </Link>
+            <div className="flex items-center gap-2 mb-6">
+              <Link to="/">
+                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-secondary">
+                  <Home className="h-4 w-4 mr-2" />
+                  Início
+                </Button>
+              </Link>
+              <span className="text-muted-foreground">/</span>
+              <Link to="/corretor">
+                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-secondary">
+                  <ArrowLeft className="h-4 w-4 mr-2" />
+                  Corretor
+                </Button>
+              </Link>
+            </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
               Como Funciona uma Assessoria de Seguros?
