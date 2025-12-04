@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import protettaLogo3D from "@/assets/protetta-logo-3d-new.webp";
 
 interface WhatsAppButtonProps {
@@ -34,23 +33,22 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >
-        <Button
+        <button
           onClick={handleClick}
-          size="lg"
-          className="h-16 w-16 rounded-full bg-primary hover:bg-primary/90 shadow-xl p-0 relative overflow-hidden"
+          className="h-16 w-16 rounded-full bg-transparent p-0 relative flex items-center justify-center"
         >
           <img 
             src={protettaLogo3D} 
-            alt="Protetta" 
-            className="h-10 w-10 object-contain"
+            alt="Protetta - Fale conosco" 
+            className="h-14 w-14 object-contain drop-shadow-lg"
           />
           
           {/* Pulse ring */}
           <motion.div
             className="absolute inset-0 rounded-full border-2 border-primary"
             animate={{
-              scale: [1, 1.3],
-              opacity: [0.5, 0],
+              scale: [1, 1.4],
+              opacity: [0.6, 0],
             }}
             transition={{
               duration: 2,
@@ -58,7 +56,7 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
               ease: "easeOut",
             }}
           />
-        </Button>
+        </button>
       </motion.div>
     </motion.div>
   );
