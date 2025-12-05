@@ -21,7 +21,7 @@ const Broker = () => {
   }, []);
 
   const whatsappMessage = "Olá! Sou corretor e gostaria de me tornar parceiro da Protetta Seguros.";
-  const phoneNumber = "5521999999999"; // Substitua pelo número real
+  const phoneNumber = "5521967651919";
 
   return (
     <motion.div 

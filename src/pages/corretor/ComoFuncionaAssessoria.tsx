@@ -14,7 +14,7 @@ const ComoFuncionaAssessoria = () => {
   }, []);
 
   const whatsappMessage = "Olá! Sou corretor e gostaria de saber como funciona a assessoria da Protetta.";
-  const phoneNumber = "5521999999999";
+  const phoneNumber = "5521967651919";
 
   const features = [
     {

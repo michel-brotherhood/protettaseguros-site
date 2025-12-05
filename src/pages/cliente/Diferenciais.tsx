@@ -14,7 +14,7 @@ const Diferenciais = () => {
   }, []);
 
   const whatsappMessage = "Olá! Gostaria de saber mais sobre os diferenciais da Protetta Seguros.";
-  const phoneNumber = "5521999999999";
+  const phoneNumber = "5521967651919";
 
   const differentials = [
     {

@@ -1,26 +1,95 @@
 import React from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import dominosLogo from "@/assets/dominos-logo.png";
-import nuuvemLogo from "@/assets/nuuvem-logo.jpg";
-import clientLogo1 from "@/assets/client-logo-1.jpg";
-import clientLogo2 from "@/assets/client-logo-2.jpg";
-import clientLogo3 from "@/assets/client-logo-3.jpg";
-import clientLogo4 from "@/assets/client-logo-4.jpg";
+import logoAIG from "@/assets/insurance-logos/aig.png";
+import logoAkad from "@/assets/insurance-logos/akad.png";
+import logoAllianz from "@/assets/insurance-logos/allianz.png";
+import logoAmil from "@/assets/insurance-logos/amil.png";
+import logoAruana from "@/assets/insurance-logos/aruana.png";
+import logoAssim from "@/assets/insurance-logos/assim.png";
+import logoAXA from "@/assets/insurance-logos/axa.png";
+import logoAzos from "@/assets/insurance-logos/azos.png";
+import logoAzul from "@/assets/insurance-logos/azul.png";
+import logoBradesco from "@/assets/insurance-logos/bradesco.png";
+import logoCapemisa from "@/assets/insurance-logos/capemisa.png";
+import logoCNP from "@/assets/insurance-logos/cnp.svg";
+import logoCoris from "@/assets/insurance-logos/coris.png";
+import logoDarwin from "@/assets/insurance-logos/darwin.png";
+import logoEssor from "@/assets/insurance-logos/essor.png";
+import logoExcelsior from "@/assets/insurance-logos/excelsior.png";
+import logoEzze from "@/assets/insurance-logos/ezze.png";
+import logoFator from "@/assets/insurance-logos/fator.png";
+import logoHapvida from "@/assets/insurance-logos/hapvida.png";
+import logoHDI from "@/assets/insurance-logos/hdi.png";
+import logoIcatu from "@/assets/insurance-logos/icatu.png";
+import logoJunto from "@/assets/insurance-logos/junto.png";
+import logoJustos from "@/assets/insurance-logos/justos.png";
+import logoKlini from "@/assets/insurance-logos/klini.webp";
+import logoKovr from "@/assets/insurance-logos/kovr.png";
+import logoLoovi from "@/assets/insurance-logos/loovi.webp";
+import logoMAG from "@/assets/insurance-logos/mag.png";
+import logoMapfre from "@/assets/insurance-logos/mapfre.png";
+import logoMBM from "@/assets/insurance-logos/mbm.png";
+import logoOmint from "@/assets/insurance-logos/omint.png";
+import logoPorto from "@/assets/insurance-logos/porto.png";
+import logoPottencial from "@/assets/insurance-logos/pottencial.png";
+import logoPrudential from "@/assets/insurance-logos/prudential.png";
+import logoQualicorp from "@/assets/insurance-logos/qualicorp.png";
+import logoSabemi from "@/assets/insurance-logos/sabemi.png";
+import logoSuhai from "@/assets/insurance-logos/suhai.png";
+import logoSulAmerica from "@/assets/insurance-logos/sulamerica.png";
+import logoTokioMarine from "@/assets/insurance-logos/tokiomarine.png";
+import logoUsebens from "@/assets/insurance-logos/usebens.png";
+import logoYouse from "@/assets/insurance-logos/youse.png";
 
 const ClientLogos = () => {
   const { ref, isVisible } = useScrollAnimation(0.1);
+  const { ref: logosRef, isVisible: logosVisible } = useScrollAnimation(0.1);
 
-  const clients = [
-    { name: "Domino's Pizza", logo: dominosLogo },
-    { name: "Nuuvem", logo: nuuvemLogo },
-    { name: "TechCorp", logo: clientLogo1 },
-    { name: "HealthPlus", logo: clientLogo2 },
-    { name: "GlobalBiz", logo: clientLogo3 },
-    { name: "StartupHub", logo: clientLogo4 },
+  const insuranceLogos = [
+    { name: "AIG", logo: logoAIG },
+    { name: "Akad", logo: logoAkad },
+    { name: "Allianz", logo: logoAllianz },
+    { name: "Amil", logo: logoAmil },
+    { name: "Aruana", logo: logoAruana },
+    { name: "Assim", logo: logoAssim },
+    { name: "AXA", logo: logoAXA },
+    { name: "Azos", logo: logoAzos },
+    { name: "Azul", logo: logoAzul },
+    { name: "Bradesco", logo: logoBradesco },
+    { name: "Capemisa", logo: logoCapemisa },
+    { name: "CNP", logo: logoCNP },
+    { name: "Coris", logo: logoCoris },
+    { name: "Darwin", logo: logoDarwin },
+    { name: "Essor", logo: logoEssor },
+    { name: "Excelsior", logo: logoExcelsior },
+    { name: "EZZE", logo: logoEzze },
+    { name: "Fator", logo: logoFator },
+    { name: "Hapvida", logo: logoHapvida },
+    { name: "HDI", logo: logoHDI },
+    { name: "Icatu", logo: logoIcatu },
+    { name: "Junto", logo: logoJunto },
+    { name: "Justos", logo: logoJustos },
+    { name: "Klini", logo: logoKlini },
+    { name: "Kovr", logo: logoKovr },
+    { name: "Loovi", logo: logoLoovi },
+    { name: "MAG", logo: logoMAG },
+    { name: "Mapfre", logo: logoMapfre },
+    { name: "MBM", logo: logoMBM },
+    { name: "Omint", logo: logoOmint },
+    { name: "Porto", logo: logoPorto },
+    { name: "Pottencial", logo: logoPottencial },
+    { name: "Prudential", logo: logoPrudential },
+    { name: "Qualicorp", logo: logoQualicorp },
+    { name: "Sabemi", logo: logoSabemi },
+    { name: "Suhai", logo: logoSuhai },
+    { name: "SulAmérica", logo: logoSulAmerica },
+    { name: "Tokio Marine", logo: logoTokioMarine },
+    { name: "Usebens", logo: logoUsebens },
+    { name: "Youse", logo: logoYouse },
   ];
 
   return (
-    <section className="py-16 bg-muted/30 border-y border-border overflow-hidden">
+    <section className="py-16 bg-muted/30 border-y border-border">
       <div className="container mx-auto px-4">
         <div
           ref={ref}
@@ -29,35 +98,32 @@ const ClientLogos = () => {
           }`}
         >
           <p className="text-sm font-semibold text-primary mb-2 tracking-wider uppercase">
-            Confiança de grandes empresas
+            Trabalhamos com as melhores
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            Mais de 500 empresas confiam na Protetta
+            Seguradoras Parceiras
           </h2>
         </div>
 
-        {/* Carrossel Infinito */}
-        <div className="relative">
-          <div className="flex overflow-hidden">
-            <div className="flex animate-scroll-left">
-              {[...clients, ...clients].map((client, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 mx-8 w-40 h-24 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110"
-                >
-                  <img
-                    src={client.logo}
-                    alt={client.name}
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-              ))}
-            </div>
+        {/* Grid de Logos */}
+        <div ref={logosRef} className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-3 md:gap-6">
+            {insuranceLogos.map((item, index) => (
+              <div 
+                key={index}
+                className={`bg-background rounded-lg p-4 flex items-center justify-center hover:bg-muted/50 transition-all duration-300 hover:shadow-md min-h-[80px] ${
+                  logosVisible ? 'scale-100 opacity-100' : 'scale-90 opacity-0'
+                }`}
+                style={{ transitionDelay: `${index * 30}ms` }}
+              >
+                <img 
+                  src={item.logo} 
+                  alt={item.name}
+                  className="w-full h-auto object-contain max-h-[60px]"
+                />
+              </div>
+            ))}
           </div>
-
-          {/* Gradient Overlays */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-muted/30 to-transparent pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-muted/30 to-transparent pointer-events-none" />
         </div>
 
         {/* Stats Row */}

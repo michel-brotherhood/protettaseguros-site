@@ -22,7 +22,7 @@ const Client = () => {
   }, []);
 
   const whatsappMessage = "Olá! Gostaria de saber mais sobre as soluções da Protetta Seguros para minha empresa.";
-  const phoneNumber = "5521999999999"; // Substitua pelo número real
+  const phoneNumber = "5521967651919";
 
   return (
     <motion.div 
