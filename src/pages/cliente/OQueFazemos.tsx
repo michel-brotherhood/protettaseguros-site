@@ -14,7 +14,7 @@ const OQueFazemos = () => {
   }, []);
 
   const whatsappMessage = "Olá! Gostaria de saber mais sobre os serviços da Protetta Seguros.";
-  const phoneNumber = "5521999999999";
+  const phoneNumber = "5521967651919";
 
   const services = [
     { icon: DollarSign, title: "Reduzir os custos da empresa com seguros", color: "primary" },

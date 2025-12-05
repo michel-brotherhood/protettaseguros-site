@@ -14,7 +14,7 @@ const PorQueEscolher = () => {
   }, []);
 
   const whatsappMessage = "Olá! Sou corretor e gostaria de saber por que escolher a Protetta como assessoria.";
-  const phoneNumber = "5521999999999";
+  const phoneNumber = "5521967651919";
 
   const advantages = [
     { icon: Headphones, text: "Suporte integral ao corretor: da cotação ao pós-venda" },

@@ -14,7 +14,7 @@ const SobreProtetta = () => {
   }, []);
 
   const whatsappMessage = "Olá! Sou corretor e gostaria de saber mais sobre a Protetta.";
-  const phoneNumber = "5521999999999";
+  const phoneNumber = "5521967651919";
 
   return (
     <motion.div 
