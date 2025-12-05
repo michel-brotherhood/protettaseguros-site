@@ -238,7 +238,7 @@ const BrokerSections = () => {
                 <img 
                   src={features[selectedFeature].image} 
                   alt={features[selectedFeature].title}
-                  className="w-full h-[500px] object-cover transition-opacity duration-500"
+                  className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover transition-opacity duration-500"
                 />
               </div>
             </div>

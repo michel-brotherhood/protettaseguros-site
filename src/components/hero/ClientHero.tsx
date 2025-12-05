@@ -47,8 +47,8 @@ const ClientHero: React.FC<ClientHeroProps> = ({ onSwitchMode }) => {
             </Badge>
           </div>
 
-          <div className="text-center">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-6 leading-tight animate-fade-in">
+          <div className="text-center overflow-hidden">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-foreground mb-6 leading-tight animate-fade-in">
               <span className="relative inline-block">
                 <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
                   Sua porta de entrada
