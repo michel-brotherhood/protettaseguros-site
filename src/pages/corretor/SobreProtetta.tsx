@@ -26,9 +26,16 @@ const SobreProtetta = () => {
     >
       <Header />
       
-      {/* Hero Section */}
-      <section className="pt-28 pb-16 bg-gradient-to-br from-secondary/10 via-background to-primary/10">
-        <div className="container mx-auto px-4">
+      {/* Hero Section with Background Image */}
+      <section className="pt-28 pb-16 bg-gradient-to-br from-secondary/10 via-background to-primary/10 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img 
+            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=80" 
+            alt=""
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-2 mb-6">
               <Link to="/">
@@ -55,6 +62,26 @@ const SobreProtetta = () => {
             <p className="text-xl md:text-2xl text-muted-foreground">
               Facilitando a vida de corretores de seguros que desejam vender saúde.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Happy Broker Image */}
+      <section className="py-8 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="relative rounded-3xl overflow-hidden shadow-xl">
+              <img 
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80" 
+                alt="Corretor de sucesso"
+                className="w-full h-64 md:h-80 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex items-end p-8">
+                <p className="text-xl md:text-2xl font-semibold text-foreground">
+                  Seu sucesso é o nosso sucesso
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
