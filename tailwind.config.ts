@@ -203,6 +203,75 @@ export default {
             transform: "translate(30px, 30px) scale(1)",
           },
         },
+        "bounce-in": {
+          "0%": {
+            opacity: "0",
+            transform: "scale(0.3)",
+          },
+          "50%": {
+            transform: "scale(1.05)",
+          },
+          "70%": {
+            transform: "scale(0.9)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "scale(1)",
+          },
+        },
+        "slide-in-left-bounce": {
+          "0%": {
+            opacity: "0",
+            transform: "translateX(-100px) scale(0.9)",
+          },
+          "60%": {
+            opacity: "1",
+            transform: "translateX(20px) scale(1.02)",
+          },
+          "80%": {
+            transform: "translateX(-10px) scale(0.98)",
+          },
+          "100%": {
+            transform: "translateX(0) scale(1)",
+          },
+        },
+        "slide-in-right-bounce": {
+          "0%": {
+            opacity: "0",
+            transform: "translateX(100px) scale(0.9)",
+          },
+          "60%": {
+            opacity: "1",
+            transform: "translateX(-20px) scale(1.02)",
+          },
+          "80%": {
+            transform: "translateX(10px) scale(0.98)",
+          },
+          "100%": {
+            transform: "translateX(0) scale(1)",
+          },
+        },
+        "pop-in": {
+          "0%": {
+            opacity: "0",
+            transform: "scale(0) rotate(-10deg)",
+          },
+          "60%": {
+            transform: "scale(1.2) rotate(5deg)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "scale(1) rotate(0deg)",
+          },
+        },
+        "glow-pulse": {
+          "0%, 100%": {
+            boxShadow: "0 0 20px 5px hsl(var(--primary) / 0.3)",
+          },
+          "50%": {
+            boxShadow: "0 0 40px 10px hsl(var(--primary) / 0.5)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -218,6 +287,11 @@ export default {
         "particle-2": "particle-2 1.2s ease-out forwards",
         "particle-3": "particle-3 1.1s ease-out forwards",
         "particle-4": "particle-4 1.3s ease-out forwards",
+        "bounce-in": "bounce-in 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards",
+        "slide-in-left-bounce": "slide-in-left-bounce 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards",
+        "slide-in-right-bounce": "slide-in-right-bounce 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards",
+        "pop-in": "pop-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards",
+        "glow-pulse": "glow-pulse 2s ease-in-out infinite",
       },
     },
   },
