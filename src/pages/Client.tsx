@@ -4,7 +4,6 @@ import Header from "@/components/Header";
 import Breadcrumb from "@/components/Breadcrumb";
 import ClientHero from "@/components/hero/ClientHero";
 import ClientSections from "@/components/client/ClientSections";
-import ClientLogos from "@/components/ClientLogos";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -34,7 +33,6 @@ const Client = () => {
     >
       <Header />
       <ClientHero onSwitchMode={handleSwitchMode} />
-      <ClientLogos />
       <ClientSections />
       <ContactForm />
       <Footer />
