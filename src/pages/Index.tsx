@@ -73,28 +73,28 @@ const Index = () => {
           </div>
 
           {/* Badge with fade-in */}
-          <div className="flex justify-center mb-6 animate-fade-in [animation-delay:300ms] opacity-0">
+          <div className="flex justify-center mb-6 animate-fade-in" style={{ animationDelay: '300ms', animationFillMode: 'both' }}>
             <Badge variant="secondary" className="px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold bg-white/10 text-white border-white/20 backdrop-blur-sm">
               <Award className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               Primeira Hub de Seguros do Brasil
             </Badge>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in [animation-delay:400ms] opacity-0 drop-shadow-lg">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in drop-shadow-lg" style={{ animationDelay: '400ms', animationFillMode: 'both' }}>
             <span className="relative inline-block">
               Protetta Seguros
               <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-secondary/20 blur-3xl -z-10 rounded-full"></div>
             </span>
           </h1>
 
-          <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-12 sm:mb-16 max-w-2xl mx-auto px-4 animate-fade-in [animation-delay:500ms] opacity-0">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-12 sm:mb-16 max-w-2xl mx-auto px-4 animate-fade-in" style={{ animationDelay: '500ms', animationFillMode: 'both' }}>
             Sua porta de entrada para o universo dos seguros.
           </p>
 
           {/* Choice Cards with elaborate slide animations */}
           <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto px-4">
             {/* Cliente Card - Slide from left */}
-            <Link to="/cliente" className="animate-slide-in-left-bounce opacity-0 [animation-delay:600ms]">
+            <Link to="/cliente" className="animate-slide-in-left-bounce" style={{ animationDelay: '600ms', animationFillMode: 'both' }}>
               <div className="group relative p-6 sm:p-8 bg-white/95 backdrop-blur-md rounded-[2.5rem] border-2 border-white/50 hover:border-primary transition-all duration-500 hover:shadow-[0_20px_60px_-15px_hsl(var(--primary)/0.5)] hover:scale-[1.03] cursor-pointer overflow-hidden">
                 {/* Animated Glow Effect */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-primary rounded-[3rem] opacity-0 group-hover:opacity-40 blur-xl transition-all duration-500 group-hover:animate-gradient bg-[length:200%_200%]"></div>
@@ -139,7 +139,7 @@ const Index = () => {
             </Link>
 
             {/* Corretor Card - Slide from right */}
-            <Link to="/corretor" className="animate-slide-in-right-bounce opacity-0 [animation-delay:750ms]">
+            <Link to="/corretor" className="animate-slide-in-right-bounce" style={{ animationDelay: '750ms', animationFillMode: 'both' }}>
               <div className="group relative p-6 sm:p-8 bg-white/95 backdrop-blur-md rounded-[2.5rem] border-2 border-white/50 hover:border-secondary transition-all duration-500 hover:shadow-[0_20px_60px_-15px_hsl(var(--secondary)/0.5)] hover:scale-[1.03] cursor-pointer overflow-hidden">
                 {/* Animated Glow Effect */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-secondary via-primary to-secondary rounded-[3rem] opacity-0 group-hover:opacity-40 blur-xl transition-all duration-500 group-hover:animate-gradient bg-[length:200%_200%]"></div>
@@ -184,7 +184,7 @@ const Index = () => {
           </div>
 
           {/* Additional Info */}
-          <div className="mt-12 sm:mt-16 animate-fade-in [animation-delay:900ms] opacity-0 px-4">
+          <div className="mt-12 sm:mt-16 animate-fade-in px-4" style={{ animationDelay: '900ms', animationFillMode: 'both' }}>
             <p className="text-sm sm:text-base text-white/60 font-medium">
               Desde 2017 revolucionando o mercado segurador brasileiro
             </p>
