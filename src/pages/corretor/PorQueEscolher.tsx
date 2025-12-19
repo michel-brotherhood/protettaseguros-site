@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Home, Headphones, Clock, Award, BookOpen, MapPin, Trophy, MessageCircle, UserPlus, Sparkles, CheckCircle } from "lucide-react";
+import { ArrowLeft, Home, Headphones, Clock, Award, BookOpen, MapPin, Trophy, MessageCircle, UserPlus, Sparkles, CheckCircle, AlertCircle, Users, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Header from "@/components/Header";
@@ -29,6 +29,24 @@ const PorQueEscolher = () => {
     { icon: Sparkles, text: "e muito mais!" },
   ];
 
+  const challengePoints = [
+    { 
+      icon: AlertCircle, 
+      title: "Inércia", 
+      description: "Seu cliente tem dificuldade de movimentar o benefício e você não consegue ajudá-lo" 
+    },
+    { 
+      icon: Users, 
+      title: "Reunião Importante", 
+      description: "Você quer participar de uma reunião para vender um corporativo, mas não domina o assunto de saúde" 
+    },
+    { 
+      icon: HelpCircle, 
+      title: "Dúvidas Técnicas", 
+      description: "Você sente que precisa de alguém para te ajudar a entender melhor o tema de saúde" 
+    },
+  ];
+
   const highlights = [
     "Especialização em planos de saúde empresariais",
     "Mais de 30 seguradoras parceiras",
@@ -47,9 +65,16 @@ const PorQueEscolher = () => {
     >
       <Header />
       
-      {/* Hero Section */}
-      <section className="pt-28 pb-16 bg-gradient-to-br from-secondary/10 via-background to-primary/10">
-        <div className="container mx-auto px-4">
+      {/* Hero Section with Background Image */}
+      <section className="pt-28 pb-16 bg-gradient-to-br from-secondary/10 via-background to-primary/10 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img 
+            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=80" 
+            alt=""
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-2 mb-6">
               <Link to="/">
@@ -73,6 +98,65 @@ const PorQueEscolher = () => {
             <p className="text-xl md:text-2xl text-muted-foreground">
               Descubra as vantagens de ser um corretor parceiro.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Introduction Section - NEW */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <Card className="p-8 md:p-12 bg-gradient-to-br from-secondary/5 to-primary/5 border-secondary/20">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-center">
+                Porque somos uma assessoria especializada em planos de saúde!
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-center">
+                Vender saúde é complexo. Existem regras específicas, regulamentações, informações técnicas, reajustes, sinistralidade e outras variáveis que tornam a jornada do corretor mais desafiadora. <span className="font-semibold text-foreground">E é exatamente para isso que estamos aqui!</span>
+              </p>
+              
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
+                {challengePoints.map((point, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.15 }}
+                  >
+                    <Card className="p-6 h-full bg-background hover:shadow-lg transition-all">
+                      <div className="bg-gradient-to-br from-secondary to-primary p-3 rounded-xl w-12 h-12 flex items-center justify-center mb-4">
+                        <point.icon className="h-6 w-6 text-white" />
+                      </div>
+                      <h3 className="font-bold text-foreground mb-2">{point.title}</h3>
+                      <p className="text-sm text-muted-foreground">{point.description}</p>
+                    </Card>
+                  </motion.div>
+                ))}
+              </div>
+              
+              <p className="text-xl md:text-2xl font-bold text-center text-secondary">
+                Vem crescer com a gente!
+              </p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Happy Professionals Image */}
+      <section className="py-8 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="relative rounded-3xl overflow-hidden shadow-xl">
+              <img 
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80" 
+                alt="Corretores de sucesso celebrando"
+                className="w-full h-64 md:h-80 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex items-end p-8">
+                <p className="text-xl md:text-2xl font-semibold text-foreground">
+                  Junte-se a uma comunidade de corretores de sucesso
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Home, BarChart3, Heart, Scale } from "lucide-react";
+import { ArrowLeft, Home, BarChart3, Heart, Scale, HandHeart, Leaf } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Header from "@/components/Header";
@@ -47,6 +47,26 @@ const Diferenciais = () => {
         "Por isso, disponibilizamos um time de advogados, que são verdadeiros descomplicadores, pra que nossos clientes se sintam cada vez mais confiantes e amparados em relação aos seus contratos."
       ],
       gradient: "from-primary to-secondary"
+    },
+    {
+      icon: HandHeart,
+      title: "ProChange",
+      subtitle: "Responsabilidade Social",
+      description: [
+        "Aqui na Protetta, assumimos o compromisso de apoiar continuamente diversas ONGs que atuam com programas socioeducativos, promovem acesso à alimentação e fortalecem comunidades locais em situação de vulnerabilidade.",
+        "Revertemos parte dos nossos lucros para ajudar instituições que estão na linha de frente do cuidado com quem mais precisa."
+      ],
+      gradient: "from-secondary to-primary"
+    },
+    {
+      icon: Leaf,
+      title: "ESG",
+      subtitle: "Saúde Ambiental",
+      description: [
+        "Desenvolvemos um programa de sustentabilidade chamado Saúde Ambiental, através do qual neutralizamos nossa pegada de carbono anualmente por meio da compra de créditos de carbono.",
+        "Com isso, ajudamos diretamente projetos que atuam na preservação da mata nativa brasileira, protegendo espécies da flora e da fauna das queimadas e do desmatamento, ao mesmo tempo em que plantamos árvores novas e compensamos a emissão de CO2."
+      ],
+      gradient: "from-primary to-secondary"
     }
   ];
 
@@ -60,9 +80,16 @@ const Diferenciais = () => {
     >
       <Header />
       
-      {/* Hero Section */}
-      <section className="pt-28 pb-16 bg-gradient-to-br from-secondary/10 via-background to-primary/10">
-        <div className="container mx-auto px-4">
+      {/* Hero Section with Background Image */}
+      <section className="pt-28 pb-16 bg-gradient-to-br from-secondary/10 via-background to-primary/10 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img 
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80" 
+            alt=""
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-2 mb-6">
               <Link to="/">
@@ -86,6 +113,26 @@ const Diferenciais = () => {
             <p className="text-xl md:text-2xl text-muted-foreground">
               Nossos diferenciais que fazem toda a diferença para sua empresa.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Happy People Image Section */}
+      <section className="py-8 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="relative rounded-3xl overflow-hidden shadow-xl">
+              <img 
+                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=80" 
+                alt="Pessoas saudáveis e felizes"
+                className="w-full h-64 md:h-80 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex items-end p-8">
+                <p className="text-xl md:text-2xl font-semibold text-foreground">
+                  Cuidando da saúde e do bem-estar dos seus colaboradores
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
