@@ -95,9 +95,9 @@ const Index = () => {
           <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto px-4">
             {/* Cliente Card - Slide from left */}
             <Link to="/cliente" className="animate-slide-in-left-bounce" style={{ animationDelay: '600ms', animationFillMode: 'both' }}>
-              <div className="group relative p-6 sm:p-8 bg-white/95 backdrop-blur-md rounded-[2.5rem] border-2 border-white/50 hover:border-primary transition-all duration-500 hover:shadow-[0_20px_60px_-15px_hsl(var(--primary)/0.5)] hover:scale-[1.03] cursor-pointer overflow-hidden">
-                {/* Animated Glow Effect */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-primary rounded-[3rem] opacity-0 group-hover:opacity-40 blur-xl transition-all duration-500 group-hover:animate-gradient bg-[length:200%_200%]"></div>
+              <div className="group relative p-6 sm:p-8 bg-white backdrop-blur-md rounded-[2.5rem] border-2 border-white/50 hover:border-primary transition-all duration-500 hover:shadow-[0_20px_60px_-15px_hsl(var(--primary)/0.4)] hover:scale-[1.03] cursor-pointer overflow-hidden">
+                {/* Animated Glow Effect - more subtle */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 via-secondary/20 to-primary/30 rounded-[4rem] opacity-0 group-hover:opacity-20 blur-3xl transition-all duration-500 -z-10"></div>
                 
                 <div className="relative">
                   {/* Icon with pop-in animation */}
@@ -105,23 +105,23 @@ const Index = () => {
                     <Building2 className="h-10 w-10 sm:h-12 sm:w-12 text-white group-hover:scale-110 transition-transform duration-300" />
                   </div>
                   
-                  <h2 className="text-2xl sm:text-3xl font-bold text-foreground group-hover:text-primary transition-colors duration-300 mb-3 sm:mb-4">Para Clientes</h2>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-foreground transition-colors duration-300 mb-3 sm:mb-4">Para Clientes</h2>
                   
-                  <p className="text-sm sm:text-base text-muted-foreground transition-colors mb-4 sm:mb-6 leading-relaxed">
+                  <p className="text-sm sm:text-base text-muted-foreground group-hover:text-foreground/70 transition-colors mb-4 sm:mb-6 leading-relaxed">
                     Soluções personalizadas de seguro saúde empresarial com tecnologia e consultoria especializada
                   </p>
                   
-                  {/* Pills */}
+                  {/* Pills - better contrast on hover */}
                   <div className="flex flex-wrap gap-2 justify-center mb-6">
-                    <Badge className="bg-primary/10 text-primary border-primary/20 rounded-full px-4 py-1 group-hover:bg-primary/20 transition-colors">
+                    <Badge className="bg-primary/10 text-primary border-primary/20 rounded-full px-4 py-1 group-hover:bg-primary group-hover:text-white transition-colors">
                       <Shield className="w-3 h-3 mr-1" />
                       B.I.
                     </Badge>
-                    <Badge className="bg-primary/10 text-primary border-primary/20 rounded-full px-4 py-1 group-hover:bg-primary/20 transition-colors">
+                    <Badge className="bg-primary/10 text-primary border-primary/20 rounded-full px-4 py-1 group-hover:bg-primary group-hover:text-white transition-colors">
                       <Heart className="w-3 h-3 mr-1" />
                       Wellness
                     </Badge>
-                    <Badge className="bg-primary/10 text-primary border-primary/20 rounded-full px-4 py-1 group-hover:bg-primary/20 transition-colors">
+                    <Badge className="bg-primary/10 text-primary border-primary/20 rounded-full px-4 py-1 group-hover:bg-primary group-hover:text-white transition-colors">
                       <Users className="w-3 h-3 mr-1" />
                       Consultoria
                     </Badge>
@@ -140,9 +140,9 @@ const Index = () => {
 
             {/* Corretor Card - Slide from right */}
             <Link to="/corretor" className="animate-slide-in-right-bounce" style={{ animationDelay: '750ms', animationFillMode: 'both' }}>
-              <div className="group relative p-6 sm:p-8 bg-white/95 backdrop-blur-md rounded-[2.5rem] border-2 border-white/50 hover:border-secondary transition-all duration-500 hover:shadow-[0_20px_60px_-15px_hsl(var(--secondary)/0.5)] hover:scale-[1.03] cursor-pointer overflow-hidden">
-                {/* Animated Glow Effect */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-secondary via-primary to-secondary rounded-[3rem] opacity-0 group-hover:opacity-40 blur-xl transition-all duration-500 group-hover:animate-gradient bg-[length:200%_200%]"></div>
+              <div className="group relative p-6 sm:p-8 bg-white backdrop-blur-md rounded-[2.5rem] border-2 border-white/50 hover:border-secondary transition-all duration-500 hover:shadow-[0_20px_60px_-15px_hsl(var(--secondary)/0.4)] hover:scale-[1.03] cursor-pointer overflow-hidden">
+                {/* Animated Glow Effect - more subtle */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-secondary/30 via-primary/20 to-secondary/30 rounded-[4rem] opacity-0 group-hover:opacity-20 blur-3xl transition-all duration-500 -z-10"></div>
                 
                 <div className="relative">
                   {/* Icon with pop-in animation */}
@@ -150,22 +150,22 @@ const Index = () => {
                     <UserCheck className="h-10 w-10 sm:h-12 sm:w-12 text-white group-hover:scale-110 transition-transform duration-300" />
                   </div>
                   
-                  <h2 className="text-2xl sm:text-3xl font-bold text-foreground group-hover:text-secondary transition-colors duration-300 mb-3 sm:mb-4">Para Corretores</h2>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-foreground transition-colors duration-300 mb-3 sm:mb-4">Para Corretores</h2>
                   
-                  <p className="text-sm sm:text-base text-muted-foreground transition-colors mb-4 sm:mb-6 leading-relaxed">
+                  <p className="text-sm sm:text-base text-muted-foreground group-hover:text-foreground/70 transition-colors mb-4 sm:mb-6 leading-relaxed">
                     Assessoria especializada para você vender saúde com segurança, suporte integral e custo zero
                   </p>
                   
-                  {/* Pills */}
+                  {/* Pills - better contrast on hover */}
                   <div className="flex flex-wrap gap-2 justify-center mb-6">
-                    <Badge className="bg-secondary/10 text-secondary border-secondary/20 rounded-full px-4 py-1 group-hover:bg-secondary/20 transition-colors">
+                    <Badge className="bg-secondary/10 text-secondary border-secondary/20 rounded-full px-4 py-1 group-hover:bg-secondary group-hover:text-white transition-colors">
                       <Shield className="w-3 h-3 mr-1" />
                       Suporte 24/7
                     </Badge>
-                    <Badge className="bg-secondary/10 text-secondary border-secondary/20 rounded-full px-4 py-1 group-hover:bg-secondary/20 transition-colors">
+                    <Badge className="bg-secondary/10 text-secondary border-secondary/20 rounded-full px-4 py-1 group-hover:bg-secondary group-hover:text-white transition-colors">
                       Custo Zero
                     </Badge>
-                    <Badge className="bg-secondary/10 text-secondary border-secondary/20 rounded-full px-4 py-1 group-hover:bg-secondary/20 transition-colors">
+                    <Badge className="bg-secondary/10 text-secondary border-secondary/20 rounded-full px-4 py-1 group-hover:bg-secondary group-hover:text-white transition-colors">
                       Treinamentos
                     </Badge>
                   </div>
