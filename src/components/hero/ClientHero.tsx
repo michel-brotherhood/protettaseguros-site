@@ -29,86 +29,96 @@ const ClientHero: React.FC<ClientHeroProps> = ({ onSwitchMode }) => {
         <div className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-primary rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
       </div>
 
-      <div className="container mx-auto px-4 py-12 md:py-20 relative z-10">
+      <div className="container mx-auto px-4 py-8 md:py-16 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Image for Mobile/Tablet - shown at top */}
+          <div className="block lg:hidden mb-8 animate-fade-in">
+            <div className="relative max-w-xs sm:max-w-sm mx-auto">
+              <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-xl"></div>
+              <img 
+                src={happyProfessional} 
+                alt="Profissional sorridente representando atendimento humanizado" 
+                className="relative rounded-xl shadow-xl w-full h-auto object-cover object-top max-h-[280px] sm:max-h-[320px]"
+              />
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             
             {/* Text Content */}
             <div className="text-center lg:text-left">
               {/* Badges */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-8 animate-fade-in">
-                <Badge variant="secondary" className="px-4 py-2 text-sm font-semibold bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors">
-                  <Award className="w-4 h-4 mr-2" />
+              <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 mb-6 animate-fade-in">
+                <Badge variant="secondary" className="px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-semibold bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors">
+                  <Award className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
                   Primeira Hub de Seguros
                 </Badge>
-                <Badge variant="secondary" className="px-4 py-2 text-sm font-semibold bg-secondary/10 text-secondary-foreground border-secondary/20 hover:bg-secondary/20 transition-colors">
-                  <Shield className="w-4 h-4 mr-2" />
+                <Badge variant="secondary" className="px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-semibold bg-secondary/10 text-secondary-foreground border-secondary/20 hover:bg-secondary/20 transition-colors">
+                  <Shield className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
                   100% Seguro
                 </Badge>
-                <Badge variant="secondary" className="px-4 py-2 text-sm font-semibold bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors">
-                  <TrendingUp className="w-4 h-4 mr-2" />
+                <Badge variant="secondary" className="px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-semibold bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors">
+                  <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
                   Desde 2017
                 </Badge>
               </div>
 
-              <div className="overflow-hidden">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-6 leading-tight animate-fade-in">
-                  <span className="relative inline-block">
-                    <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
-                      Sua porta de entrada
-                    </span>
-                    <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-secondary/20 blur-2xl -z-10"></div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-4 sm:mb-6 leading-tight animate-fade-in">
+                <span className="relative inline-block">
+                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
+                    Sua porta de entrada
                   </span>
-                  <br />
-                  para o universo dos seguros.
-                </h1>
-                
-                <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-xl mx-auto lg:mx-0 leading-relaxed animate-fade-in [animation-delay:200ms] opacity-0 font-light" style={{ animationFillMode: 'forwards' }}>
-                  Muito mais que brokers, somos a 
-                  <span className="text-primary font-semibold"> primeira hub de seguros do Brasil </span> 
-                  com foco em seguro saúde empresarial.
-                </p>
+                  <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-secondary/20 blur-2xl -z-10"></div>
+                </span>
+                <br />
+                para o universo dos seguros.
+              </h1>
+              
+              <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 sm:mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed animate-fade-in font-light">
+                Muito mais que brokers, somos a 
+                <span className="text-primary font-semibold"> primeira hub de seguros do Brasil </span> 
+                com foco em seguro saúde empresarial.
+              </p>
 
-                {/* Stats */}
-                <div className="grid grid-cols-3 gap-6 max-w-md mx-auto lg:mx-0 mb-12 animate-fade-in [animation-delay:400ms] opacity-0" style={{ animationFillMode: 'forwards' }}>
-                  <div className="text-center lg:text-left">
-                    <div className="text-3xl md:text-4xl font-bold text-primary mb-1">2017</div>
-                    <div className="text-sm text-muted-foreground">Ano de Fundação</div>
-                  </div>
-                  <div className="text-center lg:text-left">
-                    <div className="text-3xl md:text-4xl font-bold text-secondary mb-1">100%</div>
-                    <div className="text-sm text-muted-foreground">Satisfação</div>
-                  </div>
-                  <div className="text-center lg:text-left">
-                    <div className="text-3xl md:text-4xl font-bold text-primary mb-1">24/7</div>
-                    <div className="text-sm text-muted-foreground">Suporte</div>
-                  </div>
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-4 sm:gap-6 max-w-md mx-auto lg:mx-0 mb-8 sm:mb-10 animate-fade-in">
+                <div className="text-center lg:text-left">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-1">2017</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Ano de Fundação</div>
                 </div>
+                <div className="text-center lg:text-left">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary mb-1">100%</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Satisfação</div>
+                </div>
+                <div className="text-center lg:text-left">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-1">24/7</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Suporte</div>
+                </div>
+              </div>
 
-                {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in [animation-delay:600ms] opacity-0" style={{ animationFillMode: 'forwards' }}>
-                  <Button 
-                    size="lg" 
-                    onClick={scrollToContact}
-                    className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-secondary text-white hover:opacity-90 transition-all shadow-lg hover:shadow-xl hover:scale-105"
-                  >
-                    Solicite uma Análise Gratuita
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                  <Button 
-                    size="lg" 
-                    variant="outline"
-                    onClick={() => document.getElementById('diferenciais')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="text-lg px-8 py-6 border-2 hover:bg-primary/10"
-                  >
-                    Conheça nossos diferenciais
-                  </Button>
-                </div>
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start animate-fade-in">
+                <Button 
+                  size="lg" 
+                  onClick={scrollToContact}
+                  className="text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 bg-gradient-to-r from-primary to-secondary text-primary-foreground hover:opacity-90 transition-all shadow-lg hover:shadow-xl hover:scale-105"
+                >
+                  Solicite uma Análise Gratuita
+                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  onClick={() => document.getElementById('diferenciais')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 border-2 hover:bg-primary/10"
+                >
+                  Conheça nossos diferenciais
+                </Button>
               </div>
             </div>
 
-            {/* Image */}
-            <div className="hidden lg:block animate-fade-in [animation-delay:300ms] opacity-0" style={{ animationFillMode: 'forwards' }}>
+            {/* Image for Desktop */}
+            <div className="hidden lg:block animate-fade-in">
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-2xl"></div>
                 <img 
