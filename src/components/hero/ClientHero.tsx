@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Shield, Award, TrendingUp } from "lucide-react";
-import happyProfessional from "@/assets/happy-professional.png";
+import familyVideo from "@/assets/family-loving.mp4";
 
 interface ClientHeroProps {
   onSwitchMode: () => void;
@@ -31,14 +31,20 @@ const ClientHero: React.FC<ClientHeroProps> = ({ onSwitchMode }) => {
 
       <div className="container mx-auto px-4 py-8 md:py-16 relative z-10">
         <div className="max-w-7xl mx-auto">
-          {/* Image for Mobile/Tablet - shown at top */}
-          <div className="block lg:hidden mb-8 animate-fade-in">
+          {/* Video for Mobile/Tablet - shown at top */}
+          <div 
+            className="block lg:hidden mb-8 animate-fade-in"
+            style={{ animationDelay: '100ms' }}
+          >
             <div className="relative max-w-xs sm:max-w-sm mx-auto">
               <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-xl"></div>
-              <img 
-                src={happyProfessional} 
-                alt="Profissional sorridente representando atendimento humanizado" 
-                className="relative rounded-xl shadow-xl w-full h-auto object-cover object-top max-h-[280px] sm:max-h-[320px]"
+              <video 
+                src={familyVideo}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="relative rounded-xl shadow-xl w-full h-auto object-cover max-h-[280px] sm:max-h-[320px]"
               />
             </div>
           </div>
@@ -48,7 +54,10 @@ const ClientHero: React.FC<ClientHeroProps> = ({ onSwitchMode }) => {
             {/* Text Content */}
             <div className="text-center lg:text-left">
               {/* Badges */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 mb-6 animate-fade-in">
+              <div 
+                className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 mb-6 animate-fade-in"
+                style={{ animationDelay: '200ms' }}
+              >
                 <Badge variant="secondary" className="px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-semibold bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors">
                   <Award className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
                   Primeira Hub de Seguros
@@ -63,25 +72,34 @@ const ClientHero: React.FC<ClientHeroProps> = ({ onSwitchMode }) => {
                 </Badge>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-4 sm:mb-6 leading-tight animate-fade-in">
+              <h1 
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-4 sm:mb-6 leading-tight animate-fade-in"
+                style={{ animationDelay: '300ms' }}
+              >
                 <span className="relative inline-block">
-                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
+                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-gradient bg-[length:200%_auto] drop-shadow-sm">
                     Sua porta de entrada
                   </span>
                   <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-secondary/20 blur-2xl -z-10"></div>
                 </span>
                 <br />
-                para o universo dos seguros.
+                <span className="drop-shadow-sm">para o universo dos seguros.</span>
               </h1>
               
-              <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 sm:mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed animate-fade-in font-light">
+              <p 
+                className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 sm:mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed animate-fade-in font-light"
+                style={{ animationDelay: '400ms' }}
+              >
                 Muito mais que brokers, somos a 
                 <span className="text-primary font-semibold"> primeira hub de seguros do Brasil </span> 
                 com foco em seguro saúde empresarial.
               </p>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-4 sm:gap-6 max-w-md mx-auto lg:mx-0 mb-8 sm:mb-10 animate-fade-in">
+              <div 
+                className="grid grid-cols-3 gap-4 sm:gap-6 max-w-md mx-auto lg:mx-0 mb-8 sm:mb-10 animate-fade-in"
+                style={{ animationDelay: '500ms' }}
+              >
                 <div className="text-center lg:text-left">
                   <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-1">2017</div>
                   <div className="text-xs sm:text-sm text-muted-foreground">Ano de Fundação</div>
@@ -97,11 +115,14 @@ const ClientHero: React.FC<ClientHeroProps> = ({ onSwitchMode }) => {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start animate-fade-in">
+              <div 
+                className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start animate-fade-in"
+                style={{ animationDelay: '600ms' }}
+              >
                 <Button 
                   size="lg" 
                   onClick={scrollToContact}
-                  className="text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 bg-gradient-to-r from-primary to-secondary text-primary-foreground hover:opacity-90 transition-all shadow-lg hover:shadow-xl hover:scale-105"
+                  className="text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 bg-gradient-to-r from-primary to-secondary text-primary-foreground hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 focus:ring-2 focus:ring-primary/50"
                 >
                   Solicite uma Análise Gratuita
                   <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
@@ -110,21 +131,27 @@ const ClientHero: React.FC<ClientHeroProps> = ({ onSwitchMode }) => {
                   size="lg" 
                   variant="outline"
                   onClick={() => document.getElementById('diferenciais')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 border-2 hover:bg-primary/10"
+                  className="text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 border-2 border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary/50 transition-all duration-300"
                 >
                   Conheça nossos diferenciais
                 </Button>
               </div>
             </div>
 
-            {/* Image for Desktop */}
-            <div className="hidden lg:block animate-fade-in">
+            {/* Video for Desktop */}
+            <div 
+              className="hidden lg:block animate-fade-in"
+              style={{ animationDelay: '400ms' }}
+            >
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-2xl"></div>
-                <img 
-                  src={happyProfessional} 
-                  alt="Profissional sorridente representando atendimento humanizado" 
-                  className="relative rounded-2xl shadow-2xl w-full h-auto object-cover object-top"
+                <video 
+                  src={familyVideo}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="relative rounded-2xl shadow-2xl w-full h-auto object-cover"
                 />
               </div>
             </div>

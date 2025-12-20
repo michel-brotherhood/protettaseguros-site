@@ -10,6 +10,7 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Building2, User, Phone, MessageSquare, Send, CheckCircle2 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import happyProfessional from "@/assets/happy-professional.png";
 
 const contactSchema = z.object({
   name: z
@@ -95,7 +96,7 @@ const ContactForm = () => {
       <div className="container mx-auto px-4">
         <div 
           ref={ref}
-          className={`max-w-4xl mx-auto transition-all duration-700 ${
+          className={`max-w-6xl mx-auto transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
@@ -108,128 +109,143 @@ const ContactForm = () => {
             </p>
           </div>
 
-          <Card className="p-8 md:p-12 shadow-2xl border-border">
-            {isSubmitted ? (
-              <div className="text-center py-12 animate-scale-in">
-                <div className="bg-gradient-to-br from-primary to-secondary p-6 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle2 className="h-12 w-12 text-white" />
-                </div>
-                <h3 className="text-3xl font-bold text-foreground mb-4">
-                  Mensagem enviada!
-                </h3>
-                <p className="text-lg text-muted-foreground">
-                  Obrigado pelo contato. Nossa equipe responderá em breve.
-                </p>
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Image Section - Hidden on mobile, shown on lg+ */}
+            <div className="hidden lg:block">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-2xl"></div>
+                <img 
+                  src={happyProfessional}
+                  alt="Profissional sorridente pronta para atender"
+                  className="relative rounded-2xl shadow-2xl w-full h-auto object-cover object-top max-h-[600px]"
+                />
               </div>
-            ) : (
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="name" className="text-foreground flex items-center gap-2">
-                      <User className="h-4 w-4" />
-                      Nome completo *
-                    </Label>
-                    <Input
-                      id="name"
-                      placeholder="Seu nome"
-                      {...register("name")}
-                      className={errors.name ? "border-destructive" : ""}
-                    />
-                    {errors.name && (
-                      <p className="text-sm text-destructive">{errors.name.message}</p>
-                    )}
-                  </div>
+            </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="company" className="text-foreground flex items-center gap-2">
-                      <Building2 className="h-4 w-4" />
-                      Empresa *
-                    </Label>
-                    <Input
-                      id="company"
-                      placeholder="Nome da empresa"
-                      {...register("company")}
-                      className={errors.company ? "border-destructive" : ""}
-                    />
-                    {errors.company && (
-                      <p className="text-sm text-destructive">{errors.company.message}</p>
-                    )}
+            {/* Form Section */}
+            <Card className="p-8 md:p-12 shadow-2xl border-border">
+              {isSubmitted ? (
+                <div className="text-center py-12 animate-scale-in">
+                  <div className="bg-gradient-to-br from-primary to-secondary p-6 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6">
+                    <CheckCircle2 className="h-12 w-12 text-white" />
                   </div>
+                  <h3 className="text-3xl font-bold text-foreground mb-4">
+                    Mensagem enviada!
+                  </h3>
+                  <p className="text-lg text-muted-foreground">
+                    Obrigado pelo contato. Nossa equipe responderá em breve.
+                  </p>
                 </div>
+              ) : (
+                <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="name" className="text-foreground flex items-center gap-2">
+                        <User className="h-4 w-4" />
+                        Nome completo *
+                      </Label>
+                      <Input
+                        id="name"
+                        placeholder="Seu nome"
+                        {...register("name")}
+                        className={errors.name ? "border-destructive" : ""}
+                      />
+                      {errors.name && (
+                        <p className="text-sm text-destructive">{errors.name.message}</p>
+                      )}
+                    </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="email" className="text-foreground flex items-center gap-2">
-                      <Mail className="h-4 w-4" />
-                      Email *
-                    </Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="seu@email.com"
-                      {...register("email")}
-                      className={errors.email ? "border-destructive" : ""}
-                    />
-                    {errors.email && (
-                      <p className="text-sm text-destructive">{errors.email.message}</p>
-                    )}
+                    <div className="space-y-2">
+                      <Label htmlFor="company" className="text-foreground flex items-center gap-2">
+                        <Building2 className="h-4 w-4" />
+                        Empresa *
+                      </Label>
+                      <Input
+                        id="company"
+                        placeholder="Nome da empresa"
+                        {...register("company")}
+                        className={errors.company ? "border-destructive" : ""}
+                      />
+                      {errors.company && (
+                        <p className="text-sm text-destructive">{errors.company.message}</p>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="email" className="text-foreground flex items-center gap-2">
+                        <Mail className="h-4 w-4" />
+                        Email *
+                      </Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="seu@email.com"
+                        {...register("email")}
+                        className={errors.email ? "border-destructive" : ""}
+                      />
+                      {errors.email && (
+                        <p className="text-sm text-destructive">{errors.email.message}</p>
+                      )}
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="phone" className="text-foreground flex items-center gap-2">
+                        <Phone className="h-4 w-4" />
+                        Telefone *
+                      </Label>
+                      <Input
+                        id="phone"
+                        placeholder="(00) 00000-0000"
+                        {...register("phone")}
+                        className={errors.phone ? "border-destructive" : ""}
+                      />
+                      {errors.phone && (
+                        <p className="text-sm text-destructive">{errors.phone.message}</p>
+                      )}
+                    </div>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="phone" className="text-foreground flex items-center gap-2">
-                      <Phone className="h-4 w-4" />
-                      Telefone *
+                    <Label htmlFor="message" className="text-foreground flex items-center gap-2">
+                      <MessageSquare className="h-4 w-4" />
+                      Mensagem *
                     </Label>
-                    <Input
-                      id="phone"
-                      placeholder="(00) 00000-0000"
-                      {...register("phone")}
-                      className={errors.phone ? "border-destructive" : ""}
+                    <Textarea
+                      id="message"
+                      placeholder="Como podemos ajudar sua empresa?"
+                      rows={6}
+                      {...register("message")}
+                      className={errors.message ? "border-destructive" : ""}
                     />
-                    {errors.phone && (
-                      <p className="text-sm text-destructive">{errors.phone.message}</p>
+                    {errors.message && (
+                      <p className="text-sm text-destructive">{errors.message.message}</p>
                     )}
                   </div>
-                </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="message" className="text-foreground flex items-center gap-2">
-                    <MessageSquare className="h-4 w-4" />
-                    Mensagem *
-                  </Label>
-                  <Textarea
-                    id="message"
-                    placeholder="Como podemos ajudar sua empresa?"
-                    rows={6}
-                    {...register("message")}
-                    className={errors.message ? "border-destructive" : ""}
-                  />
-                  {errors.message && (
-                    <p className="text-sm text-destructive">{errors.message.message}</p>
-                  )}
-                </div>
-
-                <Button
-                  type="submit"
-                  size="lg"
-                  disabled={isSubmitting}
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-lg py-6 shadow-xl hover:shadow-2xl transition-all"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />
-                      Enviando...
-                    </>
-                  ) : (
-                    <>
-                      Enviar mensagem
-                      <Send className="ml-2 h-5 w-5" />
-                    </>
-                  )}
-                </Button>
-              </form>
-            )}
-          </Card>
+                  <Button
+                    type="submit"
+                    size="lg"
+                    disabled={isSubmitting}
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-lg py-6 shadow-xl hover:shadow-2xl transition-all duration-300"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />
+                        Enviando...
+                      </>
+                    ) : (
+                      <>
+                        Enviar mensagem
+                        <Send className="ml-2 h-5 w-5" />
+                      </>
+                    )}
+                  </Button>
+                </form>
+              )}
+            </Card>
+          </div>
         </div>
       </div>
     </section>
