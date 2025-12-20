@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import happyProfessional from "@/assets/happy-professional.png";
 
 const Diferenciais = () => {
   React.useEffect(() => {
@@ -53,8 +54,8 @@ const Diferenciais = () => {
       title: "ProChange",
       subtitle: "Responsabilidade Social",
       description: [
-        "Aqui na Protetta, assumimos o compromisso de apoiar continuamente diversas ONGs que atuam com programas socioeducativos, promovem acesso à alimentação e fortalecem comunidades locais em situação de vulnerabilidade.",
-        "Revertemos parte dos nossos lucros para ajudar instituições que estão na linha de frente do cuidado com quem mais precisa."
+        "ProChange é o braço social da Protetta. Todo mês, uma parte do lucro é revertida para auxiliar duas ONGs diferentes, sempre cuidadosamente escolhidas por nossa equipe e divulgadas em nossas redes sociais.",
+        "Desta forma, ao escolher a Protetta, você não está apenas escolhendo uma corretora de seguros, está realmente ajudando o mundo a se tornar um lugar melhor."
       ],
       gradient: "from-secondary to-primary"
     },
@@ -63,8 +64,9 @@ const Diferenciais = () => {
       title: "ESG",
       subtitle: "Saúde Ambiental",
       description: [
-        "Desenvolvemos um programa de sustentabilidade chamado Saúde Ambiental, através do qual neutralizamos nossa pegada de carbono anualmente por meio da compra de créditos de carbono.",
-        "Com isso, ajudamos diretamente projetos que atuam na preservação da mata nativa brasileira, protegendo espécies da flora e da fauna das queimadas e do desmatamento, ao mesmo tempo em que plantamos árvores novas e compensamos a emissão de CO2."
+        "Na Protetta, a preocupação com saúde ocorre de maneira global. E, é claro, que não deixaríamos de lado a saúde ambiental.",
+        "Sendo assim, a cada contrato fechado adquirimos créditos de carbono proporcionais ao valor do contrato. Um crédito de carbono é a representação de uma tonelada de carbono que deixou de ser emitida para a atmosfera, contribuindo para a diminuição do efeito estufa.",
+        "Para nós, meio ambiente é coisa séria. Tão séria quanto saúde."
       ],
       gradient: "from-primary to-secondary"
     }
@@ -123,8 +125,8 @@ const Diferenciais = () => {
           <div className="max-w-5xl mx-auto">
             <div className="relative rounded-3xl overflow-hidden shadow-xl">
               <img 
-                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=80" 
-                alt="Pessoas saudáveis e felizes"
+                src={happyProfessional} 
+                alt="Profissional feliz e saudável"
                 className="w-full h-64 md:h-80 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex items-end p-8">

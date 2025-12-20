@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import happyProfessional from "@/assets/happy-professional.png";
 
 const PorQueEscolher = () => {
   React.useEffect(() => {
@@ -33,17 +34,17 @@ const PorQueEscolher = () => {
     { 
       icon: AlertCircle, 
       title: "Inércia", 
-      description: "Seu cliente tem dificuldade de movimentar o benefício e você não consegue ajudá-lo" 
+      description: "Tem muito tempo que não vende saúde? Não tem problema, a gente te tira da inércia!" 
     },
     { 
       icon: Users, 
       title: "Reunião Importante", 
-      description: "Você quer participar de uma reunião para vender um corporativo, mas não domina o assunto de saúde" 
+      description: "Está se sentindo inseguro para fazer reunião com o cliente? Não tem problema, a gente vai junto com você!" 
     },
     { 
       icon: HelpCircle, 
       title: "Dúvidas Técnicas", 
-      description: "Você sente que precisa de alguém para te ajudar a entender melhor o tema de saúde" 
+      description: "Está com alguma dúvida acerca de regras comerciais? Não tem problema, a gente te responde na mesma hora!" 
     },
   ];
 
@@ -111,7 +112,7 @@ const PorQueEscolher = () => {
                 Porque somos uma assessoria especializada em planos de saúde!
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-center">
-                Vender saúde é complexo. Existem regras específicas, regulamentações, informações técnicas, reajustes, sinistralidade e outras variáveis que tornam a jornada do corretor mais desafiadora. <span className="font-semibold text-foreground">E é exatamente para isso que estamos aqui!</span>
+                Vender saúde é complexo. Existem regras específicas, regulamentações, informações técnicas, reajustes, sinistralidade e outras variáveis que tornam a jornada do corretor mais desafiadora. <span className="font-semibold text-foreground">Mas aqui na Protetta não tem erro! A gente te acompanha do início ao fim da venda!</span>
               </p>
               
               <div className="grid md:grid-cols-3 gap-6 mb-8">
@@ -147,8 +148,8 @@ const PorQueEscolher = () => {
           <div className="max-w-4xl mx-auto">
             <div className="relative rounded-3xl overflow-hidden shadow-xl">
               <img 
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80" 
-                alt="Corretores de sucesso celebrando"
+                src={happyProfessional} 
+                alt="Profissional feliz e sorrindo"
                 className="w-full h-64 md:h-80 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex items-end p-8">
