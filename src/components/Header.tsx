@@ -165,7 +165,7 @@ const Header = () => {
                       className="cursor-pointer hover:bg-primary/10 transition-colors duration-200 focus:bg-primary/10"
                     >
                       <div className="py-2">
-                        <div className="font-semibold text-foreground">Pro Orange</div>
+                        <div className="font-semibold text-foreground">ProChange</div>
                       </div>
                     </Link>
                   </DropdownMenuItem>

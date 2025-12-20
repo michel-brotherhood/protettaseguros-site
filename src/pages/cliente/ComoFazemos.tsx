@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import happyProfessional from "@/assets/happy-professional.png";
 
 const ComoFazemos = () => {
   React.useEffect(() => {
@@ -92,9 +93,9 @@ const ComoFazemos = () => {
           <div className="max-w-6xl mx-auto">
             <div className="relative rounded-3xl overflow-hidden shadow-xl">
               <img 
-                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80" 
-                alt="Equipe colaborando em projeto"
-                className="w-full h-64 md:h-80 object-cover"
+                src={happyProfessional} 
+                alt="Profissional feliz colaborando"
+                className="w-full h-64 md:h-80 object-cover object-top"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex items-end p-8">
                 <p className="text-xl md:text-2xl font-semibold text-foreground">
