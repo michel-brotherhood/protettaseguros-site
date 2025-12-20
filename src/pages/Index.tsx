@@ -4,8 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Building2, UserCheck, ArrowRight, Shield, Award, Heart, Users } from "lucide-react";
 import protettaLogo3D from "@/assets/protetta-logo-3d.webp";
+import { useParallax } from "@/hooks/useParallax";
 
 const Index = () => {
+  // Parallax effects for different layers
+  const parallaxSlow = useParallax(0.08, 25);
+  const parallaxMedium = useParallax(0.15, 40);
+  const parallaxFast = useParallax(0.25, 60);
+  const parallaxReverse = useParallax(-0.1, 30);
   return (
     <div className="min-h-screen relative overflow-hidden bg-dark-blue">
       {/* Dark Blue Background with Subtle Decorative Elements */}
@@ -13,37 +19,77 @@ const Index = () => {
         {/* Base gradient - dark blue */}
         <div className="absolute inset-0 bg-gradient-to-br from-dark-blue via-[hsl(210_35%_20%)] to-[hsl(210_40%_15%)]"></div>
         
-        {/* Subtle cyan accent - top right */}
-        <div className="absolute top-0 right-0 w-[60%] h-[50%] bg-gradient-to-bl from-primary/20 via-primary/5 to-transparent rounded-bl-[100%]"></div>
+        {/* Subtle cyan accent - top right - with parallax */}
+        <div 
+          className="absolute top-0 right-0 w-[60%] h-[50%] bg-gradient-to-bl from-primary/20 via-primary/5 to-transparent rounded-bl-[100%] transition-transform duration-100 ease-out will-change-transform"
+          style={{ transform: `translateY(${parallaxReverse.y}px)` }}
+        ></div>
         
-        {/* Subtle lime accent - bottom left */}
-        <div className="absolute bottom-0 left-0 w-[50%] h-[40%] bg-gradient-to-tr from-secondary/15 via-secondary/5 to-transparent rounded-tr-[100%]"></div>
+        {/* Subtle lime accent - bottom left - with parallax */}
+        <div 
+          className="absolute bottom-0 left-0 w-[50%] h-[40%] bg-gradient-to-tr from-secondary/15 via-secondary/5 to-transparent rounded-tr-[100%] transition-transform duration-100 ease-out will-change-transform"
+          style={{ transform: `translateY(${parallaxReverse.y * 0.7}px)` }}
+        ></div>
         
-        {/* Organic wave shapes */}
-        <svg className="absolute top-1/4 left-0 right-0 w-full h-64 opacity-10" viewBox="0 0 1440 200" preserveAspectRatio="none">
+        {/* Organic wave shapes - with subtle parallax */}
+        <svg 
+          className="absolute top-1/4 left-0 right-0 w-full h-64 opacity-10 transition-transform duration-100 ease-out will-change-transform" 
+          viewBox="0 0 1440 200" 
+          preserveAspectRatio="none"
+          style={{ transform: `translateY(${parallaxSlow.y}px)` }}
+        >
           <path 
             fill="hsl(var(--primary))" 
             d="M0,100 C320,180 420,20 720,100 C1020,180 1120,20 1440,100 L1440,200 L0,200 Z"
           />
         </svg>
-        <svg className="absolute bottom-1/4 left-0 right-0 w-full h-64 opacity-10" viewBox="0 0 1440 200" preserveAspectRatio="none">
+        <svg 
+          className="absolute bottom-1/4 left-0 right-0 w-full h-64 opacity-10 transition-transform duration-100 ease-out will-change-transform" 
+          viewBox="0 0 1440 200" 
+          preserveAspectRatio="none"
+          style={{ transform: `translateY(${parallaxSlow.y * 0.5}px)` }}
+        >
           <path 
             fill="hsl(var(--secondary))" 
             d="M0,100 C320,20 420,180 720,100 C1020,20 1120,180 1440,100 L1440,0 L0,0 Z"
           />
         </svg>
         
-        {/* Floating orbs - subtle glow */}
-        <div className="absolute top-[15%] left-[10%] w-40 h-40 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-[25%] right-[15%] w-56 h-56 bg-secondary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-[20%] left-[20%] w-48 h-48 bg-primary/8 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-[30%] right-[10%] w-36 h-36 bg-secondary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+        {/* Floating orbs - subtle glow with parallax */}
+        <div 
+          className="absolute top-[15%] left-[10%] w-40 h-40 bg-primary/10 rounded-full blur-3xl animate-pulse transition-transform duration-100 ease-out will-change-transform"
+          style={{ transform: `translateY(${parallaxMedium.y}px)` }}
+        ></div>
+        <div 
+          className="absolute top-[25%] right-[15%] w-56 h-56 bg-secondary/10 rounded-full blur-3xl animate-pulse transition-transform duration-100 ease-out will-change-transform" 
+          style={{ animationDelay: '1s', transform: `translateY(${parallaxSlow.y}px)` }}
+        ></div>
+        <div 
+          className="absolute bottom-[20%] left-[20%] w-48 h-48 bg-primary/8 rounded-full blur-3xl animate-pulse transition-transform duration-100 ease-out will-change-transform" 
+          style={{ animationDelay: '2s', transform: `translateY(${parallaxFast.y}px)` }}
+        ></div>
+        <div 
+          className="absolute bottom-[30%] right-[10%] w-36 h-36 bg-secondary/10 rounded-full blur-3xl animate-pulse transition-transform duration-100 ease-out will-change-transform" 
+          style={{ animationDelay: '0.5s', transform: `translateY(${parallaxMedium.y}px)` }}
+        ></div>
         
-        {/* Small floating dots */}
-        <div className="absolute top-[20%] left-[30%] w-2 h-2 bg-primary/50 rounded-full animate-float"></div>
-        <div className="absolute top-[35%] right-[25%] w-3 h-3 bg-secondary/60 rounded-full animate-float" style={{ animationDelay: '0.5s' }}></div>
-        <div className="absolute bottom-[40%] left-[15%] w-2 h-2 bg-primary/40 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-[25%] right-[30%] w-3 h-3 bg-secondary/50 rounded-full animate-float" style={{ animationDelay: '1.5s' }}></div>
+        {/* Small floating dots with faster parallax */}
+        <div 
+          className="absolute top-[20%] left-[30%] w-2 h-2 bg-primary/50 rounded-full animate-float transition-transform duration-100 ease-out will-change-transform"
+          style={{ transform: `translateY(${parallaxFast.y}px)` }}
+        ></div>
+        <div 
+          className="absolute top-[35%] right-[25%] w-3 h-3 bg-secondary/60 rounded-full animate-float transition-transform duration-100 ease-out will-change-transform" 
+          style={{ animationDelay: '0.5s', transform: `translateY(${parallaxMedium.y}px)` }}
+        ></div>
+        <div 
+          className="absolute bottom-[40%] left-[15%] w-2 h-2 bg-primary/40 rounded-full animate-float transition-transform duration-100 ease-out will-change-transform" 
+          style={{ animationDelay: '1s', transform: `translateY(${parallaxFast.y}px)` }}
+        ></div>
+        <div 
+          className="absolute bottom-[25%] right-[30%] w-3 h-3 bg-secondary/50 rounded-full animate-float transition-transform duration-100 ease-out will-change-transform" 
+          style={{ animationDelay: '1.5s', transform: `translateY(${parallaxMedium.y}px)` }}
+        ></div>
       </div>
 
       {/* Happy People Background Image */}
@@ -101,8 +147,8 @@ const Index = () => {
                 
                 <div className="relative">
                   {/* Icon with pop-in animation */}
-                  <div className="bg-gradient-to-br from-primary to-primary/80 p-5 sm:p-6 rounded-full w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-primary/40 group-hover:shadow-2xl">
-                    <Building2 className="h-10 w-10 sm:h-12 sm:w-12 text-white group-hover:scale-110 transition-transform duration-300" />
+                  <div className="bg-gradient-to-br from-primary to-primary/80 p-5 sm:p-6 rounded-full w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-105 group-hover:rotate-2 transition-all duration-700 ease-out shadow-lg group-hover:shadow-primary/40 group-hover:shadow-2xl ring-0 group-hover:ring-4 group-hover:ring-primary/20">
+                    <Building2 className="h-10 w-10 sm:h-12 sm:w-12 text-white group-hover:animate-icon-float transition-transform duration-500 ease-out" />
                   </div>
                   
                   <h2 className="text-2xl sm:text-3xl font-bold text-foreground transition-colors duration-300 mb-3 sm:mb-4">Para Clientes</h2>
@@ -146,8 +192,8 @@ const Index = () => {
                 
                 <div className="relative">
                   {/* Icon with pop-in animation */}
-                  <div className="bg-gradient-to-br from-secondary to-secondary/80 p-5 sm:p-6 rounded-full w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-secondary/40 group-hover:shadow-2xl">
-                    <UserCheck className="h-10 w-10 sm:h-12 sm:w-12 text-white group-hover:scale-110 transition-transform duration-300" />
+                  <div className="bg-gradient-to-br from-secondary to-secondary/80 p-5 sm:p-6 rounded-full w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-105 group-hover:-rotate-2 transition-all duration-700 ease-out shadow-lg group-hover:shadow-secondary/40 group-hover:shadow-2xl ring-0 group-hover:ring-4 group-hover:ring-secondary/20">
+                    <UserCheck className="h-10 w-10 sm:h-12 sm:w-12 text-white group-hover:animate-icon-float transition-transform duration-500 ease-out" />
                   </div>
                   
                   <h2 className="text-2xl sm:text-3xl font-bold text-foreground transition-colors duration-300 mb-3 sm:mb-4">Para Corretores</h2>
