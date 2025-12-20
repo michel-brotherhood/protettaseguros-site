@@ -108,15 +108,13 @@ const Index = () => {
       <div className="container mx-auto px-4 py-12 sm:py-20 relative z-10 flex items-center justify-center min-h-screen">
         <div className="max-w-5xl mx-auto text-center">
           {/* 3D Logo with bounce animation */}
-          <div className="flex justify-center mb-8 animate-bounce-in">
-            <div className="bg-white/10 backdrop-blur-sm p-4 rounded-full border border-white/10">
-              <img 
-                src={protettaLogo3D} 
-                alt="Protetta Seguros Logo" 
-                className="h-24 sm:h-28 md:h-32 lg:h-36 w-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          </div>
+        <div className="flex justify-center mb-8 animate-bounce-in">
+          <img 
+            src={protettaLogo3D} 
+            alt="Protetta Seguros Logo" 
+            className="h-24 sm:h-28 md:h-32 lg:h-36 w-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+          />
+        </div>
 
           {/* Badge with fade-in */}
           <div className="flex justify-center mb-6 animate-fade-in" style={{ animationDelay: '300ms', animationFillMode: 'both' }}>
