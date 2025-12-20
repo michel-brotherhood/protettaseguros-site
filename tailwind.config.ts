@@ -135,6 +135,14 @@ export default {
             transform: "translateY(-20px)",
           },
         },
+        "icon-float": {
+          "0%, 100%": {
+            transform: "translateY(0px)",
+          },
+          "50%": {
+            transform: "translateY(-4px)",
+          },
+        },
         "gradient": {
           "0%, 100%": {
             backgroundPosition: "0% 50%",
@@ -281,6 +289,7 @@ export default {
         "fade-in-right": "fade-in-right 0.6s ease-out forwards",
         "scale-in": "scale-in 0.5s ease-out forwards",
         "float": "float 3s ease-in-out infinite",
+        "icon-float": "icon-float 1.5s ease-in-out infinite",
         "gradient": "gradient 3s ease infinite",
         "scroll-left": "scroll-left 30s linear infinite",
         "particle-1": "particle-1 1s ease-out forwards",
