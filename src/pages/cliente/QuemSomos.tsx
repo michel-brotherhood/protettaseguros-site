@@ -7,7 +7,6 @@ import { Card } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import happyProfessional from "@/assets/happy-professional.png";
 
 const QuemSomos = () => {
   React.useEffect(() => {
@@ -63,26 +62,6 @@ const QuemSomos = () => {
             <p className="text-xl md:text-2xl text-muted-foreground">
               Sua porta de entrada para o universo dos seguros.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Happy Team Image */}
-      <section className="py-8 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="relative rounded-3xl overflow-hidden shadow-xl">
-              <img 
-                src={happyProfessional} 
-                alt="Profissional feliz e acolhedor"
-                className="w-full h-64 md:h-80 object-cover object-top"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex items-end p-8">
-                <p className="text-xl md:text-2xl font-semibold text-foreground">
-                  Uma equipe dedicada ao seu sucesso
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>

@@ -7,7 +7,6 @@ import { Card } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import happyProfessional from "@/assets/happy-professional.png";
 
 const Diferenciais = () => {
   React.useEffect(() => {
@@ -115,26 +114,6 @@ const Diferenciais = () => {
             <p className="text-xl md:text-2xl text-muted-foreground">
               Nossos diferenciais que fazem toda a diferença para sua empresa.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Happy People Image Section */}
-      <section className="py-8 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="relative rounded-3xl overflow-hidden shadow-xl">
-              <img 
-                src={happyProfessional} 
-                alt="Profissional feliz e saudável"
-                className="w-full h-64 md:h-80 object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex items-end p-8">
-                <p className="text-xl md:text-2xl font-semibold text-foreground">
-                  Cuidando da saúde e do bem-estar dos seus colaboradores
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
