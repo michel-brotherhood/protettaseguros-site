@@ -1,9 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Shield, Award, TrendingUp } from "lucide-react";
 import familyVideo from "@/assets/family-loving.mp4";
-import happyProfessional from "@/assets/happy-professional.png";
 import { useParallax } from "@/hooks/useParallax";
 
 interface ClientHeroProps {
@@ -11,7 +10,6 @@ interface ClientHeroProps {
 }
 
 const ClientHero: React.FC<ClientHeroProps> = ({ onSwitchMode }) => {
-  const [videoLoaded, setVideoLoaded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const desktopVideoRef = useRef<HTMLVideoElement>(null);
   const parallax = useParallax(0.3, 40);
@@ -102,26 +100,15 @@ const ClientHero: React.FC<ClientHeroProps> = ({ onSwitchMode }) => {
             <div className="relative max-w-xs sm:max-w-sm mx-auto">
               <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-xl" />
               
-              {/* Poster fallback */}
-              {!videoLoaded && (
-                <img 
-                  src={happyProfessional}
-                  alt="Família feliz"
-                  className="absolute inset-0 w-full h-full object-cover rounded-xl"
-                />
-              )}
-              
               <video 
                 ref={videoRef}
                 data-src={familyVideo}
-                poster={happyProfessional}
                 autoPlay
                 muted
                 loop
                 playsInline
                 preload="metadata"
-                onLoadedData={() => setVideoLoaded(true)}
-                className={`relative rounded-xl shadow-xl w-full h-auto object-cover max-h-[280px] sm:max-h-[320px] transition-opacity duration-500 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}
+                className="relative rounded-xl shadow-xl w-full h-auto object-cover max-h-[280px] sm:max-h-[320px]"
               />
             </div>
           </div>
@@ -231,26 +218,15 @@ const ClientHero: React.FC<ClientHeroProps> = ({ onSwitchMode }) => {
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-2xl" />
                 
-                {/* Poster fallback for desktop */}
-                {!videoLoaded && (
-                  <img 
-                    src={happyProfessional}
-                    alt="Família feliz"
-                    className="absolute inset-0 w-full h-full object-cover rounded-2xl"
-                  />
-                )}
-                
                 <video 
                   ref={desktopVideoRef}
                   data-src={familyVideo}
-                  poster={happyProfessional}
                   autoPlay
                   muted
                   loop
                   playsInline
                   preload="metadata"
-                  onLoadedData={() => setVideoLoaded(true)}
-                  className={`relative rounded-2xl shadow-2xl w-full h-auto object-cover transition-opacity duration-700 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}
+                  className="relative rounded-2xl shadow-2xl w-full h-auto object-cover"
                 />
                 
                 {/* Subtle overlay for better text contrast */}
