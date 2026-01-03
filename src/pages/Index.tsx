@@ -55,41 +55,6 @@ const Index = () => {
           />
         </svg>
         
-        {/* Floating orbs - subtle glow with parallax */}
-        <div 
-          className="absolute top-[15%] left-[10%] w-40 h-40 bg-primary/10 rounded-full blur-3xl animate-pulse transition-transform duration-100 ease-out will-change-transform"
-          style={{ transform: `translateY(${parallaxMedium.y}px)` }}
-        ></div>
-        <div 
-          className="absolute top-[25%] right-[15%] w-56 h-56 bg-secondary/10 rounded-full blur-3xl animate-pulse transition-transform duration-100 ease-out will-change-transform" 
-          style={{ animationDelay: '1s', transform: `translateY(${parallaxSlow.y}px)` }}
-        ></div>
-        <div 
-          className="absolute bottom-[20%] left-[20%] w-48 h-48 bg-primary/8 rounded-full blur-3xl animate-pulse transition-transform duration-100 ease-out will-change-transform" 
-          style={{ animationDelay: '2s', transform: `translateY(${parallaxFast.y}px)` }}
-        ></div>
-        <div 
-          className="absolute bottom-[30%] right-[10%] w-36 h-36 bg-secondary/10 rounded-full blur-3xl animate-pulse transition-transform duration-100 ease-out will-change-transform" 
-          style={{ animationDelay: '0.5s', transform: `translateY(${parallaxMedium.y}px)` }}
-        ></div>
-        
-        {/* Small floating dots with faster parallax */}
-        <div 
-          className="absolute top-[20%] left-[30%] w-2 h-2 bg-primary/50 rounded-full animate-float transition-transform duration-100 ease-out will-change-transform"
-          style={{ transform: `translateY(${parallaxFast.y}px)` }}
-        ></div>
-        <div 
-          className="absolute top-[35%] right-[25%] w-3 h-3 bg-secondary/60 rounded-full animate-float transition-transform duration-100 ease-out will-change-transform" 
-          style={{ animationDelay: '0.5s', transform: `translateY(${parallaxMedium.y}px)` }}
-        ></div>
-        <div 
-          className="absolute bottom-[40%] left-[15%] w-2 h-2 bg-primary/40 rounded-full animate-float transition-transform duration-100 ease-out will-change-transform" 
-          style={{ animationDelay: '1s', transform: `translateY(${parallaxFast.y}px)` }}
-        ></div>
-        <div 
-          className="absolute bottom-[25%] right-[30%] w-3 h-3 bg-secondary/50 rounded-full animate-float transition-transform duration-100 ease-out will-change-transform" 
-          style={{ animationDelay: '1.5s', transform: `translateY(${parallaxMedium.y}px)` }}
-        ></div>
       </div>
 
       {/* Happy People Background Image */}
