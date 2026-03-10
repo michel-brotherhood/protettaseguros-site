@@ -56,7 +56,7 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 max-w-3xl mx-auto px-4">
             {/* Cliente Card */}
             <Link to="/cliente" className="animate-slide-in-left-bounce" style={{ animationDelay: '600ms', animationFillMode: 'both' }}>
-              <div className="group relative w-56 h-56 sm:w-64 sm:h-64 bg-white/10 backdrop-blur-md rounded-full border border-white/20 hover:border-primary/60 hover:bg-white/15 transition-all duration-500 hover:scale-105 cursor-pointer flex flex-col items-center justify-center text-center p-6">
+              <div className="group relative w-56 h-56 sm:w-64 sm:h-64 bg-primary/80 backdrop-blur-md rounded-full border border-primary/40 hover:bg-primary/90 transition-all duration-500 hover:scale-105 cursor-pointer flex flex-col items-center justify-center text-center p-6">
                 <div className="bg-primary p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Building2 className="h-7 w-7 text-white" />
                 </div>
