@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
-import { Building2, UserCheck, ArrowRight, Award } from "lucide-react";
+import { ShieldCheck, Handshake, ArrowRight, Award } from "lucide-react";
 import protettaLogo3D from "@/assets/protetta-logo-3d.webp";
 import cyclingVideo from "@/assets/cycling-family.mp4";
 
