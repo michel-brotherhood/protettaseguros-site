@@ -18,6 +18,24 @@ import logoSuhai from "@/assets/insurance-logos/suhai.png";
 import logoHDI from "@/assets/insurance-logos/hdi.png";
 import logoAllianz from "@/assets/insurance-logos/allianz.png";
 import logoIcatu from "@/assets/insurance-logos/icatu.png";
+import logoCarePlus from "@/assets/insurance-logos/careplus.png";
+import logoSelect from "@/assets/insurance-logos/select.png";
+import logoLeve from "@/assets/insurance-logos/leve.png";
+import logoPreventSenior from "@/assets/insurance-logos/preventsenior.png";
+import logoMedsenior from "@/assets/insurance-logos/medsenior.png";
+import logoIntegral from "@/assets/insurance-logos/integral.png";
+import logoAmpla from "@/assets/insurance-logos/ampla.png";
+import logoNovaSaude from "@/assets/insurance-logos/novasaude.png";
+import logoOnmed from "@/assets/insurance-logos/onmed.png";
+import logoEver from "@/assets/insurance-logos/ever.png";
+import logoCemeru from "@/assets/insurance-logos/cemeru.png";
+import logoSamoc from "@/assets/insurance-logos/samoc.png";
+import logoHealthmed from "@/assets/insurance-logos/healthmed.png";
+import logoSupermed from "@/assets/insurance-logos/supermed.png";
+import logoMetlife from "@/assets/insurance-logos/metlife.png";
+import logoAssistCard from "@/assets/insurance-logos/assistcard.png";
+import logoSompo from "@/assets/insurance-logos/sompo.png";
+import logoUnimed from "@/assets/insurance-logos/unimed.png";
 
 const ClientSections = () => {
   const specialties = [
