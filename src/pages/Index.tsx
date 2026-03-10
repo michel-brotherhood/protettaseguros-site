@@ -56,10 +56,8 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 max-w-3xl mx-auto px-4">
             {/* Cliente Card */}
             <Link to="/cliente" className="animate-slide-in-left-bounce" style={{ animationDelay: '600ms', animationFillMode: 'both' }}>
-              <div className="group relative w-56 h-56 sm:w-64 sm:h-64 bg-white/10 backdrop-blur-md rounded-full border border-white/20 hover:border-primary/60 hover:bg-white/15 transition-all duration-500 hover:scale-105 cursor-pointer flex flex-col items-center justify-center text-center p-6">
-                <div className="bg-primary p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Building2 className="h-7 w-7 text-white" />
-                </div>
+              <div className="group relative w-56 h-56 sm:w-64 sm:h-64 bg-primary/80 backdrop-blur-md rounded-full border border-primary/40 hover:bg-primary/90 transition-all duration-500 hover:scale-105 cursor-pointer flex flex-col items-center justify-center text-center p-6">
+                <Building2 className="h-10 w-10 text-white mb-4" />
                 <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Para Clientes</h2>
                 <p className="text-xs sm:text-sm text-white/60">Explorar Soluções</p>
                 <ArrowRight className="mt-2 h-5 w-5 text-white/40 group-hover:text-primary group-hover:translate-x-1 transition-all duration-300" />
@@ -68,10 +66,8 @@ const Index = () => {
 
             {/* Corretor Card */}
             <Link to="/corretor" className="animate-slide-in-right-bounce" style={{ animationDelay: '750ms', animationFillMode: 'both' }}>
-              <div className="group relative w-56 h-56 sm:w-64 sm:h-64 bg-white/10 backdrop-blur-md rounded-full border border-white/20 hover:border-secondary/60 hover:bg-white/15 transition-all duration-500 hover:scale-105 cursor-pointer flex flex-col items-center justify-center text-center p-6">
-                <div className="bg-secondary p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <UserCheck className="h-7 w-7 text-white" />
-                </div>
+              <div className="group relative w-56 h-56 sm:w-64 sm:h-64 bg-secondary/80 backdrop-blur-md rounded-full border border-secondary/40 hover:bg-secondary/90 transition-all duration-500 hover:scale-105 cursor-pointer flex flex-col items-center justify-center text-center p-6">
+                <UserCheck className="h-10 w-10 text-white mb-4" />
                 <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Para Corretores</h2>
                 <p className="text-xs sm:text-sm text-white/60">Seja Parceiro</p>
                 <ArrowRight className="mt-2 h-5 w-5 text-white/40 group-hover:text-secondary group-hover:translate-x-1 transition-all duration-300" />
