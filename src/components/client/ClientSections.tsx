@@ -234,16 +234,16 @@ const ClientSections = () => {
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground">Parceiros que confiam na Protetta</p>
           </div>
-          <div className="max-w-6xl mx-auto grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
+          <div className="max-w-6xl mx-auto grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-5">
             {insuranceLogos.map((item, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center p-4 rounded-xl border border-border bg-background/80 backdrop-blur-sm hover:shadow-md hover:border-primary/20 transition-all aspect-[3/2]"
+                className="flex items-center justify-center p-5 rounded-xl border border-border bg-background/80 backdrop-blur-sm hover:shadow-md hover:border-primary/20 transition-all aspect-[3/2] min-h-[100px]"
               >
                 {item.logo ? (
-                  <img src={item.logo} alt={item.name} className="max-h-10 max-w-full object-contain" />
+                  <img src={item.logo} alt={item.name} className="max-h-12 w-[80%] object-contain" />
                 ) : (
-                  <span className="text-xs font-semibold text-muted-foreground text-center leading-tight">{item.name}</span>
+                  <span className="text-sm font-semibold text-muted-foreground text-center leading-tight">{item.name}</span>
                 )}
               </div>
             ))}
