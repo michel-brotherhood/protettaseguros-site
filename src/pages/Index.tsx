@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Badge } from "@/components/ui/badge";
 import { Building2, UserCheck, ArrowRight, Award } from "lucide-react";
 import protettaLogo3D from "@/assets/protetta-logo-3d.webp";
