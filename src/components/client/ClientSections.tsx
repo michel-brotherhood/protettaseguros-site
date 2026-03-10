@@ -120,6 +120,60 @@ const ClientSections = () => {
         </div>
       </section>
 
+      {/* Especialidades */}
+      <section id="especialidades" className="py-10 md:py-16 bg-background scroll-mt-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 md:mb-4">
+              Especialidades
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground">Atuamos em diversas modalidades de seguros</p>
+          </div>
+          <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {specialties.map((item, index) => (
+              <div
+                key={index}
+                className={`flex items-center gap-3 px-4 py-3 rounded-xl border border-border bg-background/80 backdrop-blur-sm hover:shadow-md hover:border-primary/30 transition-all ${
+                  !item.icon ? "col-span-2 sm:col-span-1 justify-center italic text-muted-foreground" : ""
+                }`}
+              >
+                {item.icon && (
+                  <div className="bg-gradient-to-br from-primary to-secondary p-2 rounded-lg shrink-0">
+                    <item.icon className="h-4 w-4 text-white" />
+                  </div>
+                )}
+                <span className="text-sm font-medium text-foreground">{item.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Seguradoras / Operadoras */}
+      <section id="seguradoras" className="py-10 md:py-16 bg-muted/30 scroll-mt-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 md:mb-4">
+              Seguradoras & Operadoras
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground">Parceiros que confiam na Protetta</p>
+          </div>
+          <div className="max-w-6xl mx-auto grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
+            {insuranceLogos.map((item, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center p-4 rounded-xl border border-border bg-background/80 backdrop-blur-sm hover:shadow-md hover:border-primary/20 transition-all aspect-[3/2]"
+              >
+                {item.logo ? (
+                  <img src={item.logo} alt={item.name} className="max-h-10 max-w-full object-contain" />
+                ) : (
+                  <span className="text-xs font-semibold text-muted-foreground text-center leading-tight">{item.name}</span>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
       {/* O Que Fazemos */}
       <section id="o-que-fazemos" className="py-10 md:py-16 bg-muted/30 scroll-mt-20">
         <div className="container mx-auto px-4">
