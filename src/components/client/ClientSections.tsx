@@ -17,6 +17,7 @@ import logoMapfre from "@/assets/insurance-logos/mapfre.png";
 import logoSuhai from "@/assets/insurance-logos/suhai.png";
 import logoHDI from "@/assets/insurance-logos/hdi.png";
 import logoAllianz from "@/assets/insurance-logos/allianz.png";
+import logoIcatu from "@/assets/insurance-logos/icatu.png";
 
 const ClientSections = () => {
   const specialties = [
