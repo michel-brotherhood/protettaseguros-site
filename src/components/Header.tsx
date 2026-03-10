@@ -135,10 +135,17 @@ const Header = () => {
               </DropdownMenu>
 
               <button 
-                onClick={() => scrollToSection("diferenciais")}
+                onClick={() => scrollToSection("especialidades")}
                 className="px-4 py-2 text-sm font-normal text-foreground hover:text-primary hover:bg-primary/5 transition-all"
               >
                 Especialidades
+              </button>
+
+              <button 
+                onClick={() => scrollToSection("seguradoras")}
+                className="px-4 py-2 text-sm font-normal text-foreground hover:text-primary hover:bg-primary/5 transition-all"
+              >
+                Seguradoras/Operadoras
               </button>
 
               <button 
@@ -432,6 +439,18 @@ const Header = () => {
                 >
                   Diferenciais
                 </Link>
+                <button 
+                  onClick={() => scrollToSection("especialidades")}
+                  className="px-4 py-4 text-foreground hover:text-primary transition-all text-left font-medium text-base"
+                >
+                  Especialidades
+                </button>
+                <button 
+                  onClick={() => scrollToSection("seguradoras")}
+                  className="px-4 py-4 text-foreground hover:text-primary transition-all text-left font-medium text-base"
+                >
+                  Seguradoras/Operadoras
+                </button>
                 <Link 
                   to="/contato" 
                   className="px-4 py-4 text-foreground hover:text-primary transition-all font-medium text-base"

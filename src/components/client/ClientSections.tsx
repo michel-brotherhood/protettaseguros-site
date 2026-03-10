@@ -1,9 +1,73 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
-import { Users, Lightbulb, Globe, Zap, BarChart3, Heart, Scale, Leaf, Shield } from "lucide-react";
+import { Users, Lightbulb, Globe, Zap, BarChart3, Heart, Scale, Leaf, Shield, Car, FileText, Plane, Home, Briefcase, HardHat, Smartphone, Flame } from "lucide-react";
 import AnimatedCard from "@/components/AnimatedCard";
+import logoBradesco from "@/assets/insurance-logos/bradesco.png";
+import logoSulAmerica from "@/assets/insurance-logos/sulamerica.png";
+import logoPorto from "@/assets/insurance-logos/porto.png";
+import logoAmil from "@/assets/insurance-logos/amil.png";
+import logoOmint from "@/assets/insurance-logos/omint.png";
+import logoAssim from "@/assets/insurance-logos/assim.png";
+import logoKlini from "@/assets/insurance-logos/klini.webp";
+import logoHapvida from "@/assets/insurance-logos/hapvida.png";
+import logoQualicorp from "@/assets/insurance-logos/qualicorp.png";
+import logoMAG from "@/assets/insurance-logos/mag.png";
+import logoTokioMarine from "@/assets/insurance-logos/tokiomarine.png";
+import logoMapfre from "@/assets/insurance-logos/mapfre.png";
+import logoSuhai from "@/assets/insurance-logos/suhai.png";
+import logoHDI from "@/assets/insurance-logos/hdi.png";
+import logoAllianz from "@/assets/insurance-logos/allianz.png";
 
 const ClientSections = () => {
+  const specialties = [
+    { label: "Planos de Saúde e Odontológicos", icon: Heart },
+    { label: "Seguro de Vida e Previdência", icon: Shield },
+    { label: "Seguro Auto", icon: Car },
+    { label: "Seguro Fiança", icon: FileText },
+    { label: "Seguro Viagem", icon: Plane },
+    { label: "Seguro Residencial", icon: Home },
+    { label: "RC Profissional", icon: Briefcase },
+    { label: "Seguro Obras/Engenharia", icon: HardHat },
+    { label: "Equipamentos Portáteis", icon: Smartphone },
+    { label: "Seguro de Incêndio", icon: Flame },
+    { label: "entre outros", icon: null },
+  ];
+
+  const insuranceLogos: { name: string; logo?: string }[] = [
+    { name: "Bradesco Seguros", logo: logoBradesco },
+    { name: "SulAmérica", logo: logoSulAmerica },
+    { name: "Porto Seguro", logo: logoPorto },
+    { name: "Amil", logo: logoAmil },
+    { name: "Omint", logo: logoOmint },
+    { name: "Care Plus" },
+    { name: "Assim Saúde", logo: logoAssim },
+    { name: "Select" },
+    { name: "Leve" },
+    { name: "Klini", logo: logoKlini },
+    { name: "Prevent Sênior" },
+    { name: "Medsênior" },
+    { name: "Hapvida", logo: logoHapvida },
+    { name: "Integral Saúde" },
+    { name: "Ampla" },
+    { name: "Nova Saúde" },
+    { name: "Onmed" },
+    { name: "Ever Insurance" },
+    { name: "Cemeru" },
+    { name: "Samoc" },
+    { name: "Healthmed" },
+    { name: "Qualicorp", logo: logoQualicorp },
+    { name: "Supermed" },
+    { name: "Metlife" },
+    { name: "MAG Seguros", logo: logoMAG },
+    { name: "Tokio Marine", logo: logoTokioMarine },
+    { name: "Mapfre", logo: logoMapfre },
+    { name: "Suhai", logo: logoSuhai },
+    { name: "HDI", logo: logoHDI },
+    { name: "Allianz", logo: logoAllianz },
+    { name: "Assist Card" },
+    { name: "Sompo Seguros" },
+    { name: "Unimed Seguros" },
+  ];
 
   return (
     <>
@@ -112,6 +176,61 @@ const ClientSections = () => {
         </div>
       </section>
 
+      {/* Especialidades */}
+      <section id="especialidades" className="py-10 md:py-16 bg-background scroll-mt-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 md:mb-4">
+              Especialidades
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground">Atuamos em diversas modalidades de seguros</p>
+          </div>
+          <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {specialties.map((item, index) => (
+              <div
+                key={index}
+                className={`flex items-center gap-3 px-4 py-3 rounded-xl border border-border bg-background/80 backdrop-blur-sm hover:shadow-md hover:border-primary/30 transition-all ${
+                  !item.icon ? "col-span-2 sm:col-span-1 justify-center italic text-muted-foreground" : ""
+                }`}
+              >
+                {item.icon && (
+                  <div className="bg-gradient-to-br from-primary to-secondary p-2 rounded-lg shrink-0">
+                    <item.icon className="h-4 w-4 text-white" />
+                  </div>
+                )}
+                <span className="text-sm font-medium text-foreground">{item.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Seguradoras / Operadoras */}
+      <section id="seguradoras" className="py-10 md:py-16 bg-muted/30 scroll-mt-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 md:mb-4">
+              Seguradoras & Operadoras
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground">Parceiros que confiam na Protetta</p>
+          </div>
+          <div className="max-w-6xl mx-auto grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
+            {insuranceLogos.map((item, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center p-4 rounded-xl border border-border bg-background/80 backdrop-blur-sm hover:shadow-md hover:border-primary/20 transition-all aspect-[3/2]"
+              >
+                {item.logo ? (
+                  <img src={item.logo} alt={item.name} className="max-h-10 max-w-full object-contain" />
+                ) : (
+                  <span className="text-xs font-semibold text-muted-foreground text-center leading-tight">{item.name}</span>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Como Fazemos */}
       <section id="como-fazemos" className="py-10 md:py-16 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
@@ -123,40 +242,28 @@ const ClientSections = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
-            <AnimatedCard
-              delay={0}
-              className="p-8 text-center hover:shadow-xl transition-all"
-            >
+            <AnimatedCard delay={0} className="p-8 text-center hover:shadow-xl transition-all">
               <div className="bg-gradient-to-br from-primary to-secondary p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6">
                 <Users className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-4">Equipe Disruptiva</h3>
             </AnimatedCard>
 
-            <AnimatedCard
-              delay={100}
-              className="p-8 text-center hover:shadow-xl transition-all"
-            >
+            <AnimatedCard delay={100} className="p-8 text-center hover:shadow-xl transition-all">
               <div className="bg-gradient-to-br from-primary to-secondary p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6">
                 <Lightbulb className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-4">Conhecimento Técnico</h3>
             </AnimatedCard>
 
-            <AnimatedCard
-              delay={200}
-              className="p-8 text-center hover:shadow-xl transition-all"
-            >
+            <AnimatedCard delay={200} className="p-8 text-center hover:shadow-xl transition-all">
               <div className="bg-gradient-to-br from-primary to-secondary p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6">
                 <Globe className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-4">Experiência Global</h3>
             </AnimatedCard>
 
-            <AnimatedCard
-              delay={300}
-              className="p-8 text-center hover:shadow-xl transition-all"
-            >
+            <AnimatedCard delay={300} className="p-8 text-center hover:shadow-xl transition-all">
               <div className="bg-gradient-to-br from-primary to-secondary p-4 rounded-2xl w-16 h-16 flex items-center justify-center mx-auto mb-6">
                 <Zap className="h-8 w-8 text-white" />
               </div>
@@ -177,7 +284,6 @@ const ClientSections = () => {
           </div>
 
           <div className="max-w-6xl mx-auto space-y-6 md:space-y-16">
-            {/* BI */}
             <Card className="p-6 md:p-8 lg:p-12">
               <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6 mb-4 md:mb-6">
                 <div className="bg-gradient-to-br from-primary to-secondary p-3 md:p-4 rounded-2xl shrink-0">
@@ -198,7 +304,6 @@ const ClientSections = () => {
               </div>
             </Card>
 
-            {/* Wellness */}
             <Card className="p-6 md:p-8 lg:p-12">
               <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6 mb-4 md:mb-6">
                 <div className="bg-gradient-to-br from-secondary to-primary p-3 md:p-4 rounded-2xl shrink-0">
@@ -216,7 +321,6 @@ const ClientSections = () => {
               </div>
             </Card>
 
-            {/* Projur */}
             <Card className="p-6 md:p-8 lg:p-12">
               <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6 mb-4 md:mb-6">
                 <div className="bg-gradient-to-br from-primary to-secondary p-3 md:p-4 rounded-2xl shrink-0">
@@ -247,7 +351,6 @@ const ClientSections = () => {
           </div>
 
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 md:gap-8">
-            {/* ProChange */}
             <Card className="p-6 md:p-8 hover:shadow-xl transition-all">
               <div className="bg-gradient-to-br from-secondary to-primary p-3 md:p-4 rounded-2xl w-14 h-14 md:w-16 md:h-16 flex items-center justify-center mb-4 md:mb-6">
                 <Shield className="h-6 w-6 md:h-8 md:w-8 text-white" />
@@ -261,7 +364,6 @@ const ClientSections = () => {
               </p>
             </Card>
 
-            {/* ESG */}
             <Card className="p-6 md:p-8 hover:shadow-xl transition-all">
               <div className="bg-gradient-to-br from-primary to-secondary p-3 md:p-4 rounded-2xl w-14 h-14 md:w-16 md:h-16 flex items-center justify-center mb-4 md:mb-6">
                 <Leaf className="h-6 w-6 md:h-8 md:w-8 text-white" />
