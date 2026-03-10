@@ -18,6 +18,24 @@ import logoSuhai from "@/assets/insurance-logos/suhai.png";
 import logoHDI from "@/assets/insurance-logos/hdi.png";
 import logoAllianz from "@/assets/insurance-logos/allianz.png";
 import logoIcatu from "@/assets/insurance-logos/icatu.png";
+import logoCarePlus from "@/assets/insurance-logos/careplus.png";
+import logoSelect from "@/assets/insurance-logos/select.png";
+import logoLeve from "@/assets/insurance-logos/leve.png";
+import logoPreventSenior from "@/assets/insurance-logos/preventsenior.png";
+import logoMedsenior from "@/assets/insurance-logos/medsenior.png";
+import logoIntegral from "@/assets/insurance-logos/integral.png";
+import logoAmpla from "@/assets/insurance-logos/ampla.png";
+import logoNovaSaude from "@/assets/insurance-logos/novasaude.png";
+import logoOnmed from "@/assets/insurance-logos/onmed.png";
+import logoEver from "@/assets/insurance-logos/ever.png";
+import logoCemeru from "@/assets/insurance-logos/cemeru.png";
+import logoSamoc from "@/assets/insurance-logos/samoc.png";
+import logoHealthmed from "@/assets/insurance-logos/healthmed.png";
+import logoSupermed from "@/assets/insurance-logos/supermed.png";
+import logoMetlife from "@/assets/insurance-logos/metlife.png";
+import logoAssistCard from "@/assets/insurance-logos/assistcard.png";
+import logoSompo from "@/assets/insurance-logos/sompo.png";
+import logoUnimed from "@/assets/insurance-logos/unimed.png";
 
 const ClientSections = () => {
   const specialties = [
@@ -40,34 +58,34 @@ const ClientSections = () => {
     { name: "Porto Seguro", logo: logoPorto },
     { name: "Amil", logo: logoAmil },
     { name: "Omint", logo: logoOmint },
-    { name: "Care Plus" },
+    { name: "Care Plus", logo: logoCarePlus },
     { name: "Assim Saúde", logo: logoAssim },
-    { name: "Select" },
-    { name: "Leve" },
+    { name: "Select", logo: logoSelect },
+    { name: "Leve", logo: logoLeve },
     { name: "Klini", logo: logoKlini },
-    { name: "Prevent Sênior" },
-    { name: "Medsênior" },
+    { name: "Prevent Sênior", logo: logoPreventSenior },
+    { name: "Medsênior", logo: logoMedsenior },
     { name: "Hapvida", logo: logoHapvida },
-    { name: "Integral Saúde" },
-    { name: "Ampla" },
-    { name: "Nova Saúde" },
-    { name: "Onmed" },
-    { name: "Ever Insurance" },
-    { name: "Cemeru" },
-    { name: "Samoc" },
-    { name: "Healthmed" },
+    { name: "Integral Saúde", logo: logoIntegral },
+    { name: "Ampla", logo: logoAmpla },
+    { name: "Nova Saúde", logo: logoNovaSaude },
+    { name: "Onmed", logo: logoOnmed },
+    { name: "Ever Insurance", logo: logoEver },
+    { name: "Cemeru", logo: logoCemeru },
+    { name: "Samoc", logo: logoSamoc },
+    { name: "Healthmed", logo: logoHealthmed },
     { name: "Qualicorp", logo: logoQualicorp },
-    { name: "Supermed" },
-    { name: "Metlife" },
+    { name: "Supermed", logo: logoSupermed },
+    { name: "Metlife", logo: logoMetlife },
     { name: "MAG Seguros", logo: logoMAG },
     { name: "Tokio Marine", logo: logoTokioMarine },
     { name: "Mapfre", logo: logoMapfre },
     { name: "Suhai", logo: logoSuhai },
     { name: "HDI", logo: logoHDI },
     { name: "Allianz", logo: logoAllianz },
-    { name: "Assist Card" },
-    { name: "Sompo Seguros" },
-    { name: "Unimed Seguros" },
+    { name: "Assist Card", logo: logoAssistCard },
+    { name: "Sompo Seguros", logo: logoSompo },
+    { name: "Unimed Seguros", logo: logoUnimed },
     { name: "Icatu", logo: logoIcatu },
   ];
 
