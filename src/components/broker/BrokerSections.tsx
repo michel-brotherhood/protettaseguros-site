@@ -341,11 +341,11 @@ const BrokerSections = () => {
               Seguradoras Parceiras
             </h2>
             
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-3 md:gap-6">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-5">
               {insuranceLogos.map((item, index) => (
                 <div 
                   key={index}
-                  className={`bg-muted/30 rounded-lg p-4 flex items-center justify-center hover:bg-muted/50 transition-all duration-300 hover:shadow-md min-h-[80px] ${
+                  className={`bg-muted/30 rounded-lg p-5 flex items-center justify-center hover:bg-muted/50 transition-all duration-300 hover:shadow-md min-h-[100px] aspect-[3/2] ${
                     logosVisible ? 'scale-100 opacity-100' : 'scale-90 opacity-0'
                   }`}
                   style={{ transitionDelay: `${index * 30}ms` }}
@@ -354,10 +354,10 @@ const BrokerSections = () => {
                     <img 
                       src={item.logo} 
                       alt={item.name}
-                      className="w-full h-auto object-contain max-h-[60px]"
+                      className="w-[80%] h-auto object-contain max-h-12"
                     />
                   ) : (
-                    <span className="text-xs font-semibold text-muted-foreground text-center">
+                    <span className="text-sm font-semibold text-muted-foreground text-center">
                       {item.name}
                     </span>
                   )}
