@@ -69,7 +69,7 @@ const Index = () => {
             {/* Corretor Card */}
             <Link to="/corretor" className="animate-slide-in-right-bounce" style={{ animationDelay: '750ms', animationFillMode: 'both' }}>
               <div className="group relative w-44 h-44 sm:w-52 sm:h-52 bg-secondary/80 backdrop-blur-md rounded-full border border-secondary/40 hover:bg-secondary transition-all duration-500 hover:scale-110 hover:shadow-[0_0_40px_8px_hsl(var(--secondary)/0.5)] cursor-pointer flex flex-col items-center justify-center text-center p-5">
-                <UserCheck className="h-9 w-9 text-white mb-3" />
+                <Handshake className="h-9 w-9 text-white mb-3" />
                 <h2 className="text-lg sm:text-xl font-bold text-white mb-1">Para Corretores</h2>
                 <p className="text-xs text-white/80 flex items-center gap-1">
                   Seja Parceiro
