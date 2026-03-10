@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Building2, UserCheck, ArrowRight, Award } from "lucide-react";
 import protettaLogo3D from "@/assets/protetta-logo-3d.webp";
@@ -53,52 +52,29 @@ const Index = () => {
             Sua porta de entrada para o universo dos seguros.
           </p>
 
-          {/* Choice Cards - Clean glassmorphism */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-3xl mx-auto px-4">
+          {/* Choice Cards - Circular modern design */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 max-w-3xl mx-auto px-4">
             {/* Cliente Card */}
             <Link to="/cliente" className="animate-slide-in-left-bounce" style={{ animationDelay: '600ms', animationFillMode: 'both' }}>
-              <div className="group relative p-6 sm:p-8 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:border-primary/60 hover:bg-white/15 transition-all duration-500 hover:scale-[1.03] cursor-pointer">
-                <div className="bg-primary p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300">
-                  <Building2 className="h-8 w-8 text-white" />
+              <div className="group relative w-56 h-56 sm:w-64 sm:h-64 bg-white/10 backdrop-blur-md rounded-full border border-white/20 hover:border-primary/60 hover:bg-white/15 transition-all duration-500 hover:scale-105 cursor-pointer flex flex-col items-center justify-center text-center p-6">
+                <div className="bg-primary p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Building2 className="h-7 w-7 text-white" />
                 </div>
-                
-                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">Para Clientes</h2>
-                
-                <p className="text-sm sm:text-base text-white/70 mb-6 leading-relaxed">
-                  Soluções personalizadas de seguro saúde empresarial com tecnologia e consultoria especializada
-                </p>
-                
-                <Button 
-                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-full transition-all"
-                  size="lg"
-                >
-                  Explorar Soluções
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
-                </Button>
+                <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Para Clientes</h2>
+                <p className="text-xs sm:text-sm text-white/60">Explorar Soluções</p>
+                <ArrowRight className="mt-2 h-5 w-5 text-white/40 group-hover:text-primary group-hover:translate-x-1 transition-all duration-300" />
               </div>
             </Link>
 
             {/* Corretor Card */}
             <Link to="/corretor" className="animate-slide-in-right-bounce" style={{ animationDelay: '750ms', animationFillMode: 'both' }}>
-              <div className="group relative p-6 sm:p-8 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:border-secondary/60 hover:bg-white/15 transition-all duration-500 hover:scale-[1.03] cursor-pointer">
-                <div className="bg-secondary p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300">
-                  <UserCheck className="h-8 w-8 text-white" />
+              <div className="group relative w-56 h-56 sm:w-64 sm:h-64 bg-white/10 backdrop-blur-md rounded-full border border-white/20 hover:border-secondary/60 hover:bg-white/15 transition-all duration-500 hover:scale-105 cursor-pointer flex flex-col items-center justify-center text-center p-6">
+                <div className="bg-secondary p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <UserCheck className="h-7 w-7 text-white" />
                 </div>
-                
-                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">Para Corretores</h2>
-                
-                <p className="text-sm sm:text-base text-white/70 mb-6 leading-relaxed">
-                  Assessoria especializada para você vender saúde com segurança, suporte integral e custo zero
-                </p>
-                
-                <Button 
-                  variant="secondary"
-                  className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-full transition-all"
-                  size="lg"
-                >
-                  Seja Parceiro
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
-                </Button>
+                <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">Para Corretores</h2>
+                <p className="text-xs sm:text-sm text-white/60">Seja Parceiro</p>
+                <ArrowRight className="mt-2 h-5 w-5 text-white/40 group-hover:text-secondary group-hover:translate-x-1 transition-all duration-300" />
               </div>
             </Link>
           </div>
