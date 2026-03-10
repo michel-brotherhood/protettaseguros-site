@@ -1,83 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
-import { ShieldCheck, Handshake, ArrowRight, Award, Heart, Car, Home, Plane, Shield, HardHat, Smartphone, Flame, FileText, Briefcase } from "lucide-react";
+import { ShieldCheck, Handshake, ArrowRight, Award } from "lucide-react";
 import protettaLogo3D from "@/assets/protetta-logo-3d.webp";
 import cyclingVideo from "@/assets/cycling-family.mp4";
 
-// Insurance logos
-import logoBradesco from "@/assets/insurance-logos/bradesco.png";
-import logoSulAmerica from "@/assets/insurance-logos/sulamerica.png";
-import logoPorto from "@/assets/insurance-logos/porto.png";
-import logoAmil from "@/assets/insurance-logos/amil.png";
-import logoOmint from "@/assets/insurance-logos/omint.png";
-import logoAssim from "@/assets/insurance-logos/assim.png";
-import logoKlini from "@/assets/insurance-logos/klini.webp";
-import logoHapvida from "@/assets/insurance-logos/hapvida.png";
-import logoQualicorp from "@/assets/insurance-logos/qualicorp.png";
-import logoMAG from "@/assets/insurance-logos/mag.png";
-import logoTokioMarine from "@/assets/insurance-logos/tokiomarine.png";
-import logoMapfre from "@/assets/insurance-logos/mapfre.png";
-import logoSuhai from "@/assets/insurance-logos/suhai.png";
-import logoHDI from "@/assets/insurance-logos/hdi.png";
-import logoAllianz from "@/assets/insurance-logos/allianz.png";
-
-const specialties = [
-  { label: "Planos de Saúde e Odontológicos", icon: Heart },
-  { label: "Seguro de Vida e Previdência", icon: Shield },
-  { label: "Seguro Auto", icon: Car },
-  { label: "Seguro Fiança", icon: FileText },
-  { label: "Seguro Viagem", icon: Plane },
-  { label: "Seguro Residencial", icon: Home },
-  { label: "RC Profissional", icon: Briefcase },
-  { label: "Seguro Obras/Engenharia", icon: HardHat },
-  { label: "Equipamentos Portáteis", icon: Smartphone },
-  { label: "Seguro de Incêndio", icon: Flame },
-  { label: "entre outros", icon: null },
-];
-
-type InsurancePartner = { name: string; logo?: string };
-
-const insurancePartners: InsurancePartner[] = [
-  { name: "Bradesco Seguros", logo: logoBradesco },
-  { name: "SulAmérica", logo: logoSulAmerica },
-  { name: "Porto Seguro", logo: logoPorto },
-  { name: "Amil", logo: logoAmil },
-  { name: "Omint", logo: logoOmint },
-  { name: "Care Plus" },
-  { name: "Assim Saúde", logo: logoAssim },
-  { name: "Select" },
-  { name: "Leve" },
-  { name: "Klini", logo: logoKlini },
-  { name: "Prevent Sênior" },
-  { name: "Medsênior" },
-  { name: "Hapvida", logo: logoHapvida },
-  { name: "Integral Saúde" },
-  { name: "Ampla" },
-  { name: "Nova Saúde" },
-  { name: "Onmed" },
-  { name: "Ever Insurance" },
-  { name: "Cemeru" },
-  { name: "Samoc" },
-  { name: "Healthmed" },
-  { name: "Qualicorp", logo: logoQualicorp },
-  { name: "Supermed" },
-  { name: "Metlife" },
-  { name: "MAG Seguros", logo: logoMAG },
-  { name: "Tokio Marine", logo: logoTokioMarine },
-  { name: "Mapfre", logo: logoMapfre },
-  { name: "Suhai", logo: logoSuhai },
-  { name: "HDI", logo: logoHDI },
-  { name: "Allianz", logo: logoAllianz },
-  { name: "Assist Card" },
-  { name: "Sompo Seguros" },
-  { name: "Unimed Seguros" },
-];
-
 const Index = () => {
-  // Duplicate partners for seamless marquee
-  const marqueeItems = [...insurancePartners, ...insurancePartners];
-
   return (
     <div className="min-h-screen relative overflow-hidden bg-dark-blue">
       {/* Video Background */}
@@ -123,7 +51,7 @@ const Index = () => {
             Sua porta de entrada para o universo dos seguros.
           </p>
 
-          {/* Choice Cards - Smaller Circles */}
+          {/* Choice Cards */}
           <div className="flex flex-row items-center justify-center gap-8 sm:gap-10 max-w-3xl mx-auto px-4 mb-10">
             <Link to="/cliente" className="animate-slide-in-left-bounce" style={{ animationDelay: '600ms', animationFillMode: 'both' }}>
               <div className="group relative w-32 h-32 sm:w-40 sm:h-40 bg-primary/80 backdrop-blur-md rounded-full border border-primary/40 hover:bg-primary transition-all duration-500 hover:scale-110 hover:shadow-[0_0_40px_8px_hsl(var(--primary)/0.5)] cursor-pointer flex flex-col items-center justify-center text-center p-4">
@@ -148,55 +76,8 @@ const Index = () => {
             </Link>
           </div>
 
-          {/* Especialidades */}
-          <div className="animate-fade-in mb-10" style={{ animationDelay: '850ms', animationFillMode: 'both' }}>
-            <p className="text-xs font-semibold text-white/50 uppercase tracking-widest mb-4">Especialidades</p>
-            <div className="flex flex-wrap justify-center gap-2 max-w-3xl mx-auto px-2">
-              {specialties.map((item, i) => (
-                <span
-                  key={i}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] sm:text-xs font-medium bg-white/10 text-white/90 border border-white/10 backdrop-blur-sm"
-                >
-                  {item.icon && <item.icon className="h-3 w-3 text-primary" />}
-                  {item.label}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* Seguradoras / Operadoras - Marquee */}
-          <div className="animate-fade-in mb-8" style={{ animationDelay: '1000ms', animationFillMode: 'both' }}>
-            <p className="text-xs font-semibold text-white/50 uppercase tracking-widest mb-4">Seguradoras & Operadoras</p>
-            <div className="relative overflow-hidden max-w-5xl mx-auto">
-              {/* Fade edges */}
-              <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-dark-blue to-transparent z-10 pointer-events-none"></div>
-              <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-dark-blue to-transparent z-10 pointer-events-none"></div>
-              
-              <div className="flex animate-marquee gap-6 py-2">
-                {marqueeItems.map((partner, i) => (
-                  <div
-                    key={i}
-                    className="flex-shrink-0 flex items-center justify-center h-10 px-4 rounded-lg bg-white/10 backdrop-blur-sm border border-white/10"
-                  >
-                    {partner.logo ? (
-                      <img
-                        src={partner.logo}
-                        alt={partner.name}
-                        className="h-6 w-auto object-contain brightness-0 invert opacity-80"
-                      />
-                    ) : (
-                      <span className="text-[11px] font-medium text-white/80 whitespace-nowrap">
-                        {partner.name}
-                      </span>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
           {/* Additional Info */}
-          <div className="animate-fade-in" style={{ animationDelay: '1100ms', animationFillMode: 'both' }}>
+          <div className="animate-fade-in" style={{ animationDelay: '900ms', animationFillMode: 'both' }}>
             <p className="text-xs sm:text-sm text-white/50 font-medium">
               Desde 2017 revolucionando o mercado segurador brasileiro
             </p>

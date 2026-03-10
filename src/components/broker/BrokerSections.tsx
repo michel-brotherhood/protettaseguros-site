@@ -1,50 +1,25 @@
 import React, { useState } from "react";
 import { Card } from "@/components/ui/card";
-import { CheckCircle, DollarSign, Award, Headphones, Clock, Users, BookOpen, MapPin, Trophy, MessageCircle, UserPlus, Calendar, Gauge, Building2, Megaphone, Zap, MousePointerClick, Monitor, GraduationCap, Sparkles } from "lucide-react";
+import { CheckCircle, DollarSign, Award, Headphones, Clock, Users, BookOpen, MapPin, Trophy, MessageCircle, UserPlus, Calendar, Gauge, Building2, Megaphone, Zap, MousePointerClick, Monitor, GraduationCap, Sparkles, Heart, Shield, Car, FileText, Plane, Home, Briefcase, HardHat, Smartphone, Flame } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import brokerMeeting from "@/assets/broker-meeting.jpg";
 import brokerConsulting from "@/assets/broker-consulting.jpg";
 import brokerTraining from "@/assets/broker-training.jpg";
-import logoAIG from "@/assets/insurance-logos/aig.png";
-import logoAkad from "@/assets/insurance-logos/akad.png";
-import logoAllianz from "@/assets/insurance-logos/allianz.png";
-import logoAmil from "@/assets/insurance-logos/amil.png";
-import logoAruana from "@/assets/insurance-logos/aruana.png";
-import logoAssim from "@/assets/insurance-logos/assim.png";
-import logoAXA from "@/assets/insurance-logos/axa.png";
-import logoAzos from "@/assets/insurance-logos/azos.png";
-import logoAzul from "@/assets/insurance-logos/azul.png";
 import logoBradesco from "@/assets/insurance-logos/bradesco.png";
-import logoCapemisa from "@/assets/insurance-logos/capemisa.png";
-import logoCNP from "@/assets/insurance-logos/cnp.svg";
-import logoCoris from "@/assets/insurance-logos/coris.png";
-import logoDarwin from "@/assets/insurance-logos/darwin.png";
-import logoEssor from "@/assets/insurance-logos/essor.png";
-import logoExcelsior from "@/assets/insurance-logos/excelsior.png";
-import logoEzze from "@/assets/insurance-logos/ezze.png";
-import logoFator from "@/assets/insurance-logos/fator.png";
-import logoHapvida from "@/assets/insurance-logos/hapvida.png";
-import logoHDI from "@/assets/insurance-logos/hdi.png";
-import logoIcatu from "@/assets/insurance-logos/icatu.png";
-import logoJunto from "@/assets/insurance-logos/junto.png";
-import logoJustos from "@/assets/insurance-logos/justos.png";
-import logoKlini from "@/assets/insurance-logos/klini.webp";
-import logoKovr from "@/assets/insurance-logos/kovr.png";
-import logoLoovi from "@/assets/insurance-logos/loovi.webp";
-import logoMAG from "@/assets/insurance-logos/mag.png";
-import logoMapfre from "@/assets/insurance-logos/mapfre.png";
-import logoMBM from "@/assets/insurance-logos/mbm.png";
-import logoOmint from "@/assets/insurance-logos/omint.png";
-import logoPorto from "@/assets/insurance-logos/porto.png";
-import logoPottencial from "@/assets/insurance-logos/pottencial.png";
-import logoPrudential from "@/assets/insurance-logos/prudential.png";
-import logoQualicorp from "@/assets/insurance-logos/qualicorp.png";
-import logoSabemi from "@/assets/insurance-logos/sabemi.png";
-import logoSuhai from "@/assets/insurance-logos/suhai.png";
 import logoSulAmerica from "@/assets/insurance-logos/sulamerica.png";
+import logoPorto from "@/assets/insurance-logos/porto.png";
+import logoAmil from "@/assets/insurance-logos/amil.png";
+import logoOmint from "@/assets/insurance-logos/omint.png";
+import logoAssim from "@/assets/insurance-logos/assim.png";
+import logoKlini from "@/assets/insurance-logos/klini.webp";
+import logoHapvida from "@/assets/insurance-logos/hapvida.png";
+import logoQualicorp from "@/assets/insurance-logos/qualicorp.png";
+import logoMAG from "@/assets/insurance-logos/mag.png";
 import logoTokioMarine from "@/assets/insurance-logos/tokiomarine.png";
-import logoUsebens from "@/assets/insurance-logos/usebens.png";
-import logoYouse from "@/assets/insurance-logos/youse.png";
+import logoMapfre from "@/assets/insurance-logos/mapfre.png";
+import logoSuhai from "@/assets/insurance-logos/suhai.png";
+import logoHDI from "@/assets/insurance-logos/hdi.png";
+import logoAllianz from "@/assets/insurance-logos/allianz.png";
 
 const BrokerSections = () => {
   const { ref: assessoriaRef, isVisible: assessoriaVisible } = useScrollAnimation(0.1);
@@ -71,47 +46,54 @@ const BrokerSections = () => {
     }
   ];
 
-  const insuranceLogos = [
-    { name: "AIG", logo: logoAIG },
-    { name: "Akad", logo: logoAkad },
-    { name: "Allianz", logo: logoAllianz },
-    { name: "Amil", logo: logoAmil },
-    { name: "Aruana", logo: logoAruana },
-    { name: "Assim", logo: logoAssim },
-    { name: "AXA", logo: logoAXA },
-    { name: "Azos", logo: logoAzos },
-    { name: "Azul", logo: logoAzul },
-    { name: "Bradesco", logo: logoBradesco },
-    { name: "Capemisa", logo: logoCapemisa },
-    { name: "CNP", logo: logoCNP },
-    { name: "Coris", logo: logoCoris },
-    { name: "Darwin", logo: logoDarwin },
-    { name: "Essor", logo: logoEssor },
-    { name: "Excelsior", logo: logoExcelsior },
-    { name: "EZZE", logo: logoEzze },
-    { name: "Fator", logo: logoFator },
-    { name: "Hapvida", logo: logoHapvida },
-    { name: "HDI", logo: logoHDI },
-    { name: "Icatu", logo: logoIcatu },
-    { name: "Junto", logo: logoJunto },
-    { name: "Justos", logo: logoJustos },
-    { name: "Klini", logo: logoKlini },
-    { name: "Kovr", logo: logoKovr },
-    { name: "Loovi", logo: logoLoovi },
-    { name: "MAG", logo: logoMAG },
-    { name: "Mapfre", logo: logoMapfre },
-    { name: "MBM", logo: logoMBM },
-    { name: "Omint", logo: logoOmint },
-    { name: "Porto", logo: logoPorto },
-    { name: "Pottencial", logo: logoPottencial },
-    { name: "Prudential", logo: logoPrudential },
-    { name: "Qualicorp", logo: logoQualicorp },
-    { name: "Sabemi", logo: logoSabemi },
-    { name: "Suhai", logo: logoSuhai },
+  const specialties = [
+    { label: "Planos de Saúde e Odontológicos", icon: Heart },
+    { label: "Seguro de Vida e Previdência", icon: Shield },
+    { label: "Seguro Auto", icon: Car },
+    { label: "Seguro Fiança", icon: FileText },
+    { label: "Seguro Viagem", icon: Plane },
+    { label: "Seguro Residencial", icon: Home },
+    { label: "RC Profissional", icon: Briefcase },
+    { label: "Seguro Obras/Engenharia", icon: HardHat },
+    { label: "Equipamentos Portáteis", icon: Smartphone },
+    { label: "Seguro de Incêndio", icon: Flame },
+    { label: "entre outros", icon: null },
+  ];
+
+  const insuranceLogos: { name: string; logo?: string }[] = [
+    { name: "Bradesco Seguros", logo: logoBradesco },
     { name: "SulAmérica", logo: logoSulAmerica },
+    { name: "Porto Seguro", logo: logoPorto },
+    { name: "Amil", logo: logoAmil },
+    { name: "Omint", logo: logoOmint },
+    { name: "Care Plus" },
+    { name: "Assim Saúde", logo: logoAssim },
+    { name: "Select" },
+    { name: "Leve" },
+    { name: "Klini", logo: logoKlini },
+    { name: "Prevent Sênior" },
+    { name: "Medsênior" },
+    { name: "Hapvida", logo: logoHapvida },
+    { name: "Integral Saúde" },
+    { name: "Ampla" },
+    { name: "Nova Saúde" },
+    { name: "Onmed" },
+    { name: "Ever Insurance" },
+    { name: "Cemeru" },
+    { name: "Samoc" },
+    { name: "Healthmed" },
+    { name: "Qualicorp", logo: logoQualicorp },
+    { name: "Supermed" },
+    { name: "Metlife" },
+    { name: "MAG Seguros", logo: logoMAG },
     { name: "Tokio Marine", logo: logoTokioMarine },
-    { name: "Usebens", logo: logoUsebens },
-    { name: "Youse", logo: logoYouse },
+    { name: "Mapfre", logo: logoMapfre },
+    { name: "Suhai", logo: logoSuhai },
+    { name: "HDI", logo: logoHDI },
+    { name: "Allianz", logo: logoAllianz },
+    { name: "Assist Card" },
+    { name: "Sompo Seguros" },
+    { name: "Unimed Seguros" },
   ];
 
   const advantages = [
@@ -304,6 +286,28 @@ const BrokerSections = () => {
               <h3 className="text-base md:text-lg font-semibold text-foreground">
                 Ferramentas<br />de Vendas
               </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Especialidades */}
+      <section className="py-10 md:py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground text-center mb-8 md:mb-12">
+              Especialidades
+            </h2>
+            <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+              {specialties.map((item, i) => (
+                <span
+                  key={i}
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium bg-primary/10 text-foreground border border-primary/20 transition-colors hover:bg-primary/20"
+                >
+                  {item.icon && <item.icon className="h-4 w-4 text-primary" />}
+                  {item.label}
+                </span>
+              ))}
             </div>
           </div>
         </div>
