@@ -19,6 +19,55 @@ import logoHDI from "@/assets/insurance-logos/hdi.png";
 import logoAllianz from "@/assets/insurance-logos/allianz.png";
 
 const ClientSections = () => {
+  const specialties = [
+    { label: "Planos de Saúde e Odontológicos", icon: Heart },
+    { label: "Seguro de Vida e Previdência", icon: Shield },
+    { label: "Seguro Auto", icon: Car },
+    { label: "Seguro Fiança", icon: FileText },
+    { label: "Seguro Viagem", icon: Plane },
+    { label: "Seguro Residencial", icon: Home },
+    { label: "RC Profissional", icon: Briefcase },
+    { label: "Seguro Obras/Engenharia", icon: HardHat },
+    { label: "Equipamentos Portáteis", icon: Smartphone },
+    { label: "Seguro de Incêndio", icon: Flame },
+    { label: "entre outros", icon: null },
+  ];
+
+  const insuranceLogos: { name: string; logo?: string }[] = [
+    { name: "Bradesco Seguros", logo: logoBradesco },
+    { name: "SulAmérica", logo: logoSulAmerica },
+    { name: "Porto Seguro", logo: logoPorto },
+    { name: "Amil", logo: logoAmil },
+    { name: "Omint", logo: logoOmint },
+    { name: "Care Plus" },
+    { name: "Assim Saúde", logo: logoAssim },
+    { name: "Select" },
+    { name: "Leve" },
+    { name: "Klini", logo: logoKlini },
+    { name: "Prevent Sênior" },
+    { name: "Medsênior" },
+    { name: "Hapvida", logo: logoHapvida },
+    { name: "Integral Saúde" },
+    { name: "Ampla" },
+    { name: "Nova Saúde" },
+    { name: "Onmed" },
+    { name: "Ever Insurance" },
+    { name: "Cemeru" },
+    { name: "Samoc" },
+    { name: "Healthmed" },
+    { name: "Qualicorp", logo: logoQualicorp },
+    { name: "Supermed" },
+    { name: "Metlife" },
+    { name: "MAG Seguros", logo: logoMAG },
+    { name: "Tokio Marine", logo: logoTokioMarine },
+    { name: "Mapfre", logo: logoMapfre },
+    { name: "Suhai", logo: logoSuhai },
+    { name: "HDI", logo: logoHDI },
+    { name: "Allianz", logo: logoAllianz },
+    { name: "Assist Card" },
+    { name: "Sompo Seguros" },
+    { name: "Unimed Seguros" },
+  ];
 
   return (
     <>
