@@ -57,7 +57,7 @@ const Index = () => {
             {/* Cliente Card */}
             <Link to="/cliente" className="animate-slide-in-left-bounce" style={{ animationDelay: '600ms', animationFillMode: 'both' }}>
               <div className="group relative w-44 h-44 sm:w-52 sm:h-52 bg-primary/80 backdrop-blur-md rounded-full border border-primary/40 hover:bg-primary transition-all duration-500 hover:scale-110 hover:shadow-[0_0_40px_8px_hsl(var(--primary)/0.5)] cursor-pointer flex flex-col items-center justify-center text-center p-5">
-                <Building2 className="h-9 w-9 text-white mb-3" />
+                <ShieldCheck className="h-9 w-9 text-white mb-3" />
                 <h2 className="text-lg sm:text-xl font-bold text-white mb-1">Para Clientes</h2>
                 <p className="text-xs text-white/80 flex items-center gap-1">
                   Explorar Soluções
