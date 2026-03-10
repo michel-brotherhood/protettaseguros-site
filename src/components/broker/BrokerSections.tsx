@@ -95,6 +95,7 @@ const BrokerSections = () => {
     { name: "Assist Card" },
     { name: "Sompo Seguros" },
     { name: "Unimed Seguros" },
+    { name: "Icatu", logo: logoIcatu },
   ];
 
   const advantages = [

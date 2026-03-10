@@ -68,6 +68,7 @@ const ClientSections = () => {
     { name: "Assist Card" },
     { name: "Sompo Seguros" },
     { name: "Unimed Seguros" },
+    { name: "Icatu", logo: logoIcatu },
   ];
 
   return (
