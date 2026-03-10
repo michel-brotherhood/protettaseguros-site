@@ -1,7 +1,22 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
-import { Users, Lightbulb, Globe, Zap, BarChart3, Heart, Scale, Leaf, Shield } from "lucide-react";
+import { Users, Lightbulb, Globe, Zap, BarChart3, Heart, Scale, Leaf, Shield, Car, FileText, Plane, Home, Briefcase, HardHat, Smartphone, Flame } from "lucide-react";
 import AnimatedCard from "@/components/AnimatedCard";
+import logoBradesco from "@/assets/insurance-logos/bradesco.png";
+import logoSulAmerica from "@/assets/insurance-logos/sulamerica.png";
+import logoPorto from "@/assets/insurance-logos/porto.png";
+import logoAmil from "@/assets/insurance-logos/amil.png";
+import logoOmint from "@/assets/insurance-logos/omint.png";
+import logoAssim from "@/assets/insurance-logos/assim.png";
+import logoKlini from "@/assets/insurance-logos/klini.webp";
+import logoHapvida from "@/assets/insurance-logos/hapvida.png";
+import logoQualicorp from "@/assets/insurance-logos/qualicorp.png";
+import logoMAG from "@/assets/insurance-logos/mag.png";
+import logoTokioMarine from "@/assets/insurance-logos/tokiomarine.png";
+import logoMapfre from "@/assets/insurance-logos/mapfre.png";
+import logoSuhai from "@/assets/insurance-logos/suhai.png";
+import logoHDI from "@/assets/insurance-logos/hdi.png";
+import logoAllianz from "@/assets/insurance-logos/allianz.png";
 
 const ClientSections = () => {
 
